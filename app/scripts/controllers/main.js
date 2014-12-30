@@ -26,6 +26,7 @@ angular.module('payvizApp')
         return contrato;
       }).value();
 
+    console.log(contratos.length);
     $scope.data = contratos;
     //$scope.$apply();
   });

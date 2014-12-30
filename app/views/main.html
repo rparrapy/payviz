@@ -1,1 +1,17 @@
-<bubble-chart data="data"></bubble-chart>
+<div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-default active" id="all">
+    <input type="radio" name="options"> Todos los Contratos
+  </label>
+  <label class="btn btn-default" id="rubro_nombre">
+    <input type="radio" name="options"> Rubro
+  </label>
+  <label class="btn btn-default" id="pro_cod">
+    <input type="radio" name="options"> Proveedor
+  </label>
+  <label class="btn btn-default" id="mod_nombre">
+    <input type="radio" name="options"> Tipo de Licitación
+  </label>
+</div>
+<div id="chart">
+	<bubble-chart data="data"></bubble-chart>
+</div>

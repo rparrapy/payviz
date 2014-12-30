@@ -14,14 +14,31 @@ angular.module('payvizApp')
       scope: { data: '=' },
       link: function postLink(scope, element, attrs) {
         var data = scope.data;
-        var width = 1000, height = 1000;
-        var maxElem = _.max(data, function(c){ return c.monto_total });
-        var minElem = _.min(data, function(c){ return c.monto_total });
+        var width = 750, height = 750;
+        var maxElem = _.max(data, function(c){ return c.monto_total; });
+        var minElem = _.min(data, function(c){ return c.monto_total; });
         console.log(maxElem.monto_total);
         console.log(minElem.monto_total);
         console.log(minElem.monto_total/maxElem.monto_total);
         var area = d3.scale.sqrt().domain([0, maxElem.monto_total]).range([0, 50]);
-        var fill = d3.scale.ordinal().range(['#827d92','#827354','#523536','#72856a','#2a3285','#383435']);
+        var color = function(ejecutado){
+          var colors = ['#ffffb2','#fecc5c','#fd8d3c','#f03b20','#bd0026'];
+          return colors[Math.ceil(ejecutado * 5) - 1]; 
+        };
+
+        var fill = function(contrato){
+          var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){ return sum + imputacion.monto; }, 0);
+          var ejecutado = cobrado/contrato.monto_total;
+          var fillColor = color(ejecutado);
+          var gradientId = 'grad-' + contrato.cod_contrato; 
+          var grad = svg.append('defs').append('linearGradient').attr('id', gradientId)
+            .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
+          grad.append('stop').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
+          grad.append('stop').attr('offset', ejecutado.toFixed(2)).style('stop-color', 'white');
+
+          return 'url(#' + gradientId + ')';
+        };
+
         var svg = d3.select(element[0]).append('svg')
             .attr('width', width)
             .attr('height', height);
@@ -55,13 +72,14 @@ angular.module('payvizApp')
           .attr('cx', function (d) { return d.x; })
           .attr('cy', function (d) { return d.y; })
           .attr('r', function (d) { return d.radius; })
-          .style('fill', function (d) { return fill(d.rubro_nombre); })
+          .attr('stroke', 'gray')
+          .style('fill', function (d) { return fill(d); })
           .on('mouseover', function (d) { showPopover.call(this, d); })
           .on('mouseout', function (d) { removePopovers(); });
 
         var force = d3.layout.force();
 
-        draw('rubro_nombre');
+        draw('all');
 
         $( '.btn' ).click(function() {
           draw(this.id);
@@ -93,15 +111,15 @@ angular.module('payvizApp')
         }
 
         function labels (centers) {
-          svg.selectAll(".label").remove();
+          svg.selectAll('.label').remove();
 
-          svg.selectAll(".label")
-          .data(centers).enter().append("text")
-          .attr("class", "label")
-          .attr("text-anchor", "start")
-          .text(function (d) { return d.name })
-          .attr("transform", function (d) {
-            return "translate(" + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ", " + (d.y + 15) + ")";
+          svg.selectAll('.label')
+          .data(centers).enter().append('text')
+          .attr('class', 'label')
+          .attr('text-anchor', 'start')
+          .text(function (d) { return d.name; })
+          .attr('transform', function (d) {
+            return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y + 15) + ')';
           });
         }
 
