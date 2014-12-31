@@ -22,7 +22,6 @@ angular.module('payvizApp')
           return {fecha: imputacion.fecha, monto: imputacion.monto};
         });
         contrato.rubro_nombre = contrato.rubro_nombre.trim();
-        delete contrato.monto
         return contrato;
       }).value();
 

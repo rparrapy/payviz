@@ -11,7 +11,7 @@ angular.module('payvizApp')
     return {
       restrict: 'E',
       replace: false,
-      scope: { data: '=' },
+      scope: { data: '=' , until: '='},
       link: function postLink(scope, element, attrs) {
         var data = scope.data;
         var width = 750, height = 750;
@@ -26,15 +26,27 @@ angular.module('payvizApp')
           return colors[Math.ceil(ejecutado * 5) - 1]; 
         };
 
-        var fill = function(contrato){
-          var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){ return sum + imputacion.monto; }, 0);
+        var fill = function(contrato, hasta){
+          hasta = hasta || moment();
+          var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
+            if(moment(imputacion.fecha) <= hasta){
+              return sum + imputacion.monto; 
+            }else{
+              return sum;
+            }
+          }, 0);
           var ejecutado = cobrado/contrato.monto_total;
           var fillColor = color(ejecutado);
-          var gradientId = 'grad-' + contrato.cod_contrato; 
-          var grad = svg.append('defs').append('linearGradient').attr('id', gradientId)
+          var gradientId = 'grad-' + contrato.cod_contrato;
+          if($('#' + gradientId).length > 0){
+            d3.select('#' + gradientId + " stop.color").attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
+            d3.select('#' + gradientId + " stop.blank").attr('offset', ejecutado.toFixed(2)).style('stop-color', 'white');
+          } else {
+            var grad = svg.append('defs').append('linearGradient').attr('id', gradientId)
             .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
-          grad.append('stop').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
-          grad.append('stop').attr('offset', ejecutado.toFixed(2)).style('stop-color', 'white');
+            grad.append('stop').attr('class', 'color').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
+            grad.append('stop').attr('class', 'blank').attr('offset', ejecutado.toFixed(2)).style('stop-color', 'white');
+          }
 
           return 'url(#' + gradientId + ')';
         };
@@ -83,6 +95,10 @@ angular.module('payvizApp')
 
         $( '.btn' ).click(function() {
           draw(this.id);
+        });
+
+        scope.$watch('until',function(until){
+          nodes.style('fill', function (d) { return fill(d, until); });
         });
 
         function draw (varname) {
