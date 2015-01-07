@@ -27,9 +27,9 @@ angular.module('payvizApp')
         };
 
         var fill = function(contrato, hasta){
-          hasta = hasta || moment();
+          var limite = hasta || moment();
           var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
-            if(moment(imputacion.fecha) <= hasta){
+            if(moment(imputacion.fecha) <= limite){
               return sum + imputacion.monto; 
             }else{
               return sum;
@@ -38,7 +38,7 @@ angular.module('payvizApp')
           var ejecutado = cobrado/contrato.monto_total;
           var fillColor = color(ejecutado);
           var gradientId = 'grad-' + contrato.cod_contrato;
-          if($('#' + gradientId).length > 0){
+          if(hasta){
             d3.select('#' + gradientId + " stop.color").attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
             d3.select('#' + gradientId + " stop.blank").attr('offset', ejecutado.toFixed(2)).style('stop-color', 'white');
           } else {

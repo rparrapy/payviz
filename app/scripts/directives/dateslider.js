@@ -15,16 +15,16 @@ angular.module('payvizApp')
       template: '<input id="fecha"></input>',
       link: function postLink(scope, element, attrs) {
 
-        $("#fecha").ionRangeSlider({
-          min: +moment("20070101", "YYYYMMDD").format("X"),
-          max: +moment("20141231", "YYYYMMDD").format("X"),
-          from: +moment("20141231", "YYYYMMDD").format("X"),
+        $('#fecha').ionRangeSlider({
+          min: +moment('20070101', 'YYYYMMDD').format('X'),
+          max: +moment('20141231', 'YYYYMMDD').format('X'),
+          from: +moment('20141231', 'YYYYMMDD').format('X'),
           prettify: function (num) {
-              return moment(num, "X").format("LL");
+              return moment(num, 'X').format('LL');
           },
           onChange: function(data) {
             scope.$apply(function(){ 
-              scope.until = moment(data.from, "X");
+              scope.until = moment(data.from, 'X');
             });
           }
         });
