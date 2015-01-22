@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'datatables'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -30,7 +31,8 @@ angular
         controller: 'AboutCtrl'
       })
       .when('/data', {
-        templateUrl: 'views/list.html'
+        templateUrl: 'views/list.html',
+        controller: 'ListCtrl'
       })
       .otherwise({
         redirectTo: '/'

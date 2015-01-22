@@ -14,16 +14,16 @@ angular.module('payvizApp')
       'AngularJS',
       'Karma'
     ];
-    var contratos = _.chain(imputaciones)
-      .groupBy(function(imputacion){return imputacion.cod_contrato})
-      .map(function(imputacionesPorContrato){
-        var contrato = imputacionesPorContrato[0];
-        contrato.imputaciones = _.map(imputacionesPorContrato, function(imputacion){
-          return {fecha: imputacion.fecha, monto: imputacion.monto};
-        });
-        contrato.rubro_nombre = contrato.rubro_nombre.trim();
-        return contrato;
-      }).value();
+
+    var contratos = imputaciones;
+
+    for (var i = 0; i < contratos.length; i++){
+      var c = contratos[i];
+      if(!c.monto_total){
+        c.monto_total = _.reduce(c.imputaciones,function(sum, el) { return sum + el.monto },0);
+      }
+    }
+
 
     console.log(contratos.length);
     $scope.data = contratos;

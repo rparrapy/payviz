@@ -1,1 +1,24 @@
-<p>This is the datatables view.</p>
+ <div style="width:900px; margin:auto;">
+ <table datatable="ng" class="row-border hover" dt-options="dtOptions" dt-columns="dtColumns" >
+        <thead>
+        <tr>
+            <th>Cod. de Contratación</th>
+            <th>Nombre</th>
+            <th>RUC</th>
+            <th>Razon Social</th>
+            <th>Monto</th>
+            <th>Tipo Licitación</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="c in contratos">
+            <td>{{c.cod_contrato}}</td>
+            <td ng-bind="c.llamado_nombre"></td>
+            <td>{{c.pro_cod}}</td>
+            <td>{{c.pro_nombre}}</td>
+            <td>{{c.monto_total}}</td>
+            <td>{{c.mod_nombre}}</td>
+        </tr>
+        </tbody>
+</table>
+</div>

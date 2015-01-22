@@ -10,6 +10,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/ionrangeslider/css/ion.rangeSlider.css" />
     <link rel="stylesheet" href="bower_components/ionrangeslider/css/ion.rangeSlider.skinHTML5.css" />
+    <link rel="stylesheet" href="bower_components/datatables/media/css/jquery.dataTables.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -24,10 +25,10 @@
     <!-- Add your site or application content here -->
     <div class="container-fluid">
       <div class="header">
-        <a class="pull-left" style="display:inline;" href="http://www.presidencia.gov.py/" target="_blank"><img src="images/logogobierno.png"></a>
-        <a class="pull-right" style="display:inline;" href="http://www.presidencia.gov.py/" target="_blank"><img src="images/logogobierno.png"></a>
-        <h3 class="text-muted">Visualización de Obras</h3>
-        <ul class="nav nav-pills">
+        <!--<a class="pull-left" style="display:inline;" href="http://www.presidencia.gov.py/" target="_blank"><img src="images/logogobierno.png"></a>
+        <a class="pull-right" style="display:inline;" href="http://www.presidencia.gov.py/" target="_blank"><img src="images/logogobierno.png"></a> -->
+<!--         <h3 class="text-muted">Visualización de Obras</h3>
+ -->        <ul class="nav nav-pills">
           <li class="active"><a ng-href="#/">Inicio</a></li>
           <li><a ng-href="#/data">Listado</a></li>
           <li><a ng-href="#/about">Acerca de</a></li>
@@ -36,9 +37,11 @@
 
       <div ng-view=""></div>
 
+      <!--
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
+      -->
     </div>
 
 
@@ -88,6 +91,8 @@
     <script src="bower_components/d3/d3.js"></script>
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/ionrangeslider/js/ion.rangeSlider.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="bower_components/angular-datatables/dist/angular-datatables.js"></script>
     <!-- endbower -->
     <script src="bower_components/moment/locale/es.js"></script>
     <!-- endbuild -->
@@ -97,6 +102,7 @@
         <script src="scripts/imputaciones.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/list.js"></script>
         <script src="scripts/directives/bubblechart.js"></script>
         <script src="scripts/directives/dateslider.js"></script>
         <!-- endbuild -->
