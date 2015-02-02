@@ -16,7 +16,7 @@ angular.module('payvizApp')
       link: function postLink(scope, element, attrs) {
 
         $('#fecha').ionRangeSlider({
-          min: +moment('20070101', 'YYYYMMDD').format('X'),
+          min: +moment('20071130', 'YYYYMMDD').format('X'),
           max: +moment('20141231', 'YYYYMMDD').format('X'),
           from: +moment('20141231', 'YYYYMMDD').format('X'),
           prettify: function (num) {

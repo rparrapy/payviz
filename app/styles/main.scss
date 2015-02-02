@@ -93,7 +93,7 @@ body {
   }
 }
 
-.nav-tabs > li, .nav-pills > li {
+.nav-tabs > li, .gray > li {
     float:none;
     display:inline-block;
     *display:inline; /* ie7 fix */
@@ -117,4 +117,34 @@ body {
 
 .pagination > li > a{
   padding: 3px 6px;
+}
+
+.popover {
+  max-width : 350px;
+}
+
+/* Added by me */
+.tooltipo {
+  width: 300px; }
+  .tooltipo td, .tooltip th {
+    padding: 2px; }
+  .tooltipo .tab_sec td {
+    font-size: 11px; }
+
+.per_ejex {
+  color: #35B140;
+  font-size: 32px; 
+}
+
+.gray > li.active > a,
+.gray > li.active > a:hover,
+.gray > li.active > a:focus
+{
+  background-color: #9DA4A9;
+}
+
+li > a,
+li > a:hover,
+li > a:focus {
+  color: #9DA4A9;
 }

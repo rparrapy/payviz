@@ -1,5 +1,5 @@
  <div style="width:900px; margin:auto;">
- <table datatable="ng" class="row-border hover" dt-options="dtOptions" dt-columns="dtColumns" >
+ <table datatable="ng" class="row-border hover" dt-options="dtOptions" dt-columns="dtColumns" style="max-width:900px;" >
         <thead>
         <tr>
             <th>Cod. de Contratación</th>
@@ -10,6 +10,16 @@
             <th>Tipo Licitación</th>
         </tr>
         </thead>
+        <tfoot style="display: table-header-group; max-width:900px;">
+            <tr>
+                <th class="details-control" style="text-align:center;">Cod. de Contratación</th>
+                <th class="details-control" style="text-align:center;">Nombre</th>
+                <th class="details-control" style="text-align:center;">RUC</th>
+                <th class="details-control" style="text-align:center;">Razon Social</th>
+                <th class="details-control" style="text-align:center;">Monto</th>
+                <th class="details-control" style="text-align:center;">Tipo Licitación</th>
+            </tr>
+        </tfoot>
         <tbody>
         <tr ng-repeat="c in contratos">
             <td>{{c.cod_contrato}}</td>

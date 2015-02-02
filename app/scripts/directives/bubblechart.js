@@ -33,52 +33,137 @@ angular.module('payvizApp')
             }
           }, 0);
           var ejecutado = cobrado/contrato.monto_total;
-          var fillColor = '#f56727';
-          var bgColor = '#ffcbb5';
+          var fillColor = contrato.is_adenda ? '#00698C' : '#f56727' ;
+          var bgColor = contrato.is_adenda ? '#bfdfff' : '#ffead4';
           var gradientId = 'grad-' + contrato.cod_contrato;
+
+          //Agrego aca, pero deberiamos hacer en otra parte
+          contrato.ejecutado = ejecutado.toFixed(2);
+          contrato.monto_pagado = cobrado;
+
+          var imgId = 'img-' +  contrato.cod_contrato;
+          var imagen = $('#' + imgId);
+          imagen.show();
+
+
           if(hasta){
             d3.select('#' + gradientId + " stop.color").attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
             d3.select('#' + gradientId + " stop.blank").attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);
+
+            if(contrato.fecha_contrato && moment(contrato.fecha_contrato) > limite){
+              d3.select('#' + gradientId + " stop.color").attr('offset', ejecutado.toFixed(2)).style('stop-color', 'white');
+              d3.select('#' + gradientId + " stop.blank").attr('offset', ejecutado.toFixed(2)).style('stop-color', 'white');
+              imagen.hide();
+            }
+
+
           } else {
             var grad = svg.append('defs').append('linearGradient').attr('id', gradientId)
             .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
             grad.append('stop').attr('class', 'color').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
-            grad.append('stop').attr('class', 'blank').attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);
+            grad.append('stop').attr('class', 'blank').attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);  
           }
 
           return 'url(#' + gradientId + ')';
+        };
+
+        var stroke = function(contrato, hasta){
+          var limite = hasta || moment();
+          var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
+            if(moment(imputacion.fecha_obl) <= limite){
+              return sum + imputacion.monto; 
+            }else{
+              return sum;
+            }
+          }, 0);
+          var result = contrato.is_adenda ? '#006289' : '#ca4600';
+          if(contrato.fecha_contrato && moment(contrato.fecha_contrato) > limite){result = 'white'};
+          return result; 
+        }
+
+        var imagen = function(contrato){
+          var imgId = 'img-' +  contrato.cod_contrato;
+          var imagen = d3.select('#' + imgId );
+          if(_.has(contrato,'adendas')){
+            if(!imagen.empty()){
+              imagen
+              .attr('x', contrato.x - contrato.radius/4)
+              .attr('y', contrato.y - contrato.radius/4);
+
+            }else{
+              imagen = svg
+                .append('image')
+                .attr('id', imgId)
+                .attr('xlink:href', 'images/ico_dinero.png')
+                .attr('width', contrato.radius*0.5)
+                .attr('height', contrato.radius*0.5);
+            }
+          }
         };
 
         var svg = d3.select(element[0]).append('svg')
             .attr('width', width)
             .attr('height', height);
 
+        //Esto claramente es un alambre, se deberia mejorar y hacer de manera mas corta con _
+        var ndata = [];
         for (var j = 0; j < data.length; j++) {
-          data[j].radius = area(data[j].monto_total);
-          data[j].x = Math.random() * width;
-          data[j].y = Math.random() * height;
-        }
+          
+            data[j].id = j;
+            data[j].radius = area(data[j].monto_total);
+            data[j].x = Math.random() * width;
+            data[j].y = Math.random() * height;
+            data[j].is_adenda = false;
+            ndata.push(data[j]);
+            if(data[j].adendas){
+              var adendas = data[j].adendas;
+              for(var i=0; i < adendas.length; i++){
+                adendas[i].padre = j;
+                adendas[i].p_data = data[j];
+                adendas[i].monto_total = adendas[i].monto;
+                adendas[i].radius = area(adendas[i].monto_total);
+                adendas[i].x = data[j].x + data[j].radius - adendas[i].radius;
+                adendas[i].y = data[j].y + data[j].radius - adendas[i].radius;
+                adendas[i].pos = i;
+                adendas[i].rubro_nombre = data[j].rubro_nombre;
+                adendas[i].mod_nombre = data[j].mod_nombre;
+                adendas[i].pro_nombre = data[j].pro_nombre;
+                adendas[i].is_adenda = true;
+                ndata.push(adendas[i]);
+            }
+            
+          }
 
-        var padding = 2;
+        }
+        data = ndata;
+
+        //console.log(data);
+
+        var padding = 5;
         var maxRadius = d3.max(_.pluck(data, 'radius'));
 
         var getCenters = function (vname, size) {
           var centers, map;
+          var circulitos;
+          if(vname !== 'all'){
+            circulitos = _.countBy(_.pluck(data, vname),function(d) { return d } );
+          }
           centers = _.uniq(_.pluck(data, vname)).map(function (d) {
-            return {name: d, value: 1};
+            var c = _.has(circulitos,d) ? circulitos[d] : 0;
+            return {name: d, value: 1, cantidad : c };
           });
-
+          //console.log(centers);
           if( centers.length > 1 ){
             var falta = Math.ceil(centers.length / 3) * 3 - centers.length;
             for(var i = 0; i < falta; i++){
-              centers.push({ name: null, value : 1 });
+              centers.push({ name: null, value : 1, cantidad : -1 });
             }
           }
 
-          //centers = _.sortBy(centers, function(o) { return o.name })
+          centers = _.sortBy(centers, function(o) { return o.cantidad })
 
           map = d3.layout.treemap().size(size).ratio(1/1);
-          map.nodes({children: centers.reverse()});
+          map.nodes({children: centers});
           
 
 
@@ -88,16 +173,24 @@ angular.module('payvizApp')
         var nodes = svg.selectAll('circle')
           .data(data);
 
+        //console.log(nodes);
+
         nodes.enter().append('circle')
+          .attr('id', function(d){ return d.id; })
           .attr('class', 'node')
           .attr('cx', function (d) { return d.x; })
           .attr('cy', function (d) { return d.y; })
-          .attr('r', function (d) { return d.radius; })
-          .attr('stroke', 'gray')
+          .attr('r', function (d) {  return d.radius;})
+          .attr('stroke', function(d){ return stroke(d); })
           .style('fill', function (d) { return fill(d); })
           .on('mouseover', function (d) { showPopover.call(this, d); })
           .on('mouseout', function (d) { removePopovers(); });
 
+
+        
+        //console.log(nodes);
+              
+        
         var force = d3.layout.force();
 
         draw('all');
@@ -107,9 +200,21 @@ angular.module('payvizApp')
         });
 
         scope.$watch('until',function(until){
-          nodes.style('fill', function (d) { return fill(d, until); });
+          //No se porque es necesaria esta primera linea
+          until.toDate();
+          nodes.attr('stroke', function(d){ return stroke(d, until); })
+            .style('fill', function (d) { return fill(d, until); });
         });
 
+
+        function setPosAdenda(d){
+          if(d.p_data){
+            var angulos = [0,72,150,216,288,360];
+
+            d.x = d.p_data.x + Math.cos( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius ;
+            d.y = d.p_data.y - Math.sin( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius  ;
+          }
+        }
 
         function resizeSvg(){
           svg
@@ -139,9 +244,10 @@ angular.module('payvizApp')
               o.y += ((f.y + (f.dy / 2)) - o.y) * e.alpha;
               o.x += ((f.x + (f.dx / 2)) - o.x) * e.alpha;
             }
-            nodes.each(collide(.11))
-              .attr('cx', function (d) { return d.x; })
-              .attr('cy', function (d) { return d.y; });
+            nodes.each(collide(.15))
+              .attr('cx', function (d) {  return d.x; })
+              .attr('cy', function (d) { imagen(d); return d.y; });
+
           };
         }
 
@@ -152,7 +258,7 @@ angular.module('payvizApp')
           .data(centers).enter().append('text')
           .attr('class', 'label')
           .attr('text-anchor', 'start')
-          .text(function (d) { return d.name !== undefined || varname == 'all' ? d.name : 'No aplica'; })
+          .text(function (d) { return d.name !== undefined || varname === 'all' ? d.name : 'No aplica'; })
           .attr('transform', function (d) {
             return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y - 5 : 15) + ')';
           });
@@ -166,23 +272,45 @@ angular.module('payvizApp')
 
         function showPopover (d) {
           $(this).popover({
-            placement: 'auto top',
+            placement: 'auto right',
             container: 'body',
             trigger: 'manual',
             html : true,
-            content: function() { 
+            content: function() {
+
+
+              var crudo = '<div class="tooltipo padding10"> <table> <tbody> <tr> <td> {categoria_nombre} <br> <h5>Gs. {monto_total}</h5> </td>'+
+                    '<td rowspan="2" class="txtC" width="30%"> Monto ejecutado<br> <h1 class="per_ejex">{ejecutado}%</h1> </td> </tr> <tr> '+
+                    '<td> Proveedor<br> <h6>{pro_nombre}</h6> </td> </tr> </tbody> </table> <hr> <table class="tab_sec mb10">'+
+                    ' <tbody> <tr> <td width="50%"> Fecha de contrato<br> <strong>{fecha_contrato}</strong> </td> <td> Nombre del llamado<br>'+
+                    ' <strong>{llamado_nombre}</strong> </td> </tr> <tr> <td> Código de contratación<br> <strong>{cod_contrato}</strong> </td>'+
+                    ' <td> Monto ya pagado<br> <strong>Gs. {monto_pagado}</strong> </td> </tr> <tr> <td> Tipo de licitación<br> '+
+                    '<strong>{mod_nombre}</strong> </td> <td> </td> </tr> </tbody> </table> <p class="txtC">'+
+                    '<!--a href="#">Click para ver más detalles</a--></p> </div>';
+              if(d.is_adenda) { d.categoria_nombre = 'Adenda';}
+              return crudo.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : 'No aplica')
+                .replace('{monto_total}', typeof d.monto_total !== "undefined" ? parseInt(d.monto_total).toLocaleString() : 'No aplica')
+                .replace('{ejecutado}', typeof d.ejecutado !== "undefined" ? (d.ejecutado * 100).toFixed(0) : 'No aplica')
+                .replace('{pro_nombre}', typeof d.pro_nombre !== "undefined" ? d.pro_nombre : 'No aplica')
+                .replace('{fecha_contrato}', typeof d.fecha_contrato !== "undefined" ? d.fecha_contrato : 'No aplica')
+                .replace('{llamado_nombre}', typeof d.llamado_nombre !== "undefined" ? d.llamado_nombre : 'No aplica')
+                .replace('{cod_contrato}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : 'No aplica')
+                .replace('{monto_pagado}', typeof d.monto_pagado !== "undefined" ? d.monto_pagado.toLocaleString() : 'No aplica')
+                .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica');
+
               ( typeof metadata_title  !== "undefined" ?  "<title>" + metadata_title + "</title>\n"                             : "" )
-              return 'Proveedor: ' + d.pro_nombre + 
+              
+              /*return ( typeof d.pro_nombre !== "undefined" ? 'Proveedor: ' + d.pro_nombre : '' ) + 
                      ( typeof d.mod_nombre !== "undefined" ? '<br/>Modalidad: ' + d.mod_nombre : '' ) + 
                      ( typeof d.categoria_nombre !== "undefined" ? '<br/>Categoria: ' + d.categoria_nombre : '') + 
-                     ( typeof d.monto_total !== "undefined" ? '<br/>Monto: ' + d.monto_total : ''); 
+                     ( typeof d.monto_total !== "undefined" ? '<br/>Monto: ' + d.monto_total : '') + 
+                     ( typeof d.padre !== "undefined" ? '<br/>ES ADENDA!' : '' ); */
             }
           });
           $(this).popover('show');
         }
-
+        var PRI = true;
         function collide(alpha) {
-
           var quadtree = d3.geom.quadtree(data);
           return function (d) {
             var r = d.radius + maxRadius + padding,
@@ -191,24 +319,29 @@ angular.module('payvizApp')
                 ny1 = d.y - r,
                 ny2 = d.y + r;
             quadtree.visit(function(quad, x1, y1, x2, y2) {
-              if (quad.point && (quad.point !== d)) {
+              if (quad.point && (quad.point !== d) ) {
                 var x = d.x - quad.point.x,
                     y = d.y - quad.point.y,
                     l = Math.sqrt(x * x + y * y),
                     r = d.radius + quad.point.radius + padding;
-                if (l < r) {
-                  l = (l - r) / l * alpha;
-                  d.x -= x *= l;
-                  d.y -= y *= l;
-                  quad.point.x += x;
-                  quad.point.y += y;
+
+                if( quad.point.id === d.padre ){
+                  setPosAdenda(d);
+                }else{
+                  if (l < r) {
+                    l = (l - r) / l * alpha;
+                    d.x -= x *= l;
+                    d.y -= y *= l;
+                    quad.point.x += x;
+                    quad.point.y += y;
+                  }
                 }
               }
-              return false;
+
               return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
             });
           };
-        }    
+        }
       }
     };
   });

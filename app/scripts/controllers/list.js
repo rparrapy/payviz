@@ -15,6 +15,9 @@ angular.module('payvizApp')
       'Karma'
     ];
 
+    var liToSelect = 2;
+    $(".nav.nav-pills li").removeClass("active");
+    $(".nav.nav-pills li:eq("+(liToSelect-1)+")").addClass("active");
 
     var contratos = imputaciones;
 
@@ -62,7 +65,25 @@ angular.module('payvizApp')
     })
       .withBootstrap();
 
+    $scope.$on('event:dataTableLoaded', function(event, loadedDT) {
+      // Setup - add a text input to each footer cell
+      var id = '#' + loadedDT.id;
+      $(id + ' tfoot th').each(function() {
+        var title = $(id + ' thead th').eq($(this).index()).text();
+        $(this).html('<input class="form-control input-sm" style="font-size:smaller;max-width:100px;" type="text" placeholder="' + title + '" />');
+      });
 
+      var table = loadedDT.DataTable;
+      // Apply the search
+      table.columns().eq(0).each(function(colIdx) {
+        $('input', table.column(colIdx).footer()).on('keyup change', function() {
+          table
+            .column(colIdx)
+            .search(this.value)
+            .draw();
+        });
+      });
+    });
 
     //$scope.$apply();
   });
