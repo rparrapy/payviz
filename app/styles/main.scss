@@ -27,14 +27,13 @@ body {
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
-  text-align: center;
+  text-align: left;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 40px;
-    padding-bottom: 15px;
   }
 
 }
@@ -104,6 +103,7 @@ body {
     text-align:center;
     display: inline-block;
     padding-bottom: 15px;
+    padding-top: 50px;
 }
 
 .ng-scope {
@@ -111,7 +111,6 @@ body {
 }
 
 #slider{
-  width: 50%;
   margin: auto;
 }
 
@@ -143,8 +142,88 @@ body {
   background-color: #9DA4A9;
 }
 
-li > a,
-li > a:hover,
-li > a:focus {
+.nav > li > a,
+.nav > li > a:hover,
+.nav > li > a:focus {
   color: #9DA4A9;
+  border: 1px solid #AAA;
+  color: #666;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.container{
+  max-width: 900px !important;
+}
+
+.m0{
+  margin: 0;
+}
+
+.subTit {
+  color: #666;
+  font-weight: normal; 
+}
+
+.s640 {
+  width: 640px;
+}
+
+.tips {
+  display: table;
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 870px;
+}
+
+.fila{
+  display: table-row;
+}
+
+.tips .celda:nth-child(1) {
+  background: #EEE url("../images/ico_1.png") no-repeat 15px center;
+}
+
+.tips .celda:nth-child(2) {
+  background: #DDD url("../images/ico_2.png") no-repeat 15px center;
+}
+
+.tips .celda:nth-child(3) {
+background: #CCC url("../images/ico_3.png") no-repeat 15px center;
+}
+
+.tips .celda {
+  display: table-cell;
+  padding: 20px 10px 20px 80px;
+  width: 230px;
+  color: #666;
+  font-size: 15px;
+  line-height: 120%;
+  vertical-align: middle;
+}
+
+.referencias {
+  display: table;
+  padding: 10px 0;
+}
+
+.referencias .celda {
+  display: table-cell;
+  width: 310px;
+  padding-right: 20px;
+}
+
+ul.simple {
+  padding: 10px 20px;
+}
+
+ul.simple li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.referencias .celda h5 {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 10px;
 }

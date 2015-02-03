@@ -23,19 +23,54 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container-fluid">
+    <div class="container">
       <div class="header">
-        <!--<a class="pull-left" style="display:inline;" href="http://www.presidencia.gov.py/" target="_blank"><img src="images/logogobierno.png"></a>
-        <a class="pull-right" style="display:inline;" href="http://www.presidencia.gov.py/" target="_blank"><img src="images/logogobierno.png"></a> -->
-<!--         <h3 class="text-muted">Visualización de Obras</h3>
- -->    <ul class="nav nav-pills gray">
-          <li class="active"><a ng-href="#/">Inicio</a></li>
+        <ul class="nav nav-pills gray pull-right">
+          <li class="active"><a ng-href="#/">Gráficos</a></li>
           <li><a ng-href="#/data">Listado</a></li>
-          <li><a ng-href="#/about">Acerca de</a></li>
         </ul>
+        <div class="left s640">
+          <h3 class="m0">Contratos del proyecto Ñamopora Ñanderape</h1>
+          <h5 class="subTit">Explore los detalles, contratos, adjudicaciones, montos y tiempo de todas las licitaciones.</h4>
+          <p>Cada círculo representa un contrato, en donde el tamaño está dado por el monto del contrato y el contenido marcado representa el monto ya pagado.</p>
+          <div class="tips clear mt20 mb20">
+            <div class="fila">
+              <div class="celda">Seleccione algún criterio (rubro, proveedor, etc.) para agrupar los contratos.</div>
+              <div class="celda">Moviendo la línea de tiempo se observa el avance en ejecución de los contratos en el tiempo.</div>
+              <div class="celda">Haciendo click en un contrato puede ver mas detalles.</div>
+            </div>
+          </div>
       </div>
 
       <div ng-view=""></div>
+      <hr>
+      <div class="referencias">
+        <div class="fila">
+          <div class="celda">
+            <h5>Tamaños</h5>
+            <p>Los contratos son representados por circulos, el tamaño del circulo es proporcional al monto del contrato.</p>
+            <p><img src="images/grafico1.png" alt=""></p>
+          </div>
+          <div class="celda">
+            <h5>Iconos de referencias</h5>
+            <p>Estos contratos (circulos) pueden contener Adendas  que son representados por iconos segun su tipo.</p>
+            <ul class="simple">
+              <li><img src="images/ico_dinero.png" alt=""> Contrato con <br>Adenda de monto</li>
+              <li><img src="images/ico_tiempo.png" alt=""> Contrato con <br>Adenda de tiempo</li>
+            </ul>
+          </div>
+          <div class="celda">
+            <h5>Colores</h5>
+            <p>Los contratos con adenda de monto son representadas con circulos azules y estan anclados al contrato principal.</p>
+            <ul class="simple">
+              <li><img src="images/ico_color1.png" alt=""> Monto total del proyecto</li>
+              <li><img src="images/ico_color2.png" alt=""> Monto pagado del proyecto</li>
+              <li><img src="images/ico_color3.png" alt=""> Adenda de monto</li>
+              <li><img src="images/ico_color4.png" alt=""> Pago de adenda de monto</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <!--
       <div class="footer">
