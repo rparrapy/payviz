@@ -227,3 +227,21 @@ ul.simple li {
   border-bottom: 1px solid #CCC;
   padding-bottom: 10px;
 }
+
+.irs-bar {
+  border-top: 1px solid #f56727;
+  border-bottom: 1px solid #f56727;
+  background: #f56727;
+  background: linear-gradient(to top, #f56727 0%, #ffead4 100%);
+}
+
+.irs-bar-edge {
+  border: 1px solid #f56727;
+  background: #f56727;
+  background: linear-gradient(to top, #f56727 0%, #ffead4 100%);
+  border-right: 0;
+}
+
+.irs-single{
+  background: #f56727;
+}

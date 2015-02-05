@@ -19,6 +19,7 @@ angular.module('payvizApp')
           min: +moment('20071130', 'YYYYMMDD').format('X'),
           max: +moment('20141231', 'YYYYMMDD').format('X'),
           from: +moment('20141231', 'YYYYMMDD').format('X'),
+//          grid: true,
           prettify: function (num) {
               return moment(num, 'X').format('LL');
           },

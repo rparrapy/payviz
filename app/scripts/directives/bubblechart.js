@@ -14,7 +14,7 @@ angular.module('payvizApp')
       scope: { data: '=' , until: '='},
       link: function postLink(scope, element, attrs) {
         var data = scope.data;
-        var size = { 'all' : [900,500],'rubro_nombre' : [900, 2100],'pro_nombre_vista' : [900,1200], 'mod_nombre' : [900,1200],'componente' : [900,1200] };
+        var size = { 'all' : [900,500],'rubro_nombre' : [900, 2100],'pro_nombre_vista' : [900,1200], 'mod_nombre' : [900,1200],'componente' : [900,900] };
         var width = 750, height = 750;
         var maxElem = _.max(data, function(c){ return c.monto_total; });
         var minElem = _.min(data, function(c){ return c.monto_total; });
@@ -51,8 +51,6 @@ angular.module('payvizApp')
             d3.select('#' + gradientId + " stop.blank").attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);
 
             if(contrato.fecha_contrato && moment(contrato.fecha_contrato) > limite){
-              d3.select('#' + gradientId + " stop.color").attr('offset', ejecutado.toFixed(2)).style('stop-color', 'white');
-              d3.select('#' + gradientId + " stop.blank").attr('offset', ejecutado.toFixed(2)).style('stop-color', 'white');
               imagen.hide();
             }
 
@@ -68,17 +66,13 @@ angular.module('payvizApp')
         };
 
         var stroke = function(contrato, hasta){
+          return contrato.is_adenda ? '#006289' : '#ca4600';
+        }
+
+        var opacity = function(contrato, hasta){
           var limite = hasta || moment();
-          var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
-            if(moment(imputacion.fecha_obl) <= limite){
-              return sum + imputacion.monto; 
-            }else{
-              return sum;
-            }
-          }, 0);
-          var result = contrato.is_adenda ? '#006289' : '#ca4600';
-          if(contrato.fecha_contrato && moment(contrato.fecha_contrato) > limite){result = 'white'};
-          return result; 
+          var result = 1.0;
+          return (contrato.fecha_contrato && moment(contrato.fecha_contrato) > limite) ? 0.0 : 1.0;
         }
 
         var imagen = function(contrato){
@@ -220,8 +214,9 @@ angular.module('payvizApp')
           .attr('cy', function (d) { return d.y; })
           .attr('r', function (d) {  return d.radius;})
           .attr('stroke', function(d){ return stroke(d); })
+          .attr('opacity', function(d){ return opacity(d); })
           .style('fill', function (d) { return fill(d); })
-          .on('mouseover', function (d) { showPopover.call(this, d); })
+          .on('mouseover', function (d) { showPopover.call(this, d, scope.until); })
           .on('mouseout', function (d) { removePopovers(); });
 
 
@@ -239,8 +234,10 @@ angular.module('payvizApp')
 
         scope.$watch('until',function(until){
           //No se porque es necesaria esta primera linea
-          until.toDate();
-          nodes.attr('stroke', function(d){ return stroke(d, until); })
+          if(until){
+            until.toDate();
+          }
+          nodes.attr('opacity', function(d){ return opacity(d, until);})
             .style('fill', function (d) { return fill(d, until); });
         });
 
@@ -309,7 +306,7 @@ angular.module('payvizApp')
           }); 
         }
 
-        function showPopover (d) {
+        function showPopover (d, hasta) {
           
           $(this).popover({
             placement: 'auto right',
@@ -347,7 +344,11 @@ angular.module('payvizApp')
                      ( typeof d.padre !== "undefined" ? '<br/>ES ADENDA!' : '' ); */
             }
           });
-          if(popactual != d){
+
+          var limite = hasta || moment();
+          var isBubbleVisible = !(d.fecha_contrato && moment(d.fecha_contrato) > limite); 
+
+          if(popactual !== d && isBubbleVisible){
             popactual = d;
             $(this).popover('show');
           }
