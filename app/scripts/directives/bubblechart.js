@@ -14,7 +14,7 @@ angular.module('payvizApp')
       scope: { data: '=' , until: '='},
       link: function postLink(scope, element, attrs) {
         var data = scope.data;
-        var size = { 'all' : [900,500],'rubro_nombre' : [900, 2100],'pro_nombre_vista' : [900,1200], 'mod_nombre' : [900,1200],'componente' : [900,900] };
+        var size = { 'all' : [900,400],'rubro_nombre' : [900, 1200],'pro_nombre_vista' : [900,1000], 'mod_nombre' : [900,900],'componente' : [900,900] };
         var width = 750, height = 750;
         var maxElem = _.max(data, function(c){ return c.monto_total; });
         var minElem = _.min(data, function(c){ return c.monto_total; });
@@ -154,14 +154,20 @@ angular.module('payvizApp')
               if(d[vname])
                 circulitos[d[vname]] += parseInt(d.monto_total);
           });
-          console.log(circulitos);
+          var montos = _.chain(circulitos).map(function(num, key) { return num;});
+          var maximoMonto = _.chain(circulitos).map(function(num, key) { return num;}).max().value();
+          var minimoMonto = montos.min().value();
+          var montoToSquareSize = d3.scale.quantize().domain([minimoMonto, maximoMonto]).range(_.range(1,5));
+      
           centers = _.uniq(_.pluck(data, vname)).map(function (d) {
             var c = _.has(circulitos,d) ? circulitos[d] : 0;
-            return {name: d, value: 1, cantidad : c };
+            var v = (c > 150000000000) ? 8 : 1;
+            return {name: d, value: v, cantidad : c};
           });
 
-          centers = _.sortBy(centers, function(o) { return o.cantidad })
-          
+          centers = _.sortBy(centers, function(o) { return o.cantidad });
+
+          //console.log(centers);
           if(vname == 'pro_nombre_vista'){
               centers = centers.filter(function( obj ) {
                   return obj.name !== 'OTROS';
@@ -185,16 +191,15 @@ angular.module('payvizApp')
           }else{
 
             //console.log(centers);
-            if( centers.length > 1 ){
-              var falta = Math.ceil(centers.length / 3) * 3 - centers.length;
-              for(var i = 0; i < falta; i++){
-                centers.push({ name: null, value : 1, cantidad : -1 });
-              }
-            }
+            // if( centers.length > 1 ){
+            //   var falta = Math.ceil(centers.length / 3) * 3 - centers.length;
+            //   for(var i = 0; i < falta; i++){
+            //     centers.push({ name: null, value : 1, cantidad : -1 });
+            //   }
+            // }
 
           }
-          centers = _.sortBy(centers, function(o) { return o.cantidad });
-          map = d3.layout.treemap().size(size).ratio(1/1);
+          map = d3.layout.treemap().size(size).ratio(1).sort(function(a,b){return a.cantidad - b.cantidad});
           map.nodes({children: centers});
           
 
