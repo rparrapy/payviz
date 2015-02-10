@@ -8,7 +8,7 @@
  * Controller of the payvizApp
  */
 angular.module('payvizApp')
-  .controller('ListCtrl', function ($scope, DTOptionsBuilder) {
+  .controller('ListCtrl', function ($scope, DTOptionsBuilder, DTColumnDefBuilder) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -64,6 +64,13 @@ angular.module('payvizApp')
       }
     })
       .withBootstrap();
+
+    $scope.dtColumnDefs = [
+        DTColumnDefBuilder.newColumnDef(4).renderWith(function(data, type, full) {
+          console.log('Render!!!!')
+          return parseInt(data).toLocaleString();
+        })
+    ];
 
     $scope.$on('event:dataTableLoaded', function(event, loadedDT) {
       // Setup - add a text input to each footer cell
