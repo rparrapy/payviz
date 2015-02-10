@@ -248,6 +248,23 @@ ul.simple li {
   background: #f56727;
 }
 
+.wrap {
+  margin: auto;
+  text-align: left;
+  width: 100%;
+  font-size:12px;
+}
+
+.left, .right, .center {
+  float: left;
+  display: block;
+  width : 50%; 
+}
+
+.clear {
+  clear: both; 
+}
+
 .label{
   font-size: 67%;
 }

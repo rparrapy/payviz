@@ -1,7 +1,85 @@
- <div style="width:900px; margin:auto;">
+ <div style="width:870px; margin:auto;">
+    <div style="display:none;" id="template-detalle">
+    <div style="text-align:center">
+    <div class="wrap">
+    
+                            <div class="left">
+                                Aca iria la burbuja.
+                            </div>
+    
+                            <div class="right">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                {categoria_nombre}<br />
+                                                <h5>{monto_total}</h5>
+                                            </td>
+                                            <td rowspan="2" class="txtC" width="30%">
+                                                Monto ejecutado<br />
+                                                <h1 class="per_ejex">{ejecutado}%</h1>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Proovedor<br />
+                                                <h6>{pro_nombre}</h6>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+    
+                                <hr>
+                                
+                                <table class="tab_sec mb10">
+                                    <tbody>
+                                        <tr>
+                                            <td width="50%">
+                                                Fecha de contrato<br />
+                                                <strong>{fecha_contrato}</strong>
+                                            </td>
+                                            <td>
+                                                Nombre del llamado<br />
+                                                <strong>{llamado_nombre}</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Código de contratación<br />
+                                                <strong>{cod_contrato}</strong>
+                                            </td>
+                                            <td>
+                                                Monto ya pagado<br />
+                                                <strong>Gs. {monto_pagado}</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Tipo de licitación<br />
+                                                <strong>{mod_nombre}</strong>
+                                            </td>
+                                            <td>
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    
+                            <h2 class="clear">Adendas</h2>
+                            
+                              <div id="target-{id_timeline}" class="timeline-tgt" style="max-width:800px;">
+                                <!-- <label>Zoom Factor</label><input id="zoom-factor" type="text" value="2" style="width: 30px;"><input id="zoom"  ype="button" value="Zoom" /><input id="to-today" type="button" value="Hoy" /> -->
+                              </div>
+    
+    
+                        </div>
+    </div>
+ </div>
  <table datatable="ng" class="row-border hover" dt-options="dtOptions" dt-columns="dtColumns" dt-column-defs="dtColumnDefs" style="max-width:900px;">
         <thead>
         <tr>
+            <th class="details-control sorting_disabled" rowspan="1" colspan="1" aria-label=""></th>
             <th>Cod. de Contratación</th>
             <th>Nombre</th>
             <th>RUC</th>
@@ -12,22 +90,24 @@
         </thead>
         <tfoot style="display: table-header-group; max-width:900px;">
             <tr>
-                <th class="details-control" style="text-align:center;">Cod. de Contratación</th>
-                <th class="details-control" style="text-align:center;">Nombre</th>
-                <th class="details-control" style="text-align:center;">RUC</th>
-                <th class="details-control" style="text-align:center;">Razon Social</th>
-                <th class="details-control" style="text-align:center;">Monto</th>
-                <th class="details-control" style="text-align:center;">Tipo Licitación</th>
+                <th rowspan="1" colspan="1" style="max-width:10px;" ></th>
+                <th style="text-align:center;">Cod. de Contratación</th>
+                <th style="text-align:center;">Nombre</th>
+                <th style="text-align:center;">RUC</th>
+                <th style="text-align:center;">Razon Social</th>
+                <th style="text-align:center;">Monto</th>
+                <th style="text-align:center;">Tipo Licitación</th>
             </tr>
         </tfoot>
         <tbody>
-        <tr ng-repeat="c in contratos">
-            <td>{{c.cod_contrato}}</td>
-            <td ng-bind="c.llamado_nombre"></td>
-            <td>{{c.pro_cod}}</td>
-            <td>{{c.pro_nombre}}</td>
-            <td>{{c.monto_total}}</td>
-            <td>{{c.mod_nombre}}</td>
+        <tr ng-repeat="c in contratos" id="contrato-{{$index}}">
+                <td class="details-control"><img src="images/ico_mostrar.png"  ng-click="mostrarDetalle(c,$index);"></td>
+                <td ng-bind="c.cod_contrato"></td>
+                <td ng-bind="c.llamado_nombre" style="text-align:left;font-size:smaller;"></td>
+                <td ng-bind="c.pro_cod"></td>
+                <td ng-bind="c.pro_nombre"></td>
+                <td ng-bind="c.monto_total"></td>
+                <td ng-bind="c.mod_nombre"></td>
         </tr>
         </tbody>
 </table>
