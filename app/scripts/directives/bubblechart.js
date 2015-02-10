@@ -50,8 +50,10 @@ angular.module('payvizApp')
             d3.select('#' + gradientId + " stop.color").attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
             d3.select('#' + gradientId + " stop.blank").attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);
 
-            if(contrato.fecha_contrato && moment(contrato.fecha_contrato) > limite){
-              imagen.hide();
+            if(contrato['adendas']){
+              if(_.every(contrato.adendas, function(adenda){ return moment(adenda.fecha_contrato) > limite; })){
+                imagen.hide();
+              }
             }
 
 
