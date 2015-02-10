@@ -43,4 +43,7 @@ angular
 $(".nav.nav-pills li").on("click",function(){
   $(".nav.nav-pills li").removeClass("active");
   $(this).addClass("active");
+  //Fix routing problem inside iframe
+  var url = $(this).children().first()[0].href;
+  window.location = url;
 });

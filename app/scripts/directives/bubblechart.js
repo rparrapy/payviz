@@ -14,7 +14,7 @@ angular.module('payvizApp')
       scope: { data: '=' , until: '='},
       link: function postLink(scope, element, attrs) {
         var data = scope.data;
-        var size = { 'all' : [900,400],'rubro_nombre' : [900, 1200],'pro_nombre_vista' : [900,1000], 'mod_nombre' : [900,900],'componente' : [900,900] };
+        var size = { 'all' : [900,400],'rubro_nombre' : [900, 1100],'pro_nombre_vista' : [900,1000], 'mod_nombre' : [900,900],'componente' : [900,900] };
         var width = 750, height = 750;
         var maxElem = _.max(data, function(c){ return c.monto_total; });
         var minElem = _.min(data, function(c){ return c.monto_total; });
