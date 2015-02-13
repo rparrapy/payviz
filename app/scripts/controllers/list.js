@@ -21,6 +21,10 @@ angular.module('payvizApp')
 
     var contratos = imputaciones;
 
+    var maxElem = _.max(contratos, function(c){ return c.monto_total; });
+    var minElem = _.min(contratos, function(c){ return c.monto_total; });
+    var area = d3.scale.sqrt().domain([0, maxElem.monto_total]).range([0, 50]);
+
     for (var i = 0; i < contratos.length; i++){
       var c = contratos[i];
       if(!c.monto_total){
@@ -29,12 +33,28 @@ angular.module('payvizApp')
       if(!c.llamado_nombre){
         c.llamado_nombre = 'NO POSEE';
       }
+      c.radius = area(c.monto_total);
+      c.is_adenda = false;
+      var cobrado = _.reduce(c.imputaciones, function(sum, imputacion){
+            return sum + imputacion.monto; 
+        }, 0);
+      var ejecutado = cobrado/c.monto_total;
+      c.ejecutado = ejecutado.toFixed(2);
+      c.monto_pagado = cobrado;
+      c.x = 100;
+      c.y = 100;
+
+
+
     }
 
-    contratos = _.sortBy(contratos, function(o) { return o.llamado_nombre; })
+    contratos = _.sortBy(contratos, function(o) { return o.llamado_nombre; });
 
     $scope.contratos = contratos;
+    $scope.detalles_abiertos = [];
 
+
+    
 
 
     $scope.dtOptions = DTOptionsBuilder.newOptions().withPaginationType('full_numbers')
@@ -64,14 +84,18 @@ angular.module('payvizApp')
       }
     })
       .withBootstrap()
-      .withOption('responsive', true);
+      .withOption('responsive', true)
+      .withOption('fnDrawCallback', function(oSettings){  
+        $(".img-mostrar").attr("src","images/ico_mostrar.png");
+        $scope.detalles_abiertos = [];
+      });
 
-    $scope.detalle_actual = -1;
+
 
     $scope.dtColumnDefs = [
         DTColumnDefBuilder.newColumnDef(0).notSortable().withClass('details-control'),
         DTColumnDefBuilder.newColumnDef(5).renderWith(function(data, type, full) {
-          console.log(full);
+
           return parseInt(data).toLocaleString();
         })
     ];
@@ -95,14 +119,70 @@ angular.module('payvizApp')
         });
       });
 
+
     });
 
 
+    function generarTablaDetalles(d){
+      var s = '<h2>Detalle</h2>'+
+      '<div style="overflow-y:scroll;max-height:400px;">'+
+      '<table class="secundaria" style="margin-bottom:30px;width:100%;line-height: 1.2em;">'+
+              '<thead>'+
+                '<tr style="background:#ddd;">'+
+                  '<td>Cod. contrato</td>'+
+                  '<td>Fecha contrato</td>'+
+                  '<td>Fecha de obligación</td>'+
+                  '<td>Monto</td>'+
+                '</tr>'+
+              '</thead>'+
+              '<tbody>'+
+                '<tr class="item">'+
+                  '<td><strong>'+d.cod_contrato+'</strong></td>'+
+                  '<td>'+d.fecha_contrato+'</td>'+
+                  '<td></td>'+
+                  '<td></td>'+
+                '</tr>'
+                for(var i=0; i< d.imputaciones.length; i++){
+                  var imp = d.imputaciones[i];
+                  s+= '<tr>'+
+                      '<td></td>'+
+                      '<td></td>'+
+                      '<td>'+imp.fecha_obl+'</td>'+
+                      '<td style="text-align:right;">Gs. '+parseInt(imp.monto).toLocaleString()+'</td>'+
+                    '</tr>';
+                }
+                if(_.has(d,'adendas')){
+                    for(var j=0; j< d.adendas.length; j++){
+                    var ad = d.adendas[j];
+                    s+= '<tr class="item">'+
+                        '<td><strong>'+ad.cod_contrato+'</strong></td>'+
+                        '<td>'+ad.fecha_contrato+'</td>'+
+                        '<td></td>'+
+                        '<td></td>'+
+                      '</tr>';
+                   for(var k=0; k< ad.imputaciones.length; k++){
+                      var impa = ad.imputaciones[k];
+                      s+= '<tr>'+
+                          '<td></td>'+
+                          '<td></td>'+
+                          '<td>'+impa.fecha_obl+'</td>'+
+                          '<td style="text-align:right;">Gs. '+parseInt(impa.monto).toLocaleString()+'</td>'+
+                        '</tr>';
+                    }
+                  }
+                }
+
+            s += '</tbody>'+
+            '</table>'+
+            '</div>';
+      return s
+    }
+
     function generarDiv(d){
       var html = " " + $("#template-detalle").html();
-      console.log(html);
 
-      return html.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : 'No aplica')
+
+      html = html.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : 'No aplica')
                 .replace('{monto_total}', typeof d.monto_total !== "undefined" ? parseInt(d.monto_total).toLocaleString() : 'No aplica')
                 .replace('{ejecutado}', typeof d.ejecutado !== "undefined" ? (d.ejecutado * 100).toFixed(0) : '0')
                 .replace('{pro_nombre}', typeof d.pro_nombre !== "undefined" ? d.pro_nombre : 'No aplica')
@@ -111,32 +191,137 @@ angular.module('payvizApp')
                 .replace('{cod_contrato}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : 'No aplica')
                 .replace('{monto_pagado}', typeof d.monto_pagado !== "undefined" ? d.monto_pagado.toLocaleString() : 'No aplica')
                 .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica')
-                .replace('{id_timeline}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : '1');
+                .replace('{id_svg}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : '1');
+      if(_.has(d,'adendas')){
+        html = html.replace('{id_timeline}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : '1')
+                .replace('{titulo_adendas}', 'Adendas');
+      }else{
+        html = html.replace('{titulo_adendas}', '&nbsp;');
+      }
+
+      html += generarTablaDetalles(d);
+
+      return html;
 
 
 
     }
 
     $scope.mostrarDetalle = function(c,id){
-      $scope.ocultarDetalles();
-
-      if(id != $scope.detalle_actual){
+      if($scope.detalles_abiertos.indexOf(id) == -1){
+        console.log($scope.detalles_abiertos);
         console.log(c,id);
         var html = generarDiv(c)
-        $("#contrato-"+id).after('<tr class="detalle"><td colspan="7">'+ html +'</td></tr>');
-        test(c.cod_contrato);
-        $scope.detalle_actual = id;
+        $("#contrato-"+id).after('<tr class="detalle" id="detalle-'+id+'"><td colspan="7">'+ html +'</td></tr>');
+        
+        if( _.has(c,'adendas') )
+          test(c.cod_contrato);
+        
+        $scope.detalles_abiertos.push(id);
+        $("#img-mostrar-"+id).attr('src','images/ico_ocultar.png');
+        dibujar(c,id);
       }else{
-        $scope.detalle_actual = null;
+        $scope.ocultarDetalles(id);
       }
 
     }
 
-    $scope.ocultarDetalles = function(){
-      $(".detalle").remove();
+    $scope.ocultarDetalles = function(id){
+      console.log($scope.detalles_abiertos);
+      $scope.detalles_abiertos = _.without($scope.detalles_abiertos,id);
+      $("#detalle-"+id).remove();
+      $("#img-mostrar-"+id).attr('src','images/ico_mostrar.png');
 
     }
 
+
+    var fill = function(contrato, svg){
+          var limite = moment();
+          var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
+            if(moment(imputacion.fecha_obl) <= limite){
+              return sum + imputacion.monto; 
+            }else{
+              return sum;
+            }
+          }, 0);
+          var ejecutado = cobrado/contrato.monto_total;
+          var fillColor = contrato.is_adenda ? '#00698C' : '#f56727' ;
+          var bgColor = contrato.is_adenda ? '#bfdfff' : '#ffead4';
+          var gradientId = 'grad-' + contrato.cod_contrato;
+
+          //Agrego aca, pero deberiamos hacer en otra parte
+          contrato.ejecutado = ejecutado.toFixed(2);
+          contrato.monto_pagado = cobrado;
+
+          var imgId = 'img-' +  contrato.cod_contrato;
+          var imagen = $('#' + imgId);
+          imagen.show();
+
+
+          var grad = svg.append('defs').append('linearGradient').attr('id', gradientId)
+          .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
+          grad.append('stop').attr('class', 'color').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
+          grad.append('stop').attr('class', 'blank').attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);  
+
+          return 'url(#' + gradientId + ')';
+    };
+
+    var imagen = function(contrato,svg){
+          console.log("se le llamo");
+          var imgId = 'img-' +  contrato.cod_contrato;
+          var imagen = d3.select('#' + imgId );
+          if(_.has(contrato,'adendas')){
+              imagen = svg
+                .append('image')
+                .attr('id', imgId)
+                .attr('xlink:href', 'images/ico_dinero.png')
+                .attr('width', contrato.radius*0.5)
+                .attr('height', contrato.radius*0.5)
+                .attr('x', 100 - contrato.radius/4)
+                .attr('y', 100 - contrato.radius/4);
+          }
+    };
+    
+
+    var stroke = function(contrato){
+          return contrato.is_adenda ? '#006289' : '#ca4600';
+    };
+
+    function setPosAdenda(d){
+          if(d.p_data){
+            var angulos = [0,72,150,216,288,360];
+
+            d.x = 100 + Math.cos( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius ;
+            d.y = 100 - Math.sin( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius ;
+          }
+    }
+
+    function dibujar(c,id){
+      var circulo = [c];
+      if(_.has(c,'adendas')){
+        var adendas = c.adendas;
+              for(var i=0; i < adendas.length; i++){
+                adendas[i].p_data = c;
+                adendas[i].monto_total = adendas[i].monto;
+                adendas[i].radius = area(adendas[i].monto_total);
+                adendas[i].pos = i;
+                adendas[i].is_adenda = true;
+                circulo.push(adendas[i]);
+              }
+      }
+      var svgContainer = d3.select("#svg-"+c.cod_contrato).append("svg:svg").attr("width",200).attr("height",200);
+      var circles = svgContainer.selectAll("circle")
+                          .data(circulo)
+                          .enter()
+                          .append("circle");
+      var circleAttributes = circles
+                       .attr("cx", function (d) { if(d.is_adenda){ setPosAdenda(d) } ;return d.x; })
+                       .attr("cy", function (d) { if(d.is_adenda){ setPosAdenda(d) } ;return d.y; })
+                       .attr("r", function (d) { return d.radius; })
+                       .attr('stroke', function(d){ return stroke(d); })
+                       .style("fill", function(d) { imagen(d,svgContainer);return fill(d,svgContainer); });
+
+    }
 
 
     function test(id) {
