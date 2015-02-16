@@ -15,7 +15,7 @@ angular.module('payvizApp')
       'Karma'
     ];
 
-    $('.tips').hide();
+    $('.tips, .referencias, hr:last').hide();
     var liToSelect = 2;
     $(".nav.nav-pills li").removeClass("active");
     $(".nav.nav-pills li:eq("+(liToSelect-1)+")").addClass("active");

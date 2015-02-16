@@ -15,6 +15,7 @@ angular.module('payvizApp')
       'Karma'
     ];
     $('.tips').show();
+    $('.referencias').show();
     var contratos = [];
     angular.copy(imputaciones, contratos);
 
