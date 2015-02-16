@@ -23,6 +23,7 @@ angular.module('payvizApp')
         console.log(minElem.monto_total/maxElem.monto_total);
         var area = d3.scale.sqrt().domain([0, maxElem.monto_total]).range([0, 50]);
         var popactual = null;
+        var popClearInterval = null;
         var fill = function(contrato, hasta){
           var limite = hasta || moment();
           var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
@@ -224,7 +225,11 @@ angular.module('payvizApp')
           .attr('opacity', function(d){ return opacity(d); })
           .style('fill', function (d) { return fill(d); })
           .on('mouseover', function (d) { showPopover.call(this, d, scope.until); })
-          .on('mouseout', function (d) { removePopovers(); });
+          .on('mouseout', function (d) { removePopovers(true); })
+          .on('click', function(d){ 
+            window.seleccionado = d.cod_contrato; 
+
+          });
 
 
         
@@ -306,15 +311,27 @@ angular.module('payvizApp')
           });
         }
 
-        function removePopovers () {
-          $('.popover').each(function() {
-            $(this).remove();
-            popactual = null;
-          }); 
+
+
+        function removePopovers (esperar) {
+         if(!esperar){
+            clearInterval(popClearInterval);
+            $('.popover').each(function() {
+              $(this).remove();
+              popactual = null;
+            });
+          }else{
+            popClearInterval = setTimeout(function(){removePopovers(false)},3000);
+          } 
         }
 
         function showPopover (d, hasta) {
-          
+          window.setLista = function setLista(cod_contrato){
+            removePopovers(false);
+            console.log("Me voy a la lista")
+            window.seleccionado = cod_contrato;
+            window.location = window.location + 'data';
+          }
           $(this).popover({
             placement: 'auto right',
             container: 'body',
@@ -330,7 +347,8 @@ angular.module('payvizApp')
                     ' <strong>{llamado_nombre}</strong> </td> </tr> <tr> <td> Código de contratación<br> <strong>{cod_contrato}</strong> </td>'+
                     ' <td> Monto ya pagado<br> <strong>Gs. {monto_pagado}</strong> </td> </tr> <tr> <td> Tipo de licitación<br> '+
                     '<strong>{mod_nombre}</strong> </td> <td> </td> </tr> </tbody> </table> <p class="txtC">'+
-                    '<!--a href="#">Click para ver más detalles</a--></p> </div>';
+                    ( d.is_adenda ? '' : '<a onClick="setLista(\''+d.cod_contrato+'\')">Click para ver más detalles</a></p> ')+
+                    '</div>';
               if(d.is_adenda) { d.categoria_nombre = 'Adenda';}
               return crudo.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : 'No aplica')
                 .replace('{monto_total}', typeof d.monto_total !== "undefined" ? parseInt(d.monto_total).toLocaleString() : 'No aplica')
@@ -357,6 +375,7 @@ angular.module('payvizApp')
 
           if(popactual !== d && isBubbleVisible){
             popactual = d;
+            removePopovers(false);
             $(this).popover('show');
           }
             

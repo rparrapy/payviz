@@ -47,3 +47,6 @@ $(".nav.nav-pills li").on("click",function(){
   var url = $(this).children().first()[0].href;
   window.location = url;
 });
+
+
+

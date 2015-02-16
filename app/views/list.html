@@ -3,7 +3,7 @@
     <div style="text-align:center">
     <div class="wrap">
     
-                            <div class="left">
+                            <div class="left" style="text-align:center;">
                                 <div id="svg-{id_svg}" style="min-width:200px;"></div>
                             </div>
     
@@ -87,6 +87,7 @@
             <th>Monto</th>
             <th>Tipo Licitación</th>
             <th style="display:none;">Sorete</th>
+            <th style="display:none;">Id Unico</th>
         </tr>
         </thead>
         <tfoot style="display: table-header-group; max-width:900px;">
@@ -98,7 +99,8 @@
                 <th style="text-align:center;">Razon Social</th>
                 <th style="text-align:center;">Monto</th>
                 <th style="text-align:center;">Tipo Licitación</th>
-
+                <th style="display:none;">Sorete</th>
+                <th style="display:none;">Id Unico</th>
             </tr>
         </tfoot>
         <tbody>
@@ -113,6 +115,7 @@
                 <td ng-bind="c.monto_total"></td>
                 <td ng-bind="c.mod_nombre"></td>
                 <td style="display:none;">sorete{{$index}}</td>
+                <td style="display:none;" ng-bind="c.id_unico"></td>
         </tr>
         </tbody>
 </table>

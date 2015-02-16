@@ -15,23 +15,32 @@ angular.module('payvizApp')
       'Karma'
     ];
 
+    $('.tips').hide();
     var liToSelect = 2;
     $(".nav.nav-pills li").removeClass("active");
     $(".nav.nav-pills li:eq("+(liToSelect-1)+")").addClass("active");
 
-    var contratos = imputaciones;
+    // se clona el objeto para no afectar al grafico.
+    var contratos = [];
+    angular.copy(imputaciones, contratos);
 
     var maxElem = _.max(contratos, function(c){ return c.monto_total; });
     var minElem = _.min(contratos, function(c){ return c.monto_total; });
     var area = d3.scale.sqrt().domain([0, maxElem.monto_total]).range([0, 50]);
 
+    var ncontratos = []
     for (var i = 0; i < contratos.length; i++){
       var c = contratos[i];
+      c.x = 100;
+      c.y = 100;
       if(!c.monto_total){
         c.monto_total = _.reduce(c.imputaciones,function(sum, el) { return sum + el.monto },0);
       }
       if(!c.llamado_nombre){
         c.llamado_nombre = 'NO POSEE';
+      }
+      if(!c.cod_contrato){
+        c.cod_contrato = 'NO POSEE';
       }
       c.radius = area(c.monto_total);
       c.is_adenda = false;
@@ -41,21 +50,14 @@ angular.module('payvizApp')
       var ejecutado = cobrado/c.monto_total;
       c.ejecutado = ejecutado.toFixed(2);
       c.monto_pagado = cobrado;
-      c.x = 100;
-      c.y = 100;
-
-
+      ncontratos.push(c);
 
     }
 
-    contratos = _.sortBy(contratos, function(o) { return o.llamado_nombre; });
+    contratos = _.sortBy(ncontratos, function(o) { return o.llamado_nombre; });
 
     $scope.contratos = contratos;
     $scope.detalles_abiertos = [];
-
-
-    
-
 
     $scope.dtOptions = DTOptionsBuilder.newOptions().withPaginationType('full_numbers')
       .withOption('order', [[2, 'asc']])
@@ -70,7 +72,7 @@ angular.module('payvizApp')
       "sInfoPostFix":    "",
       "sSearch":         "Buscar:",
       "sUrl":            "",
-      "sInfoThousands":  ",",
+      "sInfoThousands":  ".",
       "sLoadingRecords": "Cargando...",
       "oPaginate": {
           "sFirst":    "Primero",
@@ -78,6 +80,7 @@ angular.module('payvizApp')
           "sNext":     "Siguiente",
           "sPrevious": "Anterior"
       },
+      "thousands" : ".",
       "oAria": {
           "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
           "sSortDescending": ": Activar para ordenar la columna de manera descendente"
@@ -96,7 +99,7 @@ angular.module('payvizApp')
         DTColumnDefBuilder.newColumnDef(0).notSortable().withClass('details-control'),
         DTColumnDefBuilder.newColumnDef(5).renderWith(function(data, type, full) {
 
-          return parseInt(data).toLocaleString();
+          return Number(data).toLocaleString();
         })
     ];
 
@@ -118,6 +121,16 @@ angular.module('payvizApp')
             .draw();
         });
       });
+
+    // si viene de una seleccion 
+    if(window.seleccionado){
+      var cod_contrato = window.seleccionado; 
+      $("input[type=search]").val(cod_contrato);
+      $("input[type=search]").keyup();
+      $("img").click();
+      window.seleccionado = null;
+
+    }
 
 
     });
@@ -267,19 +280,23 @@ angular.module('payvizApp')
     };
 
     var imagen = function(contrato,svg){
-          console.log("se le llamo");
           var imgId = 'img-' +  contrato.cod_contrato;
           var imagen = d3.select('#' + imgId );
           if(_.has(contrato,'adendas')){
+              var x  = 100 - contrato.radius / 4;
+              var y = 100 - contrato.radius / 4;
+              x = x > 100 ? 100 : x;
+              y = y > 100 ? 100 : y;
               imagen = svg
                 .append('image')
                 .attr('id', imgId)
                 .attr('xlink:href', 'images/ico_dinero.png')
-                .attr('width', contrato.radius*0.5)
-                .attr('height', contrato.radius*0.5)
-                .attr('x', 100 - contrato.radius/4)
-                .attr('y', 100 - contrato.radius/4);
+                .attr('width', contrato.radius * 0.5)
+                .attr('height', contrato.radius * 0.5)
+                .attr('x', x)
+                .attr('y', y);
           }
+          console.log(imagen);
     };
     
 
@@ -325,8 +342,6 @@ angular.module('payvizApp')
 
 
     function test(id) {
-
-
        //adendas de dinero
       var events = [
       {dates: [new Date(2011, 2, 31), new Date(2011, 12, 30)], title: "Monto inicial", description: "Gs. 000.000.000", section: 0},
@@ -365,6 +380,8 @@ angular.module('payvizApp')
       });
 
     }
+
+
 
     //$scope.$apply();
   });
