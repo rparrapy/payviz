@@ -14,7 +14,7 @@ angular.module('payvizApp')
       scope: { data: '=' , until: '='},
       link: function postLink(scope, element, attrs) {
         var data = scope.data;
-        var size = { 'all' : [900,400],'rubro_nombre' : [900, 1100],'pro_nombre_vista' : [900,1000], 'mod_nombre' : [900,900],'componente' : [900,900] };
+        var size = { 'all' : [900,400],'rubro_nombre' : [900, 900],'pro_nombre_vista' : [900,1000], 'mod_nombre' : [900,400],'componente' : [900,400] };
         var width = 750, height = 750;
         var maxElem = _.max(data, function(c){ return c.monto_total; });
         var minElem = _.min(data, function(c){ return c.monto_total; });
@@ -142,7 +142,9 @@ angular.module('payvizApp')
         data = ndata;
 
         //console.log(data);
-
+        //var sinContrato = _.chain(data).filter(function(e){return e.cod_contrato == undefined; }).value();
+        //console.log(sinContrato);
+        
         var padding = 5;
         var maxRadius = d3.max(_.pluck(data, 'radius'));
 
@@ -164,14 +166,14 @@ angular.module('payvizApp')
       
           centers = _.uniq(_.pluck(data, vname)).map(function (d) {
             var c = _.has(circulitos,d) ? circulitos[d] : 0;
-            var v = (c > 150000000000) ? 8 : 1;
+            var v = (c > 150000000000) ? 10 : 1;
             return {name: d, value: v, cantidad : c};
           });
 
           centers = _.sortBy(centers, function(o) { return o.cantidad });
 
           //console.log(centers);
-          if(vname == 'pro_nombre_vista'){
+          if(vname === 'pro_nombre_vista'){
               centers = centers.filter(function( obj ) {
                   return obj.name !== 'OTROS';
               });
@@ -205,10 +207,79 @@ angular.module('payvizApp')
           map = d3.layout.treemap().size(size).ratio(1).sort(function(a,b){return a.cantidad - b.cantidad});
           map.nodes({children: centers});
           
-
-
+          switch(vname){
+            case 'rubro_nombre':
+              centers = moveCentersByRubro(centers);
+              break;
+            case 'mod_nombre':
+              centers = moveCentersByTipo(centers);
+              break;
+            case 'componente':
+              centers = moveCentersByComponente(centers);
+          }
           return centers;
         };
+
+        var moveCentersByTipo = function(centers){
+          return moveLeft(centers, 100);
+        };
+
+        var moveCentersByComponente = function(centers){
+          return moveLeft(centers, 175);
+        };
+
+        var moveLeft = function(centers, delta){
+          _.each(centers, function(c){
+            c.x -= delta;
+          });
+          return centers;
+        };
+
+        var moveCentersByRubro = function(centers){
+          var colsToMove = 3; // number of columns to "lift"
+          var bigDy = _.last(centers).dy;
+          var smallDy = _.first(centers).dy;
+          var smallDx = _.first(centers).dx;
+          var numberOfColumns = _.chain(centers)
+                                  .groupBy(function(c){ return c.y; })
+                                  .map(function(g){ return g.length; })
+                                  .max().value();
+
+          var bubblesToMove = numberOfColumns - colsToMove;
+
+          var lastRow = _.chain(centers)
+                              .initial()
+                              .map(function(c){ return c.y; })
+                              .uniq()
+                              .sortBy(function(x){return x;})
+                              .last()
+                              .value();
+
+          var lastColumns = _.chain(centers)
+                              .initial()
+                              .map(function(c){ return c.x; })
+                              .uniq()
+                              .sortBy(function(x){return x;})
+                              .last(colsToMove)
+                              .value();
+
+          _.each(centers, function(c, i){
+            if(c.name === 'CONSTRUCCIONES'){
+              c.x -= 300;
+            }
+
+            if(_.contains(lastColumns, c.x)){
+              c.y -= bigDy;
+            }
+
+            if(c.y === lastRow && !_.contains(lastColumns, c.x)){
+              c.x += bubblesToMove * smallDx;
+              c.y -= smallDy;
+            }
+          });
+          resizeSvg(width, height - smallDy);
+          return centers;
+        }
 
         var nodes = svg.selectAll('circle')
           .data(data);
@@ -263,7 +334,7 @@ angular.module('payvizApp')
           }
         }
 
-        function resizeSvg(){
+        function resizeSvg(width, height){
           svg
             .attr('width', width)
             .attr('height', height);
@@ -272,7 +343,7 @@ angular.module('payvizApp')
         function draw (varname) {
           width = size[varname][0];
           height = size[varname][1];
-          resizeSvg();
+          resizeSvg(width, height);
           var centers = getCenters(varname, [width, height]);
           force.on('tick', tick(centers, varname));
           labels(centers,varname);
