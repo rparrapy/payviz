@@ -97,15 +97,23 @@ angular.module('payvizApp')
 
 
     $scope.dtColumnDefs = [
-        DTColumnDefBuilder.newColumnDef(0).notSortable().withClass('details-control'),
-        DTColumnDefBuilder.newColumnDef(5).renderWith(function(data, type, full) {
-
-          return Number(data).toLocaleString();
-        })
+      DTColumnDefBuilder.newColumnDef(0).notSortable().withClass('details-control')
     ];
 
     $scope.$on('event:dataTableLoaded', function(event, loadedDT) {
-
+      var formatMonto = function(){
+        $('.monto').each(function(){
+          if(!$(this).hasClass('formatted')){
+            var currentText = $(this).text();
+            $(this).addClass('formatted');
+            $(this).text(parseInt(currentText).toLocaleString());
+          }
+        });
+      }
+      formatMonto();
+      loadedDT.DataTable.on('draw', function(){
+          formatMonto();
+      });
       // Setup - add a text input to each footer cell
       var id = '#' + loadedDT.id;
       $(id + ' tfoot th:not(:first)').each(function() {
