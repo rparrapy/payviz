@@ -12,22 +12,59 @@ angular.module('payvizApp')
       restrict: 'E',
       replace: false,
       scope: { until: '=' },
-      template: '<input id="fecha"></input>',
+      template: '<div id="fecha"></div>',
       link: function postLink(scope, element, attrs) {
+        var timestamp = function(str){
+          return +moment(str, 'YYYYMMDD');   
+        }
 
-        $('#fecha').ionRangeSlider({
-          min: +moment('20071130', 'YYYYMMDD').format('X'),
-          max: +moment('20141231', 'YYYYMMDD').format('X'),
-          from: +moment('20141231', 'YYYYMMDD').format('X'),
-//          grid: true,
-          prettify: function (num) {
-              return moment(num, 'X').format('LL');
-          },
-          onChange: function(data) {
+        var limits = ['20071130', '20141231'];
+
+        $("#fecha").noUiSlider({
+        // Create two timestamps to define a range.
+            range: {
+                min: timestamp(limits[0]),
+                max: timestamp(limits[1])
+            },
+          
+        // Steps of one week
+            //step: 7 * 24 * 60 * 60 * 1000,
+          
+        // Two more timestamps indicate the handle starting positions.
+            start: [ timestamp(limits[1]) ],
+          
+        // No decimals
+          format: wNumb({
+            decimals: 0
+          })
+        });
+
+        $("#fecha").on({
+          slide: function(){
             scope.$apply(function(){ 
-              scope.until = moment(data.from, 'X');
+              var ts = parseInt($('#fecha').val());
+              scope.until = moment(ts);
             });
           }
+        });
+
+        $('#fecha').noUiSlider_pips({
+          mode: 'values',
+          values: [timestamp(limits[0]), timestamp('20090101'), timestamp('20100101'),
+                    timestamp('20110101'), timestamp('20120101'), timestamp('20130101'), timestamp('20140101'), timestamp(limits[1])],
+          density: 4
+        });
+
+        $('.noUi-value').each(function(){
+          var ts = parseInt($(this).text());
+          var label;
+          var limitTimestamps = _.map(limits, function(l){ return timestamp(l); });
+          if(_.contains(limitTimestamps, ts)){
+            label = moment(ts).format('L');
+          }else{
+            label = moment(ts).year();
+          }
+          $(this).text(label);
         });
       }
     };
