@@ -15,6 +15,10 @@ angular.module('payvizApp')
       'Karma'
     ];
 
+    String.prototype.toProperCase = function () {
+      return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    };
+
     $('.tips, .referencias, hr:last').hide();
     var liToSelect = 2;
     $(".nav.nav-pills li").removeClass("active");
@@ -38,10 +42,22 @@ angular.module('payvizApp')
         c.monto_total = _.reduce(c.imputaciones,function(sum, el) { return sum + el.monto },0);
       }
       if(!c.llamado_nombre){
-        c.llamado_nombre = 'NO POSEE';
+        c.llamado_nombre = 'No aplica';
       }
       if(!c.cod_contrato){
-        c.cod_contrato = 'NO POSEE';
+        c.cod_contrato = 'No aplica';
+      }
+      if(!c.pro_nombre){
+        c.pro_nombre = 'No aplica';
+      }
+      if(!c.mod_nombre){
+        c.mod_nombre = 'No aplica';
+      }
+      if(!c.categoria_nombre){
+        c.categoria_nombre = 'No aplica';
+      }
+      if(!c.fecha_contrato){
+        c.fecha_contrato = 'No aplica';
       }
       c.radius = 125;
       c.is_adenda = false;
@@ -51,6 +67,19 @@ angular.module('payvizApp')
       var ejecutado = cobrado/c.monto_total;
       c.ejecutado = ejecutado.toFixed(2);
       c.monto_pagado = cobrado;
+
+      //Convertimos a ProperCase
+      c.llamado_nombre = c.llamado_nombre.toProperCase();
+      //c.pro_nombre = c.pro_nombre.toProperCase();
+      c.mod_nombre = c.mod_nombre.toProperCase();
+      c.llamado_nombre = c.llamado_nombre.toProperCase();
+      c.categoria_nombre = c.categoria_nombre.toProperCase();
+
+
+      //truncamos el nombre del llamado...
+      c.llamado_nombre_completo = c.llamado_nombre;
+      c.llamado_nombre = c.llamado_nombre.length > 40 ? c.llamado_nombre.slice(0,37) + '...' :  c.llamado_nombre;      
+
       ncontratos.push(c);
 
     }
@@ -206,13 +235,13 @@ angular.module('payvizApp')
 
       var html = " " + $("#template-detalle").html();
 
-
+      
       html = html.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : 'No aplica')
                 .replace('{monto_total}', typeof d.monto_total !== "undefined" ? parseInt(d.monto_total).toLocaleString() : 'No aplica')
                 .replace('{ejecutado}', typeof d.ejecutado !== "undefined" ? (d.ejecutado * 100).toFixed(0) : '0')
                 .replace('{pro_nombre}', typeof d.pro_nombre !== "undefined" ? d.pro_nombre : 'No aplica')
                 .replace('{fecha_contrato}', typeof d.fecha_contrato !== "undefined" ? d.fecha_contrato : 'No aplica')
-                .replace('{llamado_nombre}', typeof d.llamado_nombre !== "undefined" ? d.llamado_nombre : 'No aplica')
+                .replace('{llamado_nombre}', typeof d.llamado_nombre_completo !== "undefined" ? d.llamado_nombre_completo : 'No aplica')
                 .replace('{cod_contrato}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : 'No aplica')
                 .replace('{monto_pagado}', typeof d.monto_pagado !== "undefined" ? d.monto_pagado.toLocaleString() : 'No aplica')
                 .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica')
@@ -406,6 +435,20 @@ angular.module('payvizApp')
 
     }
 
+
+    $scope.descargarJSON = function(){
+
+      console.log("descargarJson");
+
+      var link = window.document.getElementById('descargar-json');
+      var toDownload = new Blob([JSON.stringify(imputaciones,null,4)],{type:'application/json'});
+      var url = window.URL.createObjectURL(toDownload);
+      
+      link.download = 'datos.json';
+      link.href = url;
+
+
+    }
 
 
     //$scope.$apply();

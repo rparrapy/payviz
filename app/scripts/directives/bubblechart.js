@@ -13,6 +13,9 @@ angular.module('payvizApp')
       replace: false,
       scope: { data: '=' , until: '='},
       link: function postLink(scope, element, attrs) {
+        String.prototype.toProperCase = function () {
+          return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+        };
         var data = scope.data;
         var size = { 'all' : [900,400],'rubro_nombre' : [900, 900],'pro_nombre_vista' : [900,1000], 'mod_nombre' : [900,400],'componente' : [900,400] };
         var width = 750, height = 750;
@@ -376,7 +379,11 @@ angular.module('payvizApp')
           .data(centers).enter().append('text')
           .attr('class', 'label')
           .attr('text-anchor', 'start')
-          .text(function (d) { return d.name !== undefined || varname === 'all' ? d.name : 'No aplica'; })
+          .text(function (d) {
+            var label;
+            if(d.name){ label = d.name.toProperCase(); } 
+            return d.name !== undefined || varname === 'all' ? label : 'No aplica'; 
+          })
           .attr('transform', function (d) {
             return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y - 5 : 15) + ')';
           });

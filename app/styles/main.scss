@@ -257,14 +257,6 @@ ul.simple li {
   font-size: 67%;
 }
 
-table.secundaria thead{
-  background-color: #DDD;
-  color: #666;
-  font-style: italic; 
-}
-table.secundaria tbody td {
-  border-bottom: 1px solid #DDD; 
-}
-table.secundaria tbody .item td {
-  background-color: #EEE; 
+tbody{
+  font-size: smaller;
 }
