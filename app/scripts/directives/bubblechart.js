@@ -17,7 +17,7 @@ angular.module('payvizApp')
           return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         };
         var data = scope.data;
-        var size = { 'all' : [900,400],'rubro_nombre' : [900, 900],'pro_nombre_vista' : [900,1000], 'mod_nombre' : [900,400],'componente' : [900,400] };
+        var size = { 'all' : [900,400],'rubro_nombre' : [900, 900],'pro_nombre_vista' : [900,1200], 'mod_nombre' : [900,400],'componente' : [900,400] };
         var width = 750, height = 750;
         var maxElem = _.max(data, function(c){ return c.monto_total; });
         var minElem = _.min(data, function(c){ return c.monto_total; });
@@ -62,10 +62,12 @@ angular.module('payvizApp')
 
 
           } else {
-            var grad = svg.append('defs').append('linearGradient').attr('id', gradientId)
-            .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
-            grad.append('stop').attr('class', 'color').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
-            grad.append('stop').attr('class', 'blank').attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);  
+            if(d3.select('#' + gradientId).empty()){
+              var grad = svg.append('defs').append('linearGradient').attr('id', gradientId)
+              .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
+              grad.append('stop').attr('class', 'color').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
+              grad.append('stop').attr('class', 'blank').attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);
+            }
           }
 
           return 'url(#' + gradientId + ')';
@@ -77,7 +79,6 @@ angular.module('payvizApp')
 
         var opacity = function(contrato, hasta){
           var limite = hasta || moment();
-          var result = 1.0;
           return (contrato.fecha_contrato && moment(contrato.fecha_contrato) > limite) ? 0.0 : 1.0;
         }
 
@@ -183,7 +184,7 @@ angular.module('payvizApp')
               centers.reverse();
               var ncenter = []
               for(var i=0; i<centers.length; i++){
-                  if( i < 11 ){
+                  if( i < 14 ){
                     ncenter.push(centers[i]);
                   }else{
                     _.each(data,function(d){
@@ -381,7 +382,7 @@ angular.module('payvizApp')
           .attr('text-anchor', 'start')
           .text(function (d) {
             var label;
-            if(d.name){ label = d.name.toProperCase(); } 
+            if(d.name && varname !== 'pro_nombre_vista'){ label = d.name.toProperCase(); }else{ label = d.name; } 
             return d.name !== undefined || varname === 'all' ? label : 'No aplica'; 
           })
           .attr('transform', function (d) {
