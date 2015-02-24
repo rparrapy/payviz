@@ -1,7 +1,7 @@
 var imputaciones = [
     {
         "llamado_nombre": "ASESORAMIENTO PARA LA ELABORACION  DE UNA ESTRAT.",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 75000000,
         "mod_codigo": "CD",
         "pro_cod": "710107-4",
@@ -90,11 +90,12 @@ var imputaciones = [
         "pro_nombre": "LAURA SILA MODESTA SANCHEZ",
         "fecha_contrato": "2009-12-30",
         "categoria_cod": "5",
+        "obra": "Planificación vial",
         "rubro_cod": "260"
     },
     {
         "llamado_nombre": "ADQUISICION DE TINTAS Y TONNER DE IMPRESORAS PARA LA UPGP",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 11775500,
         "mod_codigo": "CD",
         "pro_cod": "80051678-8",
@@ -118,11 +119,12 @@ var imputaciones = [
         "pro_nombre": "HADAMI S.A.",
         "fecha_contrato": "2012-12-13",
         "categoria_cod": "11",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "340"
     },
     {
         "llamado_nombre": "ADQUISICION DE TINTAS Y TONNER DE IMPRESORAS PARA LA UPGP",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 10217500,
         "mod_codigo": "CD",
         "pro_cod": "932533-6",
@@ -151,11 +153,12 @@ var imputaciones = [
         "pro_nombre": "GUIDO ANTERO NUÑEZ FLEITAS",
         "fecha_contrato": "2012-12-13",
         "categoria_cod": "11",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "340"
     },
     {
         "llamado_nombre": "ADQUISICION DE MUEBLES PARA OFICINA",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 47350000,
         "mod_codigo": "CD",
         "pro_cod": "80039173-0",
@@ -184,11 +187,12 @@ var imputaciones = [
         "pro_nombre": "MEIS INDUSTRIAL S.R.L",
         "fecha_contrato": "2012-11-30",
         "categoria_cod": "23",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "540"
     },
     {
         "llamado_nombre": "ADQUISICION DE EQUIPOS INFORMATICOS",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 8850000,
         "mod_codigo": "CD",
         "pro_cod": "80009767-0",
@@ -212,11 +216,12 @@ var imputaciones = [
         "pro_nombre": "SHIROSAWA COMPANY SAIC",
         "fecha_contrato": "2012-12-04",
         "categoria_cod": "24",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "540"
     },
     {
         "llamado_nombre": "ADQUISICION DE UTILES, PAPEL, TINTAS Y TONNER DE IMPRESORAS PARA LA UPGP",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 13673000,
         "mod_codigo": "CD",
         "pro_cod": "932533-6",
@@ -240,11 +245,12 @@ var imputaciones = [
         "pro_nombre": "GUIDO ANTERO NUÑEZ FLEITAS",
         "fecha_contrato": "2013-12-13",
         "categoria_cod": "11",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "340"
     },
     {
         "llamado_nombre": "CD N° 23/2014 ADQUISICION DE TINTAS Y TONER PARA LA UPGP",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 13160000,
         "mod_codigo": "CD",
         "pro_cod": "80013316-1",
@@ -268,11 +274,12 @@ var imputaciones = [
         "pro_nombre": "OFFICE COMPU SA",
         "fecha_contrato": "2014-08-11",
         "categoria_cod": "11",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "340"
     },
     {
         "llamado_nombre": "CD N° 23/2014 ADQUISICION DE TINTAS Y TONER PARA LA UPGP",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 31500000,
         "mod_codigo": "CD",
         "pro_cod": "1164400-1",
@@ -291,11 +298,12 @@ var imputaciones = [
         "pro_nombre": "Fernando Rojas",
         "fecha_contrato": "2014-08-18",
         "categoria_cod": "11",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "340"
     },
     {
         "llamado_nombre": "ADQUISICION DE TERRENOS PARA LA IMPLEMENTACION DEL PLAN DE MEJORAMIENTO DEL SISTEMA DE PEAJES",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 40000000,
         "mod_codigo": "CE",
         "pro_cod": "412071-0",
@@ -314,11 +322,12 @@ var imputaciones = [
         "pro_nombre": "DIAZ BORBA, FRANCISCO GABRIEL",
         "fecha_contrato": "2012-06-20",
         "categoria_cod": "3",
+        "obra": "Terrenos",
         "rubro_cod": "510"
     },
     {
         "llamado_nombre": "ADQUISICION DE TERRENOS PARA LA IMPLEMENTACION DEL PLAN DE MEJORAMIENTO DEL SISTEMA DE PEAJES",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 140000000,
         "mod_codigo": "CE",
         "pro_cod": "1175858",
@@ -337,11 +346,12 @@ var imputaciones = [
         "pro_nombre": "MACIEL GIMENEZ, MARCIANA *",
         "fecha_contrato": "2012-06-20",
         "categoria_cod": "3",
+        "obra": "Terrenos",
         "rubro_cod": "510"
     },
     {
         "llamado_nombre": "ADQUISICION DE TERRENOS PARA LA IMPLEMENTACION DEL PLAN DE MEJORAMIENTO DEL SISTEMA DE PEAJES",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 115000000,
         "mod_codigo": "CE",
         "pro_cod": "478318-2",
@@ -360,11 +370,12 @@ var imputaciones = [
         "pro_nombre": "BAZAN CABAÑAS, CECILIA *",
         "fecha_contrato": "2012-12-28",
         "categoria_cod": "3",
+        "obra": "Terrenos",
         "rubro_cod": "510"
     },
     {
         "llamado_nombre": "SELECCION DE  AUDITORIA FINANCIERA  Y CONTABLE",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 178959000,
         "mod_codigo": "CO",
         "pro_cod": "80006561-1",
@@ -448,11 +459,12 @@ var imputaciones = [
         "pro_nombre": "GESTION EMPRESARIAL",
         "fecha_contrato": "2009-08-11",
         "categoria_cod": "5",
+        "obra": "Auditoría",
         "rubro_cod": "260"
     },
     {
         "llamado_nombre": "MOPC 39/2009 ADQ. DE UNIFORMES VARIOS",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 83228700,
         "mod_codigo": "CO",
         "pro_cod": "80017826-2",
@@ -471,11 +483,12 @@ var imputaciones = [
         "pro_nombre": "RAMSES S.A.C.I.",
         "fecha_contrato": "2009-11-30",
         "categoria_cod": "10",
+        "obra": "Uniformes",
         "rubro_cod": "320"
     },
     {
         "llamado_nombre": "ADQUISICION DE EQUIPOS VARIOS DE OFICINA DEL MOPC",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 52294360,
         "mod_codigo": "CO",
         "pro_cod": "80000727-1",
@@ -504,11 +517,12 @@ var imputaciones = [
         "pro_nombre": "PARASOFT S.R.L.",
         "fecha_contrato": "2010-11-15",
         "categoria_cod": "24",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "540"
     },
     {
         "llamado_nombre": "ADQUISICION DE EQUIPOS VARIOS DE OFICINA DEL MOPC",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 9480000,
         "mod_codigo": "CO",
         "pro_cod": "80027414-8",
@@ -537,11 +551,12 @@ var imputaciones = [
         "pro_nombre": "DOCUNET SA",
         "fecha_contrato": "2010-11-08",
         "categoria_cod": "24",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "540"
     },
     {
         "llamado_nombre": "ADQUISICION DE EQUIPOS VARIOS DE OFICINA DEL MOPC",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 201841500,
         "mod_codigo": "CO",
         "pro_cod": "80034600-9",
@@ -570,114 +585,12 @@ var imputaciones = [
         "pro_nombre": "TECNOLOGIA PLANIFICADA (TECNOPLAN) SA",
         "fecha_contrato": "2010-11-08",
         "categoria_cod": "24",
+        "obra": "Equipos de Oficina",
         "rubro_cod": "540"
     },
     {
-        "llamado_nombre": "MOPC 12-2009 ASESORAMIENTO EN LA GESTION Y MONIT",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 398640000,
-        "mod_codigo": "CO",
-        "pro_cod": "E-0001212",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-03-31",
-                "monto": 29013600
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-04-06",
-                "monto": 12434400
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-05-31",
-                "monto": 2385246
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-05-31",
-                "monto": 21831782
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-05-31",
-                "monto": 51370890
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-07-30",
-                "monto": 58654472
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-12",
-                "monto": 4919138
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-24",
-                "monto": 27712720
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-24",
-                "monto": 5879028
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-10-30",
-                "monto": 53110435
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-11-03",
-                "monto": 5311043
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-11-08",
-                "monto": 25040730
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-03-30",
-                "monto": 26418189
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-04-06",
-                "monto": 59838324
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-05-26",
-                "monto": 5642820
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-11-16",
-                "monto": 7363629
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-03-14",
-                "monto": 736371
-            }
-        ],
-        "cod_contrato": "CO-12013-10-53652",
-        "mod_nombre": "Concurso de ofertas",
-        "llamado_id": "139701",
-        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
-        "pro_nombre": "LUONGO CASELLI, GABRIEL *",
-        "fecha_contrato": "2009-12-17",
-        "categoria_cod": "5",
-        "rubro_cod": "260"
-    },
-    {
         "llamado_nombre": "MOPC 164/09 CONSULTORIA P/LEY NACIONAL DE TRANSITO",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 150123875,
         "mod_codigo": "CO",
         "pro_cod": "E-0001238",
@@ -746,11 +659,12 @@ var imputaciones = [
         "pro_nombre": "MARTIN DIEGO PIROTA",
         "fecha_contrato": "2010-05-31",
         "categoria_cod": "5",
+        "obra": "Planificación vial",
         "rubro_cod": "260"
     },
     {
         "llamado_nombre": "MOPC 23/2009 un asesor para la direcc. de planif",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 261085000,
         "mod_codigo": "CO",
         "pro_cod": "E-0001240",
@@ -944,162 +858,12 @@ var imputaciones = [
         "pro_nombre": "GINESTAR * ARIEL MARCOS",
         "fecha_contrato": "2010-06-09",
         "categoria_cod": "5",
+        "obra": "Planificación vial",
         "rubro_cod": "260"
-    },
-    {
-        "llamado_nombre": "CONSULTORIA PARA LA IMPLEMENTACION DEL PROGRAMA DE EDUCACION AMBIENTAL",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 468302043,
-        "mod_codigo": "CO",
-        "pro_cod": "80006523-9",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
-        "imputaciones": [
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-19",
-                "monto": 2980104
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-04-30",
-                "monto": 29801039
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-05-11",
-                "monto": 14049061
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-07-31",
-                "monto": 37932465
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-09-06",
-                "monto": 80462805
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-09-11",
-                "monto": 8046281
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-11-27",
-                "monto": 107283741
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2013-02-07",
-                "monto": 25288310
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2013-02-20",
-                "monto": 10728374
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2013-02-27",
-                "monto": 50576621
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-05-09",
-                "monto": 53641870
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-09-16",
-                "monto": 26820935
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-07-18",
-                "monto": 5364187
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-26",
-                "monto": 12644055
-            }
-        ],
-        "cod_contrato": "CO-12013-12-47789",
-        "mod_nombre": "Concurso de ofertas",
-        "llamado_id": "210142",
-        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
-        "pro_nombre": "GEOSURVEY S.R.L.",
-        "fecha_contrato": "2012-01-16",
-        "categoria_cod": "5",
-        "rubro_cod": "260"
-    },
-    {
-        "llamado_nombre": "ENCUESTA POR MUESTREO A NIVEL DE HORARES Y A NIVEL DE COMUNIDADES PARA LA EVALUACION DE IMPACTO DEL PROYECTO",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 390252470,
-        "mod_codigo": "CO",
-        "pro_cod": "80070438-0",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
-        "imputaciones": [
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-05-30",
-                "monto": 35122722
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-05-31",
-                "monto": 74502745
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-06-08",
-                "monto": 7450274
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-09-06",
-                "monto": 99336992
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-09-13",
-                "monto": 46830296
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-09-17",
-                "monto": 9933699
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-11-30",
-                "monto": 74502745
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2013-02-12",
-                "monto": 35122722
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2013-02-19",
-                "monto": 7450274
-            }
-        ],
-        "cod_contrato": "CO-12013-12-49941",
-        "mod_nombre": "Concurso de ofertas",
-        "llamado_id": "210232",
-        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
-        "pro_nombre": "CONSORCIO ICA Y ASOCIADA",
-        "fecha_contrato": "2012-01-30",
-        "categoria_cod": "5",
-        "rubro_cod": "580"
     },
     {
         "llamado_nombre": "FISCALIZACION DEL SISTEMA DE CONTEO DE TRANSITO",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 560000000,
         "mod_codigo": "CO",
         "pro_cod": "573842-3",
@@ -1328,11 +1092,12 @@ var imputaciones = [
         "pro_nombre": "MIGUEL ANGEL ESPINOLA RUIZ DIAZ",
         "fecha_contrato": "2012-11-28",
         "categoria_cod": "5",
+        "obra": "Planificación vial",
         "rubro_cod": "260"
     },
     {
         "llamado_nombre": "LLAMADO MOPC Nº 110/2012 LCO - CONSULTORIA INDIVIDUAL PARA EL ASESORAMIENTO DE LA DIRECCION DE PLANIFICACION VIAL DEL PARAGUAY, ÑAMOPORA ÑANDERAPE. PRESTAMO BIRF Nº 7406-PA.",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 215550000,
         "mod_codigo": "CO",
         "pro_cod": "E-0001240",
@@ -1421,11 +1186,12 @@ var imputaciones = [
         "pro_nombre": "GINESTAR * ARIEL MARCOS",
         "fecha_contrato": "2012-12-27",
         "categoria_cod": "5",
+        "obra": "Planificación vial",
         "rubro_cod": "260"
     },
     {
         "llamado_nombre": "LLAMADO MOPC Nº 106-2013 SELECCION DE CONSULTORES PARA LA AUDITORIA FINANCIERA Y CONTABLE EXTERNA DEL PRESTAMO BIRF Nº 7406-PA, PERIODO FISCAL 2013-2014",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "monto_total": 44000000,
         "mod_codigo": "CO",
         "pro_cod": "80026558-0",
@@ -1459,11 +1225,967 @@ var imputaciones = [
         "pro_nombre": "CONTROLLER CONTADORES & AUDITORES",
         "fecha_contrato": "2014-06-02",
         "categoria_cod": "5",
+        "obra": "Auditoría",
+        "rubro_cod": "260"
+    },
+    {
+        "llamado_nombre": "SERVICIO DE ALQUILER DE OFICINAS PARA LA UEGMANS - AD REFERENDUM",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "monto_total": 101400000,
+        "mod_codigo": "LC",
+        "pro_cod": "80001669-6",
+        "categoria_nombre": "Adquisición y Locación de inmuebles. Alquiler de muebles",
+        "imputaciones": [
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-27",
+                "monto": 101400000
+            }
+        ],
+        "cod_contrato": "LC-12013-11-45955",
+        "mod_nombre": "Locación de inmuebles",
+        "llamado_id": "220731",
+        "rubro_nombre": "ALQUILERES Y DERECHOS",
+        "pro_nombre": "BUENA SUERTE SA",
+        "fecha_contrato": "2011-11-28",
+        "categoria_cod": "3",
+        "obra": "Alquiler de Oficinas",
+        "rubro_cod": "250"
+    },
+    {
+        "llamado_nombre": "CONSUL. PARA ELABORACION DE PLAN VIAL",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "monto_total": 983899268,
+        "mod_codigo": "LPI",
+        "pro_cod": "80053202-3",
+        "categoria_nombre": "CONSULTORIA",
+        "imputaciones": [
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-03-30",
+                "monto": 59033956
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-03-30",
+                "monto": 125223543
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-04-14",
+                "monto": 12522354
+            }
+        ],
+        "cod_contrato": "LI-12013-10-20559",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "103156",
+        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "pro_nombre": "CONSORCIO PARBRAS Y ASOCIADOS",
+        "fecha_contrato": "2009-12-30",
+        "categoria_cod": "5",
+        "obra": "Planificación vial",
+        "rubro_cod": "580"
+    },
+    {
+        "llamado_nombre": "107/2008 ELABORACION PLAN DE INERSION VIAL",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "monto_total": 1036267100,
+        "mod_codigo": "LPI",
+        "pro_cod": "80038221-8",
+        "categoria_nombre": "CONSULTORIA",
+        "imputaciones": [
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-03-30",
+                "monto": 9768000
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-03-30",
+                "monto": 49556103
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-03-30",
+                "monto": 105275268
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-03-31",
+                "monto": 20720000
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-05-31",
+                "monto": 39914289
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-05-31",
+                "monto": 7814400
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-05-31",
+                "monto": 16576000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-05-31",
+                "monto": 84666674
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-05-31",
+                "monto": 2072000
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-06-11",
+                "monto": 1657600
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-06-30",
+                "monto": 212336376
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-06-30",
+                "monto": 41440000
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-07-21",
+                "monto": 10583334
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-07-21",
+                "monto": 8466667
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-24",
+                "monto": 19536000
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-30",
+                "monto": 100290861
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-09-30",
+                "monto": 4144000
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-10-07",
+                "monto": 60881709
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-10-08",
+                "monto": 21894398
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-03",
+                "monto": 2486400
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-06",
+                "monto": 12461592
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-12-06",
+                "monto": 24864000
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-07",
+                "monto": 11721600
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-12-07",
+                "monto": 127696489
+            }
+        ],
+        "cod_contrato": "LI-12013-10-37941",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "132643",
+        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "pro_nombre": "Consorcio CSI - GEIPEX",
+        "fecha_contrato": "2009-12-24",
+        "categoria_cod": "5",
+        "obra": "Planificación vial",
+        "rubro_cod": "580"
+    },
+    {
+        "llamado_nombre": "LPI CONSULTORIA PARA INVENTARIO VIAL - AD REFERENDUM AL PGN 2012",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "monto_total": 6028400000,
+        "mod_codigo": "LPI",
+        "pro_cod": "80077086-2",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-07-29",
+                "monto": 575438182
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-15",
+                "monto": 271278000
+            }
+        ],
+        "cod_contrato": "LI-12013-13-70299",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "228090",
+        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "pro_nombre": "Consorcio RF Consultoria & Asociados",
+        "fecha_contrato": "2012-12-06",
+        "categoria_cod": "5",
+        "obra": "Planificación vial",
+        "rubro_cod": "580"
+    },
+    {
+        "llamado_nombre": "SISTEMA DE PLANIFICACION Y GESTION VIAL DEL PARAGUAY, DISEÑO, DESARROLLO E IMPLEMENTACION - AD REFERENDUM A LA APROBACION DEL PLAN FINANCIERO",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "monto_total": 2075533567,
+        "mod_codigo": "LPI",
+        "pro_cod": "80078196-1",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-02-28",
+                "monto": 126016923
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-02-28",
+                "monto": 44144385
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-30",
+                "monto": 48557948
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-25",
+                "monto": 64036280
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-25",
+                "monto": 58214780
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-25",
+                "monto": 20810924
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 22891604
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-30",
+                "monto": 135741683
+            }
+        ],
+        "cod_contrato": "LI-12013-13-72541",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "227978",
+        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "pro_nombre": "CONSORCIO BICENTENARIO",
+        "fecha_contrato": "2013-05-16",
+        "categoria_cod": "5",
+        "obra": "Sistema de Planificación de la Red vial del Paraguay",
+        "rubro_cod": "580"
+    },
+    {
+        "llamado_nombre": "LLAMADO MOPC Nº 11/2012. LPI.IMPLEMENTACION DEL SISTEMA DE CONTEOS DE TRANSITOS",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "monto_total": 8860123840,
+        "mod_codigo": "LPI",
+        "pro_cod": "80079651-9",
+        "categoria_nombre": "Equipos Militares y de Seguridad. Servicio de Seguridad y Vigilancia",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-02-28",
+                "monto": 177625280
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-02-28",
+                "monto": 443726182
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 82941976
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 209185200
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 166500000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 353181818
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-07-25",
+                "monto": 1307424238
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-07-25",
+                "monto": 345300480
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 309120696
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-24",
+                "monto": 44372618
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-29",
+                "monto": 441865582
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-29",
+                "monto": 38986695
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-29",
+                "monto": 402975109
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-29",
+                "monto": 423334868
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-12-04",
+                "monto": 33387112
+            }
+        ],
+        "cod_contrato": "LI-12013-13-77861",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "227976",
+        "rubro_nombre": "ADQ. DE MAQ. EQ. Y HERR. MAY.",
+        "pro_nombre": "CONSORCIO CSI - CIEMSA",
+        "fecha_contrato": "2013-07-26",
+        "categoria_cod": "25",
+        "obra": "Maquinas y Equipos",
+        "rubro_cod": "530"
+    },
+    {
+        "llamado_nombre": "MOPC Nº 47-2012 LPI IMPLEMENTACION DE MEJORAMIENTO DE LA RED DE PEAJES DE PARAGUAY",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "monto_total": 61239088825,
+        "mod_codigo": "LPI",
+        "pro_cod": "80079301-3",
+        "categoria_nombre": "Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-04-24",
+                "monto": 1225649218
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-04-28",
+                "monto": 2599861979
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-26",
+                "monto": 259986198
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-30",
+                "monto": 89700000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-30",
+                "monto": 20371069
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-30",
+                "monto": 8694739
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-30",
+                "monto": 10168416
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-30",
+                "monto": 8872416
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-30",
+                "monto": 180759091
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-30",
+                "monto": 17774705
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-30",
+                "monto": 17418753
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-31",
+                "monto": 120820225
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-31",
+                "monto": 60308582
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-29",
+                "monto": 81240218
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-12-10",
+                "monto": 18075909
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-12-10",
+                "monto": 12082022
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-12-10",
+                "monto": 1777471
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-12-10",
+                "monto": 1741875
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-12-11",
+                "monto": 2037107
+            }
+        ],
+        "cod_contrato": "LI-12013-13-79376",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "227974",
+        "rubro_nombre": "CONSTRUCCIONES",
+        "pro_nombre": "CONSORCIO M&T S.A. - PAT TRAFFIC",
+        "fecha_contrato": "2013-08-07",
+        "categoria_cod": "21",
+        "obra": "Peaje",
+        "rubro_cod": "520"
+    },
+    {
+        "llamado_nombre": "MOPC Nº 48-12 LPI FISCALIZACION DEL CONTRATO DE IMPLEMENTACION DEL MEJORAMIENTO DE LA RED DE PEAJES DEL PARAGUAY",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "monto_total": 3996520000,
+        "mod_codigo": "LPI",
+        "pro_cod": "80079715-9",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-21",
+                "monto": 63102947
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-22",
+                "monto": 63102947
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-29",
+                "monto": 27344611
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-30",
+                "monto": 63102947
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-30",
+                "monto": 63102947
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-25",
+                "monto": 133854737
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-25",
+                "monto": 133854737
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-25",
+                "monto": 58003719
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 133854737
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 133854737
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 63102947
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 63102947
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 133854737
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 133854737
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-22",
+                "monto": 13385474
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-24",
+                "monto": 13385474
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-25",
+                "monto": 13385474
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-26",
+                "monto": 13385474
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-26",
+                "monto": 5800372
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 133854737
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 63102947
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-17",
+                "monto": 63102947
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-20",
+                "monto": 133854737
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-31",
+                "monto": 13385474
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-31",
+                "monto": 13385474
+            }
+        ],
+        "cod_contrato": "LI-12013-13-79989",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "227975",
+        "rubro_nombre": "CONSTRUCCIONES",
+        "pro_nombre": "Consorcio D&B-CCT",
+        "fecha_contrato": "2013-11-06",
+        "categoria_cod": "5",
+        "obra": "Peaje",
+        "rubro_cod": "520"
+    },
+    {
+        "llamado_nombre": "MOPC Nº 92-2012 LPN SERVICIO DE CONSULTORIA PARA LA FISCALIZACION DEL INVENTARIO VIAL",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "monto_total": 600000000,
+        "mod_codigo": "LPN",
+        "pro_cod": "329949-0",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-05-21",
+                "monto": 38181818
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2013-07-31",
+                "monto": 18000000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-10-22",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-11-25",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-11-29",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-03-14",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-03-28",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-03-29",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-07",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-28",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-29",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-29",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-29",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-30",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-30",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-30",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-31",
+                "monto": 3818182
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-31",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-31",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-31",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-31",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-31",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-25",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-30",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-30",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-07-31",
+                "monto": 10125000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-19",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-12",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-12",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-15",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-26",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-12",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-12",
+                "monto": 21477272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-13",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-19",
+                "monto": 2147728
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-29",
+                "monto": 2147728
+            }
+        ],
+        "cod_contrato": "LP-12013-13-70528",
+        "mod_nombre": "Licitación pública nacional",
+        "llamado_id": "230692",
+        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "pro_nombre": "ANGEL RAFAEL BUSTO GIUMMARRESI",
+        "fecha_contrato": "2012-12-19",
+        "categoria_cod": "5",
+        "obra": "Planificación vial",
+        "rubro_cod": "260"
+    },
+    {
+        "llamado_nombre": "MOPC 12-2009 ASESORAMIENTO EN LA GESTION Y MONIT",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
+        "monto_total": 398640000,
+        "mod_codigo": "CO",
+        "pro_cod": "E-0001212",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-03-31",
+                "monto": 29013600
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-04-06",
+                "monto": 12434400
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-05-31",
+                "monto": 2385246
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-05-31",
+                "monto": 21831782
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-05-31",
+                "monto": 51370890
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-07-30",
+                "monto": 58654472
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-12",
+                "monto": 4919138
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-24",
+                "monto": 27712720
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-24",
+                "monto": 5879028
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-10-30",
+                "monto": 53110435
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-11-03",
+                "monto": 5311043
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-11-08",
+                "monto": 25040730
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-03-30",
+                "monto": 26418189
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-04-06",
+                "monto": 59838324
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-05-26",
+                "monto": 5642820
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-11-16",
+                "monto": 7363629
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-03-14",
+                "monto": 736371
+            }
+        ],
+        "cod_contrato": "CO-12013-10-53652",
+        "mod_nombre": "Concurso de ofertas",
+        "llamado_id": "139701",
+        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "pro_nombre": "LUONGO CASELLI, GABRIEL *",
+        "fecha_contrato": "2009-12-17",
+        "categoria_cod": "5",
+        "obra": "GMANS",
         "rubro_cod": "260"
     },
     {
         "llamado_nombre": "SERVICIOS DE CONSULTORIA - ANALISIS DE MEJORAS Y LECCIONES APRENDIDAS GMANS",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 151238340,
         "mod_codigo": "CO",
         "pro_cod": "23185893899",
@@ -1492,165 +2214,12 @@ var imputaciones = [
         "pro_nombre": "ESTEBAN FERNANDO TRAVAGLIANTI",
         "fecha_contrato": "2014-07-29",
         "categoria_cod": "5",
+        "obra": "GMANS",
         "rubro_cod": "260"
     },
     {
-        "llamado_nombre": "SERVICIO DE ALQUILER DE OFICINAS PARA LA UEGMANS - AD REFERENDUM",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 101400000,
-        "mod_codigo": "LC",
-        "pro_cod": "80001669-6",
-        "categoria_nombre": "Adquisición y Locación de inmuebles. Alquiler de muebles",
-        "imputaciones": [
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-27",
-                "monto": 101400000
-            }
-        ],
-        "cod_contrato": "LC-12013-11-45955",
-        "mod_nombre": "Locación de inmuebles",
-        "llamado_id": "220731",
-        "rubro_nombre": "ALQUILERES Y DERECHOS",
-        "pro_nombre": "BUENA SUERTE SA",
-        "fecha_contrato": "2011-11-28",
-        "categoria_cod": "3",
-        "rubro_cod": "250"
-    },
-    {
-        "llamado_nombre": "Levantamiento de encuesta a nivel de hogares.",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 700488800,
-        "mod_codigo": "LPI",
-        "pro_cod": "80028294-9",
-        "categoria_nombre": "CONSULTORIA",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-03-30",
-                "monto": 178304331
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-04-30",
-                "monto": 84057756
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-05-10",
-                "monto": 17830433
-            }
-        ],
-        "cod_contrato": "LI-12013-08-20482",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "103150",
-        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
-        "pro_nombre": "HECOHABITAT CONSULTORA SRL",
-        "fecha_contrato": "2008-07-21",
-        "categoria_cod": "5",
-        "rubro_cod": "580"
-    },
-    {
-        "llamado_nombre": "Levantamiento de encuesta a empre. de trans.cargas",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 404842480,
-        "mod_codigo": "LPI",
-        "pro_cod": "80010826-4",
-        "categoria_nombre": "CONSULTORIA",
-        "imputaciones": [
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2008-10-31",
-                "monto": 24290549
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2008-12-29",
-                "monto": 27709451
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2009-02-27",
-                "monto": 82436985
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2009-02-27",
-                "monto": 51525407
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-03-30",
-                "monto": 11153699
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2009-06-29",
-                "monto": 45534487
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-06-30",
-                "monto": 21466258
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-07-29",
-                "monto": 5152540
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-07-29",
-                "monto": 8243699
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-09-23",
-                "monto": 19432439
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2009-09-29",
-                "monto": 41220325
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2009-10-30",
-                "monto": 18391652
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-10-30",
-                "monto": 4553449
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-10-30",
-                "monto": 8669863
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-10-31",
-                "monto": 4122033
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-12-30",
-                "monto": 1839165
-            }
-        ],
-        "cod_contrato": "LI-12013-08-20486",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "103151",
-        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
-        "pro_nombre": "CONSULTORA MEMORIAS Y COMPUTOS S.A. COMYCSA",
-        "fecha_contrato": "2008-08-01",
-        "categoria_cod": "5",
-        "rubro_cod": "580"
-    },
-    {
         "llamado_nombre": "106/08 fiscali. por niveles GEMANS 5",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 4208766315,
         "mod_codigo": "LPI",
         "pro_cod": "80057334-0",
@@ -3361,11 +3930,12 @@ var imputaciones = [
         "pro_nombre": "CONSORCIO CONSULPAR - ESTEIO SA",
         "fecha_contrato": "2009-09-07",
         "categoria_cod": "5",
+        "obra": "GMANS 5",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "GESTION Y MANT.DE CARRETERAS POR NIVELES DE SERV.",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 100029583901,
         "mod_codigo": "LPI",
         "pro_cod": "80056720-0",
@@ -4636,11 +5206,12 @@ var imputaciones = [
         "pro_nombre": "CONSORCIO VIAL SUREÃO",
         "fecha_contrato": "2009-08-20",
         "categoria_cod": "21",
+        "obra": "GMANS 5",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "MOPC 13-2009 MANT. POR NIVELES DE SERV. GMANS 1",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 73000000000,
         "mod_codigo": "LPI",
         "pro_cod": "80059093-7",
@@ -5781,11 +6352,12 @@ var imputaciones = [
         "pro_nombre": "Consorcio de Ingeniería Vial",
         "fecha_contrato": "2009-12-17",
         "categoria_cod": "21",
+        "obra": "GMANS 1",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "123-10 OBRAS DE MANTEN POR NIVELES DE SERVI GMANS 2 RUTA 1 EMPALME ACCESO SUR - ENCARNACION Y ACCESO SUR, TRAMO GUARAMBARE-RUTA 1) - AD REFERENDUM",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 54857978890,
         "mod_codigo": "LPI",
         "pro_cod": "80063937-5",
@@ -5809,11 +6381,12 @@ var imputaciones = [
         "pro_nombre": "CONSORCIO DIFERENCIAL TAPE",
         "fecha_contrato": "2010-11-26",
         "categoria_cod": "21",
+        "obra": "GMANS 2",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "124-10OBRAS DE MANTENIMIENTO POR NIVELES DE SERVICIO GMANS URBANO (TRAMO: SAN LORENZO - CAACUPE - ACCESO SUR, TRAMO: 4 MOJONES - DESVIO GUARAMBARE - AD REFERENDUM",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 26111908330,
         "mod_codigo": "LPI",
         "pro_cod": "80019114-5",
@@ -6372,182 +6945,12 @@ var imputaciones = [
         "pro_nombre": "TALAVERA ORTELLADO CONSTRUCCIONES SA (T.O.C. S.A.)",
         "fecha_contrato": "2010-11-26",
         "categoria_cod": "21",
+        "obra": "GMANS 0",
         "rubro_cod": "520"
     },
     {
-        "llamado_nombre": "CONSUL. PARA ELABORACION DE PLAN VIAL",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 983899268,
-        "mod_codigo": "LPI",
-        "pro_cod": "80053202-3",
-        "categoria_nombre": "CONSULTORIA",
-        "imputaciones": [
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-03-30",
-                "monto": 59033956
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-03-30",
-                "monto": 125223543
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-04-14",
-                "monto": 12522354
-            }
-        ],
-        "cod_contrato": "LI-12013-10-20559",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "103156",
-        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
-        "pro_nombre": "CONSORCIO PARBRAS Y ASOCIADOS",
-        "fecha_contrato": "2009-12-30",
-        "categoria_cod": "5",
-        "rubro_cod": "580"
-    },
-    {
-        "llamado_nombre": "107/2008 ELABORACION PLAN DE INERSION VIAL",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 1036267100,
-        "mod_codigo": "LPI",
-        "pro_cod": "80038221-8",
-        "categoria_nombre": "CONSULTORIA",
-        "imputaciones": [
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-03-30",
-                "monto": 9768000
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-03-30",
-                "monto": 49556103
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-03-30",
-                "monto": 105275268
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-03-31",
-                "monto": 20720000
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-05-31",
-                "monto": 39914289
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-05-31",
-                "monto": 7814400
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-05-31",
-                "monto": 16576000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-05-31",
-                "monto": 84666674
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-05-31",
-                "monto": 2072000
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-06-11",
-                "monto": 1657600
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-06-30",
-                "monto": 212336376
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-06-30",
-                "monto": 41440000
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-07-21",
-                "monto": 10583334
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-07-21",
-                "monto": 8466667
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-24",
-                "monto": 19536000
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-30",
-                "monto": 100290861
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-09-30",
-                "monto": 4144000
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-10-07",
-                "monto": 60881709
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-10-08",
-                "monto": 21894398
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-03",
-                "monto": 2486400
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-06",
-                "monto": 12461592
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-12-06",
-                "monto": 24864000
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-07",
-                "monto": 11721600
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-12-07",
-                "monto": 127696489
-            }
-        ],
-        "cod_contrato": "LI-12013-10-37941",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "132643",
-        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
-        "pro_nombre": "Consorcio CSI - GEIPEX",
-        "fecha_contrato": "2009-12-24",
-        "categoria_cod": "5",
-        "rubro_cod": "580"
-    },
-    {
         "llamado_nombre": "LLamado 74/2008- gmans 1 - SELECCION DE CONSULTORES PARA FISCALIZACION DE   OBRAS",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 4748757783,
         "mod_codigo": "LPI",
         "pro_cod": "80059576-9",
@@ -7241,279 +7644,12 @@ var imputaciones = [
         "pro_nombre": "CONSORCIO ENGEVIX & ASOC.",
         "fecha_contrato": "2010-04-15",
         "categoria_cod": "5",
-        "rubro_cod": "520"
-    },
-    {
-        "llamado_nombre": "SELECCION DE CONSULTORES PARA FISCALIZACION DE OBR",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 2992036300,
-        "mod_codigo": "LPI",
-        "pro_cod": "80051887-0",
-        "categoria_nombre": "CONSULTORIA",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-11-05",
-                "monto": 78829800
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-11-05",
-                "monto": 7882980
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-11-05",
-                "monto": 37162620
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-11-30",
-                "monto": 126127680
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-06",
-                "monto": 59460192
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-30",
-                "monto": 59460192
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-12-30",
-                "monto": 126127680
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-03-11",
-                "monto": 12612768
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-03-16",
-                "monto": 12612768
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-08-30",
-                "monto": 63063840
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2013-10-04",
-                "monto": 29730096
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-12-26",
-                "monto": 25980091
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-12-26",
-                "monto": 24858272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-12-26",
-                "monto": 25980091
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-12-26",
-                "monto": 25980091
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-12-26",
-                "monto": 60134373
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-12-26",
-                "monto": 32390150
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-12-27",
-                "monto": 55109284
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-12-27",
-                "monto": 28349061
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-12-27",
-                "monto": 55109284
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-03-29",
-                "monto": 55109284
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-03-31",
-                "monto": 5510928
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-03-31",
-                "monto": 28349061
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-04-14",
-                "monto": 5510928
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-04-14",
-                "monto": 5510928
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-04-29",
-                "monto": 52729668
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-04-29",
-                "monto": 60134373
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-04-29",
-                "monto": 68706380
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-08",
-                "monto": 6013437
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-08",
-                "monto": 5272967
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-12",
-                "monto": 6870638
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-12",
-                "monto": 6013437
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-30",
-                "monto": 26332456
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-30",
-                "monto": 29962456
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-31",
-                "monto": 55856724
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-26",
-                "monto": 29962456
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 63556724
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 63556724
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-30",
-                "monto": 29962456
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-30",
-                "monto": 63556724
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-07-31",
-                "monto": 98626724
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-07-31",
-                "monto": 46495456
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-23",
-                "monto": 31645456
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 67126724
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 31645456
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 67126724
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-31",
-                "monto": 67126724
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-31",
-                "monto": 31645456
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-28",
-                "monto": 31645456
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-29",
-                "monto": 67126724
-            }
-        ],
-        "cod_contrato": "LI-12013-10-37971",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "132640",
-        "rubro_nombre": "CONSTRUCCIONES",
-        "pro_nombre": "CENTRO DE ASESORAMIENTO EMPRESARIAL MULTIDISCIPLINARIO - CAEM SPY",
-        "fecha_contrato": "2010-09-10",
-        "categoria_cod": "5",
+        "obra": "GMANS 1",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "MOPC 63-2009 GEMANS2 Y URBANO",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 547382000,
         "mod_codigo": "LPI",
         "pro_cod": "80038221-8",
@@ -7642,202 +7778,12 @@ var imputaciones = [
         "pro_nombre": "Consorcio CSI - GEIPEX",
         "fecha_contrato": "2009-12-24",
         "categoria_cod": "5",
+        "obra": "GMANS 2",
         "rubro_cod": "260"
     },
     {
-        "llamado_nombre": "MOPC 09/2009 SELECCION DE CONSULT P/ LA FISCAL.",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 1473557470,
-        "mod_codigo": "LPI",
-        "pro_cod": "80054704-7",
-        "categoria_nombre": "Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-10-07",
-                "monto": 53325004
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-10-07",
-                "monto": 25138933
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-10-27",
-                "monto": 5332500
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-12-06",
-                "monto": 85320010
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-06",
-                "monto": 40222290
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-17",
-                "monto": 8532000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-12-30",
-                "monto": 85320009
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-30",
-                "monto": 40222290
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-10-16",
-                "monto": 8532001
-            }
-        ],
-        "cod_contrato": "LI-12013-10-54620",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "139727",
-        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
-        "pro_nombre": "CONS. OSCAR G. GRIMAUX Y ASOC.S.A.T. - CIA",
-        "fecha_contrato": "2010-09-10",
-        "categoria_cod": "21",
-        "rubro_cod": "580"
-    },
-    {
-        "llamado_nombre": "MOPC11 Fiscalizacion de Obras de Caminos No Pavime",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 2812675492,
-        "mod_codigo": "LPI",
-        "pro_cod": "80055282-2",
-        "categoria_nombre": "Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-10-27",
-                "monto": 50171783
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-12-30",
-                "monto": 80274853
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-30",
-                "monto": 5017178
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-06-03",
-                "monto": 8027485
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-07-06",
-                "monto": 37843859
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-08-12",
-                "monto": 37843859
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-10-10",
-                "monto": 80274854
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-10-26",
-                "monto": 23652412
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-11-20",
-                "monto": 8027485
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-11-18",
-                "monto": 40137424
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 73887679
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 34735527
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 70279982
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 30667591
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 34832763
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 65052465
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 33131991
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 73681422
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 7027998
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 7388768
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 6505247
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 7368142
-            }
-        ],
-        "cod_contrato": "LI-12013-10-54621",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "139729",
-        "rubro_nombre": "CONSTRUCCIONES",
-        "pro_nombre": "CONSULTEC MERCOCONSUL",
-        "fecha_contrato": "2010-03-10",
-        "categoria_cod": "21",
-        "rubro_cod": "520"
-    },
-    {
         "llamado_nombre": "121-10FISCALIZACION DE OBRAS DE GESTION Y MANTENIMIENTO POR NIVELES DE SERVICIOS GMANS 2: RUTA 1 EMPALME ACCESO SUR-ENCARNACION Y ACCESO SUR, TRAMO: EMPALME GUARAMBARE-RUTA 1 - AD REFERENDUM",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 5887609037,
         "mod_codigo": "LPI",
         "pro_cod": "80064693-2",
@@ -8136,11 +8082,12 @@ var imputaciones = [
         "pro_nombre": "CONSORCIO ELECTROPAR-APPLUS",
         "fecha_contrato": "2011-03-11",
         "categoria_cod": "21",
+        "obra": "GMANS 2",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "122-10FISCALIZACION DE OBRAS DE MANTENIMEINTO POR NIVELES DE SERVICIOS GMANS URBANO TRAMO: SAN LORENZO-ARROYO IRALA -ACCESO SUR, TRAMO 4 MOJONES-DESVIO GUARAMBARE - AD REFERENDUM",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 4195707175,
         "mod_codigo": "LPI",
         "pro_cod": "80054704-7",
@@ -9069,11 +9016,760 @@ var imputaciones = [
         "pro_nombre": "CONS. OSCAR G. GRIMAUX Y ASOC.S.A.T. - CIA",
         "fecha_contrato": "2011-03-11",
         "categoria_cod": "21",
+        "obra": "GMANS 0",
+        "rubro_cod": "520"
+    },
+    {
+        "llamado_nombre": "CONSULTORIA PARA LA IMPLEMENTACION DEL PROGRAMA DE EDUCACION AMBIENTAL",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
+        "monto_total": 468302043,
+        "mod_codigo": "CO",
+        "pro_cod": "80006523-9",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-19",
+                "monto": 2980104
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-04-30",
+                "monto": 29801039
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-05-11",
+                "monto": 14049061
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-07-31",
+                "monto": 37932465
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-09-06",
+                "monto": 80462805
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-09-11",
+                "monto": 8046281
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-11-27",
+                "monto": 107283741
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2013-02-07",
+                "monto": 25288310
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2013-02-20",
+                "monto": 10728374
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2013-02-27",
+                "monto": 50576621
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-05-09",
+                "monto": 53641870
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-09-16",
+                "monto": 26820935
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-07-18",
+                "monto": 5364187
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-26",
+                "monto": 12644055
+            }
+        ],
+        "cod_contrato": "CO-12013-12-47789",
+        "mod_nombre": "Concurso de ofertas",
+        "llamado_id": "210142",
+        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "pro_nombre": "GEOSURVEY S.R.L.",
+        "fecha_contrato": "2012-01-16",
+        "categoria_cod": "5",
+        "obra": "Estudios de factibilidad",
+        "rubro_cod": "260"
+    },
+    {
+        "llamado_nombre": "ENCUESTA POR MUESTREO A NIVEL DE HORARES Y A NIVEL DE COMUNIDADES PARA LA EVALUACION DE IMPACTO DEL PROYECTO",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
+        "monto_total": 390252470,
+        "mod_codigo": "CO",
+        "pro_cod": "80070438-0",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-05-30",
+                "monto": 35122722
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-05-31",
+                "monto": 74502745
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-06-08",
+                "monto": 7450274
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-09-06",
+                "monto": 99336992
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-09-13",
+                "monto": 46830296
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-09-17",
+                "monto": 9933699
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-11-30",
+                "monto": 74502745
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2013-02-12",
+                "monto": 35122722
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2013-02-19",
+                "monto": 7450274
+            }
+        ],
+        "cod_contrato": "CO-12013-12-49941",
+        "mod_nombre": "Concurso de ofertas",
+        "llamado_id": "210232",
+        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "pro_nombre": "CONSORCIO ICA Y ASOCIADA",
+        "fecha_contrato": "2012-01-30",
+        "categoria_cod": "5",
+        "obra": "Estudios de factibilidad",
+        "rubro_cod": "580"
+    },
+    {
+        "llamado_nombre": "Levantamiento de encuesta a nivel de hogares.",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
+        "monto_total": 700488800,
+        "mod_codigo": "LPI",
+        "pro_cod": "80028294-9",
+        "categoria_nombre": "CONSULTORIA",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-03-30",
+                "monto": 178304331
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-04-30",
+                "monto": 84057756
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-05-10",
+                "monto": 17830433
+            }
+        ],
+        "cod_contrato": "LI-12013-08-20482",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "103150",
+        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "pro_nombre": "HECOHABITAT CONSULTORA SRL",
+        "fecha_contrato": "2008-07-21",
+        "categoria_cod": "5",
+        "obra": "Estudios de factibilidad",
+        "rubro_cod": "580"
+    },
+    {
+        "llamado_nombre": "Levantamiento de encuesta a empre. de trans.cargas",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
+        "monto_total": 404842480,
+        "mod_codigo": "LPI",
+        "pro_cod": "80010826-4",
+        "categoria_nombre": "CONSULTORIA",
+        "imputaciones": [
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2008-10-31",
+                "monto": 24290549
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2008-12-29",
+                "monto": 27709451
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2009-02-27",
+                "monto": 82436985
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2009-02-27",
+                "monto": 51525407
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-03-30",
+                "monto": 11153699
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2009-06-29",
+                "monto": 45534487
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-06-30",
+                "monto": 21466258
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-07-29",
+                "monto": 5152540
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-07-29",
+                "monto": 8243699
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-09-23",
+                "monto": 19432439
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2009-09-29",
+                "monto": 41220325
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2009-10-30",
+                "monto": 18391652
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-10-30",
+                "monto": 4553449
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-10-30",
+                "monto": 8669863
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-10-31",
+                "monto": 4122033
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-12-30",
+                "monto": 1839165
+            }
+        ],
+        "cod_contrato": "LI-12013-08-20486",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "103151",
+        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "pro_nombre": "CONSULTORA MEMORIAS Y COMPUTOS S.A. COMYCSA",
+        "fecha_contrato": "2008-08-01",
+        "categoria_cod": "5",
+        "obra": "Estudios de factibilidad",
+        "rubro_cod": "580"
+    },
+    {
+        "llamado_nombre": "SELECCION DE CONSULTORES PARA FISCALIZACION DE OBR",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
+        "monto_total": 2992036300,
+        "mod_codigo": "LPI",
+        "pro_cod": "80051887-0",
+        "categoria_nombre": "CONSULTORIA",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-11-05",
+                "monto": 78829800
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-11-05",
+                "monto": 7882980
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-11-05",
+                "monto": 37162620
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-11-30",
+                "monto": 126127680
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-06",
+                "monto": 59460192
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-30",
+                "monto": 59460192
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-12-30",
+                "monto": 126127680
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-03-11",
+                "monto": 12612768
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-03-16",
+                "monto": 12612768
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-08-30",
+                "monto": 63063840
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2013-10-04",
+                "monto": 29730096
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-12-26",
+                "monto": 25980091
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-12-26",
+                "monto": 24858272
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-12-26",
+                "monto": 25980091
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-12-26",
+                "monto": 25980091
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-12-26",
+                "monto": 60134373
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-12-26",
+                "monto": 32390150
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-12-27",
+                "monto": 55109284
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-12-27",
+                "monto": 28349061
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-12-27",
+                "monto": 55109284
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-03-29",
+                "monto": 55109284
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-03-31",
+                "monto": 5510928
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-03-31",
+                "monto": 28349061
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-04-14",
+                "monto": 5510928
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-04-14",
+                "monto": 5510928
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-04-29",
+                "monto": 52729668
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-04-29",
+                "monto": 60134373
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-04-29",
+                "monto": 68706380
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-08",
+                "monto": 6013437
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-08",
+                "monto": 5272967
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-12",
+                "monto": 6870638
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-12",
+                "monto": 6013437
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-30",
+                "monto": 26332456
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-30",
+                "monto": 29962456
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-31",
+                "monto": 55856724
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-26",
+                "monto": 29962456
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 63556724
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 63556724
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-30",
+                "monto": 29962456
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-30",
+                "monto": 63556724
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-07-31",
+                "monto": 98626724
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-07-31",
+                "monto": 46495456
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-23",
+                "monto": 31645456
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 67126724
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 31645456
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 67126724
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-31",
+                "monto": 67126724
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-10-31",
+                "monto": 31645456
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-28",
+                "monto": 31645456
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-29",
+                "monto": 67126724
+            }
+        ],
+        "cod_contrato": "LI-12013-10-37971",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "132640",
+        "rubro_nombre": "CONSTRUCCIONES",
+        "pro_nombre": "CENTRO DE ASESORAMIENTO EMPRESARIAL MULTIDISCIPLINARIO - CAEM SPY",
+        "fecha_contrato": "2010-09-10",
+        "categoria_cod": "5",
+        "obra": "Fizcalización Jhugua Rey - Gral. Aquino Chore - Colonia Cocuera - San Pablo Chore - Jhugua Rey",
+        "rubro_cod": "520"
+    },
+    {
+        "llamado_nombre": "MOPC 09/2009 SELECCION DE CONSULT P/ LA FISCAL.",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
+        "monto_total": 1473557470,
+        "mod_codigo": "LPI",
+        "pro_cod": "80054704-7",
+        "categoria_nombre": "Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-10-07",
+                "monto": 53325004
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-10-07",
+                "monto": 25138933
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-10-27",
+                "monto": 5332500
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-12-06",
+                "monto": 85320010
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-06",
+                "monto": 40222290
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-17",
+                "monto": 8532000
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-12-30",
+                "monto": 85320009
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-30",
+                "monto": 40222290
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-10-16",
+                "monto": 8532001
+            }
+        ],
+        "cod_contrato": "LI-12013-10-54620",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "139727",
+        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "pro_nombre": "CONS. OSCAR G. GRIMAUX Y ASOC.S.A.T. - CIA",
+        "fecha_contrato": "2010-09-10",
+        "categoria_cod": "21",
+        "obra": "Caazapá - Boquerón",
+        "rubro_cod": "580"
+    },
+    {
+        "llamado_nombre": "MOPC11 Fiscalizacion de Obras de Caminos No Pavime",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
+        "monto_total": 2812675492,
+        "mod_codigo": "LPI",
+        "pro_cod": "80055282-2",
+        "categoria_nombre": "Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-10-27",
+                "monto": 50171783
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-12-30",
+                "monto": 80274853
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-30",
+                "monto": 5017178
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-06-03",
+                "monto": 8027485
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-07-06",
+                "monto": 37843859
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-08-12",
+                "monto": 37843859
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-10-10",
+                "monto": 80274854
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-10-26",
+                "monto": 23652412
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-11-20",
+                "monto": 8027485
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-11-18",
+                "monto": 40137424
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 73887679
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 34735527
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 70279982
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 30667591
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 34832763
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 65052465
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-30",
+                "monto": 33131991
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 73681422
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 7027998
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 7388768
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 6505247
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-09-30",
+                "monto": 7368142
+            }
+        ],
+        "cod_contrato": "LI-12013-10-54621",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "139729",
+        "rubro_nombre": "CONSTRUCCIONES",
+        "pro_nombre": "CONSULTEC MERCOCONSUL",
+        "fecha_contrato": "2010-03-10",
+        "categoria_cod": "21",
+        "obra": "Colonias Unidas - Jhovy Central - Raul A. Ovierdo - J.Eulogio Estigarribia",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "CONSULTORIA PARA LA IMPLEMENTACION DEL PLAN DE PUEBLOS INDIGENAS",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "monto_total": 697543000,
         "mod_codigo": "LPI",
         "pro_cod": "80069038-9",
@@ -9152,97 +9848,12 @@ var imputaciones = [
         "pro_nombre": "Red Comunitaria Guaraní",
         "fecha_contrato": "2011-12-14",
         "categoria_cod": "5",
+        "obra": "Estudios de factibilidad",
         "rubro_cod": "260"
     },
     {
-        "llamado_nombre": "LPI CONSULTORIA PARA INVENTARIO VIAL - AD REFERENDUM AL PGN 2012",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 6028400000,
-        "mod_codigo": "LPI",
-        "pro_cod": "80077086-2",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-07-29",
-                "monto": 575438182
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-15",
-                "monto": 271278000
-            }
-        ],
-        "cod_contrato": "LI-12013-13-70299",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "228090",
-        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
-        "pro_nombre": "Consorcio RF Consultoria & Asociados",
-        "fecha_contrato": "2012-12-06",
-        "categoria_cod": "5",
-        "rubro_cod": "580"
-    },
-    {
-        "llamado_nombre": "SISTEMA DE PLANIFICACION Y GESTION VIAL DEL PARAGUAY, DISEÑO, DESARROLLO E IMPLEMENTACION - AD REFERENDUM A LA APROBACION DEL PLAN FINANCIERO",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 2075533567,
-        "mod_codigo": "LPI",
-        "pro_cod": "80078196-1",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-02-28",
-                "monto": 126016923
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-02-28",
-                "monto": 44144385
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-30",
-                "monto": 48557948
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-25",
-                "monto": 64036280
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-25",
-                "monto": 58214780
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-25",
-                "monto": 20810924
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 22891604
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-30",
-                "monto": 135741683
-            }
-        ],
-        "cod_contrato": "LI-12013-13-72541",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "227978",
-        "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
-        "pro_nombre": "CONSORCIO BICENTENARIO",
-        "fecha_contrato": "2013-05-16",
-        "categoria_cod": "5",
-        "rubro_cod": "580"
-    },
-    {
         "llamado_nombre": "REHABI.Y MEJORAM. DE CAMINOS NO PAV. 1ER AÑO, DPTO DE SAN PEDRO, TRAMOS: (LOTE 1) CHORE COLONIA COCUERA - SAN PABLO), LOTE 2 CHORE -JHUGUA REY), LOTE 3 (JHUGUA REY ? GRAL AQUINO)",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "monto_total": 22136137249,
         "mod_codigo": "LPI",
         "pro_cod": "80002947-0",
@@ -9416,11 +10027,12 @@ var imputaciones = [
         "pro_nombre": "ECOMIPA S.A.",
         "fecha_contrato": "2013-06-13",
         "categoria_cod": "21",
+        "obra": "Jhugua Rey - Gral. Aquino",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "REHABI.Y MEJORAM. DE CAMINOS NO PAV. 1ER AÑO, DPTO DE SAN PEDRO, TRAMOS: (LOTE 1) CHORE COLONIA COCUERA - SAN PABLO), LOTE 2 CHORE -JHUGUA REY), LOTE 3 (JHUGUA REY ? GRAL AQUINO)",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "monto_total": 20880759061,
         "mod_codigo": "LPI",
         "pro_cod": "80005623-0",
@@ -9704,11 +10316,12 @@ var imputaciones = [
         "pro_nombre": "BENITO ROGGIO E HIJOS SA",
         "fecha_contrato": "2013-05-27",
         "categoria_cod": "21",
+        "obra": "Chore - Jhugua Rey",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "REHABI.Y MEJORAM. DE CAMINOS NO PAV. 1ER AÑO, DPTO DE SAN PEDRO, TRAMOS: (LOTE 1) CHORE COLONIA COCUERA - SAN PABLO), LOTE 2 CHORE -JHUGUA REY), LOTE 3 (JHUGUA REY ? GRAL AQUINO)",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "monto_total": 24386596912,
         "mod_codigo": "LPI",
         "pro_cod": "80022306-3",
@@ -9977,11 +10590,12 @@ var imputaciones = [
         "pro_nombre": "VIALTEC SA",
         "fecha_contrato": "2013-05-02",
         "categoria_cod": "21",
+        "obra": "Chore - Colonia Cocuera - San Pablo",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "LLAMADO MOPC Nº 200-2012 LPI REHABILITACION Y MEJORAMIENTO DE CAMINOS NO PAVIMENTADOS, 1ER AÑO, DEPARTAMENTO DE CAAZAPA, EN EL TRAMO: CAAZAPA - BOQUERON - AD REFERENDUM AL PGN 2013",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "monto_total": 21760346115,
         "mod_codigo": "LPI",
         "pro_cod": "80078961-0",
@@ -10175,104 +10789,12 @@ var imputaciones = [
         "pro_nombre": "Consorcio Ñumi",
         "fecha_contrato": "2013-05-16",
         "categoria_cod": "21",
+        "obra": "Caazapá - Boquerón",
         "rubro_cod": "520"
     },
     {
-        "llamado_nombre": "LLAMADO MOPC Nº 11/2012. LPI.IMPLEMENTACION DEL SISTEMA DE CONTEOS DE TRANSITOS",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 8860123840,
-        "mod_codigo": "LPI",
-        "pro_cod": "80079651-9",
-        "categoria_nombre": "Equipos Militares y de Seguridad. Servicio de Seguridad y Vigilancia",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-02-28",
-                "monto": 177625280
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-02-28",
-                "monto": 443726182
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 82941976
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 209185200
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 166500000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 353181818
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-07-25",
-                "monto": 1307424238
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-07-25",
-                "monto": 345300480
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 309120696
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-24",
-                "monto": 44372618
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-29",
-                "monto": 441865582
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-29",
-                "monto": 38986695
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-29",
-                "monto": 402975109
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-29",
-                "monto": 423334868
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-12-04",
-                "monto": 33387112
-            }
-        ],
-        "cod_contrato": "LI-12013-13-77861",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "227976",
-        "rubro_nombre": "ADQ. DE MAQ. EQ. Y HERR. MAY.",
-        "pro_nombre": "CONSORCIO CSI - CIEMSA",
-        "fecha_contrato": "2013-07-26",
-        "categoria_cod": "25",
-        "rubro_cod": "530"
-    },
-    {
         "llamado_nombre": "LLAMADO MOPC Nº 199 LPI REHABILITACION Y MNTO DE CNOS NO PAVIMENTADOS, 1ER AÑO, DPTO DE CAAGUAZU, EN EL TRAMO: COLONIAS UNIDAS - RAUL OVIEDO - YHOVY - J.E. ESTIGARRIBIA - AD REFERENDUM AL PGN 2013",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "monto_total": 28230256321,
         "mod_codigo": "LPI",
         "pro_cod": "80079093-6",
@@ -10471,267 +10993,12 @@ var imputaciones = [
         "pro_nombre": "CONSORCIO ROGGIO - TECNOEDIL",
         "fecha_contrato": "2013-08-06",
         "categoria_cod": "21",
-        "rubro_cod": "520"
-    },
-    {
-        "llamado_nombre": "MOPC Nº 47-2012 LPI IMPLEMENTACION DE MEJORAMIENTO DE LA RED DE PEAJES DE PARAGUAY",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 61239088825,
-        "mod_codigo": "LPI",
-        "pro_cod": "80079301-3",
-        "categoria_nombre": "Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-04-24",
-                "monto": 1225649218
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-04-28",
-                "monto": 2599861979
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-26",
-                "monto": 259986198
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-30",
-                "monto": 89700000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-30",
-                "monto": 20371069
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-30",
-                "monto": 8694739
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-30",
-                "monto": 10168416
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-30",
-                "monto": 8872416
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-30",
-                "monto": 180759091
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-30",
-                "monto": 17774705
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-30",
-                "monto": 17418753
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-31",
-                "monto": 120820225
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-31",
-                "monto": 60308582
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-29",
-                "monto": 81240218
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-12-10",
-                "monto": 18075909
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-12-10",
-                "monto": 12082022
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-12-10",
-                "monto": 1777471
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-12-10",
-                "monto": 1741875
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-12-11",
-                "monto": 2037107
-            }
-        ],
-        "cod_contrato": "LI-12013-13-79376",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "227974",
-        "rubro_nombre": "CONSTRUCCIONES",
-        "pro_nombre": "CONSORCIO M&T S.A. - PAT TRAFFIC",
-        "fecha_contrato": "2013-08-07",
-        "categoria_cod": "21",
-        "rubro_cod": "520"
-    },
-    {
-        "llamado_nombre": "MOPC Nº 48-12 LPI FISCALIZACION DEL CONTRATO DE IMPLEMENTACION DEL MEJORAMIENTO DE LA RED DE PEAJES DEL PARAGUAY",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 3996520000,
-        "mod_codigo": "LPI",
-        "pro_cod": "80079715-9",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-21",
-                "monto": 63102947
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-22",
-                "monto": 63102947
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-29",
-                "monto": 27344611
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-30",
-                "monto": 63102947
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-30",
-                "monto": 63102947
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-25",
-                "monto": 133854737
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-25",
-                "monto": 133854737
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-25",
-                "monto": 58003719
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 133854737
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 133854737
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 63102947
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 63102947
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 133854737
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 133854737
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-22",
-                "monto": 13385474
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-24",
-                "monto": 13385474
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-25",
-                "monto": 13385474
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-26",
-                "monto": 13385474
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-26",
-                "monto": 5800372
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 133854737
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-30",
-                "monto": 63102947
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-17",
-                "monto": 63102947
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-20",
-                "monto": 133854737
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-31",
-                "monto": 13385474
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-10-31",
-                "monto": 13385474
-            }
-        ],
-        "cod_contrato": "LI-12013-13-79989",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "227975",
-        "rubro_nombre": "CONSTRUCCIONES",
-        "pro_nombre": "Consorcio D&B-CCT",
-        "fecha_contrato": "2013-11-06",
-        "categoria_cod": "5",
+        "obra": "Colonias Unidas - Jhovy Central - Raul A. Ovierdo - J.Eulogio Estigarribia",
         "rubro_cod": "520"
     },
     {
         "llamado_nombre": "165-SERV DE CONSULT PARA LA ACTUALIZACION DE LOS TRAMOS Y ELABORACION DEL PROYECTO VIAL DE LAS OBRAS DE MEJORAMIENTO DEL 2° Y 3° AÑO DE LOS CAMINOS NO PAVIMENTADOS DEL DEPARTAMENTO DE CAAZAPA",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "monto_total": 785965400,
         "mod_codigo": "LPN",
         "pro_cod": "80064649-5",
@@ -10805,11 +11072,12 @@ var imputaciones = [
         "pro_nombre": "Consorcio CIVIAL - INSERCON",
         "fecha_contrato": "2010-12-22",
         "categoria_cod": "5",
+        "obra": "Estudios de factibilidad",
         "rubro_cod": "580"
     },
     {
         "llamado_nombre": "164-SERVI DE CONSULT PARA LA ACTUALIZACION DE LOS TRAMOS Y ELABORACION DEL PROYECTO VIAL DE LAS OBRAS DE MEJORAMIENTO DEL 2° Y 3° AÑO DE LOS CAMINOS NO PAVIMENTADOS DEL DEPARTAMENTO DE SAN PEDRO",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "monto_total": 594737443,
         "mod_codigo": "LPN",
         "pro_cod": "80064115-9",
@@ -10868,11 +11136,12 @@ var imputaciones = [
         "pro_nombre": "CONSORCIO SERVINGCI - ELECTROPAR",
         "fecha_contrato": "2010-12-20",
         "categoria_cod": "5",
+        "obra": "Estudios de factibilidad",
         "rubro_cod": "580"
     },
     {
         "llamado_nombre": "163-SERVI DE CONSULT PARA LA ACTUALIZACION DE LOS TRAMOS Y ELABORACION DEL PROYECTO VIAL DE LAS OBRAS DE MEJORAMIENTO DEL 2° Y 3° AÑO DE LOS CAMINOS NO PAVIMENTADOS DEL DEPARTAMENTO DE CAAGUAZU",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "monto_total": 777182093,
         "mod_codigo": "LPN",
         "pro_cod": "80038221-8",
@@ -10956,224 +11225,12 @@ var imputaciones = [
         "pro_nombre": "Consorcio CSI - GEIPEX",
         "fecha_contrato": "2010-12-21",
         "categoria_cod": "5",
+        "obra": "Estudios de factibilidad",
         "rubro_cod": "580"
     },
     {
-        "llamado_nombre": "MOPC Nº 92-2012 LPN SERVICIO DE CONSULTORIA PARA LA FISCALIZACION DEL INVENTARIO VIAL",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL PAVIMENTADA",
-        "monto_total": 600000000,
-        "mod_codigo": "LPN",
-        "pro_cod": "329949-0",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-05-21",
-                "monto": 38181818
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2013-07-31",
-                "monto": 18000000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-10-22",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-11-25",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-11-29",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-03-14",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-03-28",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-03-29",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-07",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-28",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-29",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-29",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-29",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-30",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-30",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-30",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-31",
-                "monto": 3818182
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-31",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-31",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-31",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-31",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-31",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-25",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-30",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-30",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-07-31",
-                "monto": 10125000
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-19",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-30",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-12",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-12",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-15",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-09-26",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-12",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-12",
-                "monto": 21477272
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-13",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-19",
-                "monto": 2147728
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-29",
-                "monto": 2147728
-            }
-        ],
-        "cod_contrato": "LP-12013-13-70528",
-        "mod_nombre": "Licitación pública nacional",
-        "llamado_id": "230692",
-        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
-        "pro_nombre": "ANGEL RAFAEL BUSTO GIUMMARRESI",
-        "fecha_contrato": "2012-12-19",
-        "categoria_cod": "5",
-        "rubro_cod": "260"
-    },
-    {
         "rubro_nombre": "GRATIF. POR SERV. ESPECIALES",
-        "componente": "FORTALECIMIENTO DE LA PLANIFICACIÓN ESTRATÉGICA Y LA GESTIÓN VIAL",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "imputaciones": [
             {
                 "pro_nombre": "MINISTERIO DE OBRAS PUBLICAS Y COMUNICACIONES",
@@ -12202,7 +12259,7 @@ var imputaciones = [
     },
     {
         "rubro_nombre": "CONTRAT. PERSONAL TECNICO",
-        "componente": "FORTALECIMIENTO DE LA PLANIFICACIÓN ESTRATÉGICA Y LA GESTIÓN VIAL",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "imputaciones": [
             {
                 "pro_nombre": "ALBA CAROLINA PENAYO ORTIZ",
@@ -12489,7 +12546,7 @@ var imputaciones = [
     },
     {
         "rubro_nombre": "JORNALES",
-        "componente": "FORTALECIMIENTO DE LA PLANIFICACIÓN ESTRATÉGICA Y LA GESTIÓN VIAL",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "imputaciones": [
             {
                 "pro_nombre": "COOP. MULTIACTIVA \"5 DE OCTUBRE\" LTDA.",
@@ -12804,7 +12861,7 @@ var imputaciones = [
     },
     {
         "rubro_nombre": "HONORARIOS PROFESIONALES",
-        "componente": "FORTALECIMIENTO DE LA PLANIFICACIÓN ESTRATÉGICA Y LA GESTIÓN VIAL",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "imputaciones": [
             {
                 "pro_nombre": "MINISTERIO DE OBRAS PUBLICAS Y COMUNICACIONES",
@@ -27658,7 +27715,7 @@ var imputaciones = [
     },
     {
         "rubro_nombre": "OTROS GASTOS PERSONALES",
-        "componente": "FORTALECIMIENTO DE LA PLANIFICACIÓN ESTRATÉGICA Y LA GESTIÓN VIAL",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "imputaciones": [
             {
                 "pro_nombre": "RODNEY ARIEL VELAZQUEZ FERREIRA",
@@ -28078,7 +28135,7 @@ var imputaciones = [
     },
     {
         "rubro_nombre": "PASAJES Y VIATICOS",
-        "componente": "FORTALECIMIENTO DE LA PLANIFICACIÓN ESTRATÉGICA Y LA GESTIÓN VIAL",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
         "imputaciones": [
             {
                 "pro_nombre": "MINISTERIO DE OBRAS PUBLICAS Y COMUNICACIONES",
@@ -30025,7 +30082,7 @@ var imputaciones = [
     {
         "rubro_nombre": "APORTE A ENT. EDUCAT. E INSTIT",
         "pro_nombre": "ASOCIACION SIN FINES DE LUCRO \"LA ESPERANZA\"",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL NO PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "pro_cod": "80069543-7",
         "imputaciones": [
             {
@@ -30124,7 +30181,7 @@ var imputaciones = [
     {
         "rubro_nombre": "APORTE A ENT. EDUCAT. E INSTIT",
         "pro_nombre": "ASOCIACION SIN FINES DE LUCRO \"UNION FLORIDO\"",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL NO PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "pro_cod": "80069582-8",
         "imputaciones": [
             {
@@ -30218,7 +30275,7 @@ var imputaciones = [
     {
         "rubro_nombre": "APORTE A ENT. EDUCAT. E INSTIT",
         "pro_nombre": "ASOCIACION SIN FINES DE LUCRO ABA'I",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL NO PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "pro_cod": "80069480-5",
         "imputaciones": [
             {
@@ -30287,7 +30344,7 @@ var imputaciones = [
     {
         "rubro_nombre": "APORTE A ENT. EDUCAT. E INSTIT",
         "pro_nombre": "ASOCIACION \"SAN JOSE OBRERO\"",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL NO PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "pro_cod": "80069668-9",
         "imputaciones": [
             {
@@ -30411,7 +30468,7 @@ var imputaciones = [
     {
         "rubro_nombre": "APORTE A ENT. EDUCAT. E INSTIT",
         "pro_nombre": "ASOCIACION SIN FINES DE LUCRO \"YHUENSE\"",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL NO PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "pro_cod": "80069517-8",
         "imputaciones": [
             {
@@ -30510,7 +30567,7 @@ var imputaciones = [
     {
         "rubro_nombre": "APORTE A ENT. EDUCAT. E INSTIT",
         "pro_nombre": "ASOCIACION GUARANI TEETE",
-        "componente": "MEJORAMIENTO Y MANTENIMIENTO DE LA RED VIAL NO PAVIMENTADA",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
         "pro_cod": "80069477-5",
         "imputaciones": [
             {

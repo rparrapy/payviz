@@ -17,7 +17,7 @@ angular.module('payvizApp')
           return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         };
         var data = scope.data;
-        var size = { 'all' : [900,400],'rubro_nombre' : [900, 900],'pro_nombre_vista' : [900,1200], 'mod_nombre' : [900,400],'componente' : [900,400] };
+        var size = { 'all' : [900,400],'rubro_nombre' : [900, 900],'pro_nombre_vista' : [900,1200], 'mod_nombre' : [900,400],'componente' : [900,450], 'obra_vista': [900, 1500] };
         var width = 750, height = 750;
         var maxElem = _.max(data, function(c){ return c.monto_total; });
         var minElem = _.min(data, function(c){ return c.monto_total; });
@@ -115,11 +115,17 @@ angular.module('payvizApp')
         for (var j = 0; j < data.length; j++) {
           
             data[j].id = j;
+            if(data[j].cod_contrato){
+              data[j].id_filtrado = data[j].cod_contrato;
+            }else{
+              data[j].id_filtrado = 'no-aplica-' + j.toString();
+            }
             data[j].radius = area(data[j].monto_total);
             data[j].x = Math.random() * width;
             data[j].y = Math.random() * height;
             data[j].is_adenda = false;
             data[j].pro_nombre_vista = data[j].pro_nombre;
+            data[j].obra_vista = data[j].obra;
             ndata.push(data[j]);
             if(data[j].adendas){
               var adendas = data[j].adendas;
@@ -135,7 +141,9 @@ angular.module('payvizApp')
                 adendas[i].mod_nombre = data[j].mod_nombre;
                 adendas[i].pro_nombre = data[j].pro_nombre;
                 adendas[i].pro_nombre_vista = data[j].pro_nombre;
+                adendas[i].obra_vista = data[j].obra;
                 adendas[i].componente = data[j].componente;
+                adendas[i].obra = data[j].obra;
                 adendas[i].is_adenda = true;
                 ndata.push(adendas[i]);
             }
@@ -156,7 +164,8 @@ angular.module('payvizApp')
           var centers, map;
           var circulitos;
           if(vname !== 'all'){
-            circulitos = _.countBy(_.pluck(data, vname),function(d) { return d } );
+            circulitos = _.countBy(_.pluck(data, vname), function(d) { return d; } );
+            circulitos = _.mapObject(circulitos, function(d){ return 0; });
           }
 
           _.each(data, function(d){ 
@@ -167,50 +176,26 @@ angular.module('payvizApp')
           var maximoMonto = _.chain(circulitos).map(function(num, key) { return num;}).max().value();
           var minimoMonto = montos.min().value();
           var montoToSquareSize = d3.scale.quantize().domain([minimoMonto, maximoMonto]).range(_.range(1,5));
-      
+
           centers = _.uniq(_.pluck(data, vname)).map(function (d) {
             var c = _.has(circulitos,d) ? circulitos[d] : 0;
             var v = (c > 150000000000) ? 10 : 1;
             return {name: d, value: v, cantidad : c};
           });
 
-          centers = _.sortBy(centers, function(o) { return o.cantidad });
 
-          //console.log(centers);
-          if(vname === 'pro_nombre_vista'){
-              centers = centers.filter(function( obj ) {
-                  return obj.name !== 'OTROS';
-              });
-              centers.reverse();
-              var ncenter = []
-              for(var i=0; i<centers.length; i++){
-                  if( i < 14 ){
-                    ncenter.push(centers[i]);
-                  }else{
-                    _.each(data,function(d){
-                      if( d.pro_nombre_vista == centers[i].name ){
-                        d.pro_nombre_vista = 'OTROS';
-                      }
-                    })
-                  }
-              }
-              ncenter.push({ name: 'OTROS', value : 1, cantidad : 0 });
-              centers = ncenter;
-
-          }else{
-
-            //console.log(centers);
-            // if( centers.length > 1 ){
-            //   var falta = Math.ceil(centers.length / 3) * 3 - centers.length;
-            //   for(var i = 0; i < falta; i++){
-            //     centers.push({ name: null, value : 1, cantidad : -1 });
-            //   }
-            // }
-
+          switch(vname){
+            case 'pro_nombre_vista':
+              centers = truncateCenters(centers, 15, 'pro_nombre_vista');
+              break;
+            case 'obra_vista':
+              centers = truncateCenters(centers, 18, 'obra_vista');
+              break;
           }
+
           map = d3.layout.treemap().size(size).ratio(1).sort(function(a,b){return a.cantidad - b.cantidad});
           map.nodes({children: centers});
-          
+
           switch(vname){
             case 'rubro_nombre':
               centers = moveCentersByRubro(centers);
@@ -220,8 +205,39 @@ angular.module('payvizApp')
               break;
             case 'componente':
               centers = moveCentersByComponente(centers);
+              break;
           }
           return centers;
+        };
+
+        var sortCenters = function(centers){
+          //TODO
+          var positions = _.map(centers, function(c){
+            return {x: c.x, y: c.y, dx: c.dx, dy: c.dy};
+          });
+
+        }
+
+        var truncateCenters = function(centers, number, varname) {
+          centers = centers.filter(function( obj ) {
+            return obj.name !== 'Otros';
+          });
+
+          centers = _.sortBy(centers, function(o) { return -o.cantidad });
+          var ncenter = [];
+          for(var i=0; i<centers.length; i++){
+              if( i < number - 1 ){
+                ncenter.push(centers[i]);
+              }else{
+                _.each(data,function(d){
+                  if( d[varname] == centers[i].name ){
+                    d[varname] = 'Otros';
+                  }
+                })
+              }
+          }
+          ncenter.push({ name: 'Otros', value : 1, cantidad : 0 });
+          return ncenter;
         };
 
         var moveCentersByTipo = function(centers){
@@ -381,16 +397,50 @@ angular.module('payvizApp')
           .attr('class', 'label')
           .attr('text-anchor', 'start')
           .text(function (d) {
+            var exceptions = ['pro_nombre_vista', 'obra_vista'];
             var label;
-            if(d.name && varname !== 'pro_nombre_vista'){ label = d.name.toProperCase(); }else{ label = d.name; } 
+            if(d.name && !_.contains(exceptions, varname)){ label = d.name.toProperCase(); }else{ label = d.name; }
+            if(label){
+              label = label.length > 60 ? label.slice(0, 57) + '...' :  label;
+            }
             return d.name !== undefined || varname === 'all' ? label : 'No aplica'; 
           })
           .attr('transform', function (d) {
             return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y - 5 : 15) + ')';
-          });
+          })
+          //.call(wrap, 100);
         }
 
-
+        function wrap(text, width) {
+  
+          text.each(function() {
+            var text = d3.select(this),
+                words = text.text().split(/\s+/).reverse(),
+                diff;
+            //console.log(words);
+            diff = -40;
+            var word,
+                line = [],
+                lineNumber = 0,
+                lineHeight = 1.1, // ems
+                y = parseFloat(text.attr("y")),
+                dy = parseFloat(text.attr("dy")),
+                //dx = parseFloat(text.attr("dx")),
+            y = y + diff;
+            var tspan = text.text(null).append("tspan").attr("x", -50).attr("y", y).attr("dy", dy + "em");
+           
+            while (word = words.pop()) {
+              line.push(word);
+              tspan.text(line.join(" "));
+              if (tspan.node().getComputedTextLength() > width) {
+                line.pop();
+                tspan.text(line.join(" "));
+                line = [word];
+                tspan = text.append("tspan").attr("x", -50).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+              }
+            }
+          });
+        }
 
         function removePopovers (esperar) {
          if(!esperar){
@@ -405,10 +455,10 @@ angular.module('payvizApp')
         }
 
         function showPopover (d, hasta) {
-          window.setLista = function setLista(cod_contrato){
+          window.setLista = function setLista(id_filtrado){
             removePopovers(false);
             console.log("Me voy a la lista")
-            window.seleccionado = cod_contrato;
+            window.seleccionado = id_filtrado;
             window.location = window.location + 'data';
           }
           $(this).popover({
@@ -425,8 +475,9 @@ angular.module('payvizApp')
                     ' <tbody> <tr> <td width="50%"> Fecha de contrato<br> <strong>{fecha_contrato}</strong> </td> <td> Nombre del llamado<br>'+
                     ' <strong>{llamado_nombre}</strong> </td> </tr> <tr> <td> Código de contratación<br> <strong>{cod_contrato}</strong> </td>'+
                     ' <td> Monto ya pagado<br> <strong>Gs. {monto_pagado}</strong> </td> </tr> <tr> <td> Tipo de licitación<br> '+
-                    '<strong>{mod_nombre}</strong> </td> <td> </td> </tr> </tbody> </table> <p class="txtC">'+
-                    ( d.is_adenda ? '' : '<a onClick="setLista(\''+d.cod_contrato+'\')">Click para ver más detalles</a></p> ')+
+                    '<strong>{mod_nombre}</strong> </td> <td> Obra<br> '+
+                    '<strong>{obra}</strong> </td> </tr> </tbody> </table> <p class="txtC">'+
+                    ( d.is_adenda ? '' : '<a onClick="setLista(\''+d.id_filtrado+'\')">Click para ver más detalles</a></p> ')+
                     '</div>';
               if(d.is_adenda) { d.categoria_nombre = 'Adenda';}
               return crudo.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : 'No aplica')
@@ -437,7 +488,8 @@ angular.module('payvizApp')
                 .replace('{llamado_nombre}', typeof d.llamado_nombre !== "undefined" ? d.llamado_nombre : 'No aplica')
                 .replace('{cod_contrato}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : 'No aplica')
                 .replace('{monto_pagado}', typeof d.monto_pagado !== "undefined" ? d.monto_pagado.toLocaleString() : 'No aplica')
-                .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica');
+                .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica')
+                .replace('{obra}', typeof d.obra !== "undefined" ? d.obra : 'No aplica');
 
               ( typeof metadata_title  !== "undefined" ?  "<title>" + metadata_title + "</title>\n"                             : "" )
               

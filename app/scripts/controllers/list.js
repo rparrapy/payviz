@@ -38,6 +38,11 @@ angular.module('payvizApp')
     var ncontratos = []
     for (var i = 0; i < contratos.length; i++){
       var c = contratos[i];
+      if(c.cod_contrato){
+        c.id_filtrado = c.cod_contrato;
+      }else{
+        c.id_filtrado = 'no-aplica-' + i.toString();
+      }
       if(!c.monto_total){
         c.monto_total = _.reduce(c.imputaciones,function(sum, el) { return sum + el.monto },0);
       }
@@ -85,7 +90,6 @@ angular.module('payvizApp')
     }
 
     contratos = _.sortBy(ncontratos, function(o) { return o.llamado_nombre; });
-
     $scope.contratos = contratos;
     $scope.detalles_abiertos = [];
 
@@ -245,7 +249,8 @@ angular.module('payvizApp')
                 .replace('{cod_contrato}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : 'No aplica')
                 .replace('{monto_pagado}', typeof d.monto_pagado !== "undefined" ? d.monto_pagado.toLocaleString() : 'No aplica')
                 .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica')
-                .replace('{id_svg}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : '1');
+                .replace('{obra}', typeof d.obra !== "undefined" ? d.obra : 'No aplica')
+                .replace('{id_svg}', typeof d.id_filtrado !== "undefined" ? d.id_filtrado : '1');
       if(_.has(d,'adendas')){
         html = html.replace('{id_timeline}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : '1')
                 .replace('{titulo_adendas}', 'Adendas');
@@ -293,57 +298,56 @@ angular.module('payvizApp')
 
 
     var fill = function(contrato, svg){
+      var limite = moment();
+      var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
+        if(moment(imputacion.fecha_obl) <= limite){
+          return sum + imputacion.monto; 
+        }else{
+          return sum;
+        }
+      }, 0);
+      var ejecutado = cobrado/contrato.monto_total;
+      var fillColor = contrato.is_adenda ? '#00698C' : '#f56727' ;
+      var bgColor = contrato.is_adenda ? '#bfdfff' : '#ffead4';
+      var gradientId = 'grad-' + contrato.id_filtrado + '-detail';
 
-          var limite = moment();
-          var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
-            if(moment(imputacion.fecha_obl) <= limite){
-              return sum + imputacion.monto; 
-            }else{
-              return sum;
-            }
-          }, 0);
-          var ejecutado = cobrado/contrato.monto_total;
-          var fillColor = contrato.is_adenda ? '#00698C' : '#f56727' ;
-          var bgColor = contrato.is_adenda ? '#bfdfff' : '#ffead4';
-          var gradientId = 'grad-' + contrato.cod_contrato + '-detail';
+      //Agrego aca, pero deberiamos hacer en otra parte
+      contrato.ejecutado = ejecutado.toFixed(2);
+      contrato.monto_pagado = cobrado;
 
-          //Agrego aca, pero deberiamos hacer en otra parte
-          contrato.ejecutado = ejecutado.toFixed(2);
-          contrato.monto_pagado = cobrado;
-
-          //var imgId = 'img-' +  contrato.cod_contrato;
-          //var imagen = $('#' + imgId);
-          //imagen.show();
+      //var imgId = 'img-' +  contrato.cod_contrato;
+      //var imagen = $('#' + imgId);
+      //imagen.show();
 
 
-          var grad = svg.append('defs').append('linearGradient').attr('id', gradientId)
-          .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
-          grad.append('stop').attr('class', 'color').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
-          grad.append('stop').attr('class', 'blank').attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);  
-
-          return 'url(#' + gradientId + ')';
+      if(d3.select('#' + gradientId).empty()){
+        var grad = svg.append('defs').append('linearGradient').attr('id', gradientId)
+        .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
+        grad.append('stop').attr('class', 'color').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
+        grad.append('stop').attr('class', 'blank').attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);
+      }  
+      return 'url(#' + gradientId + ')';
     };
 
     var imagen = function(contrato, svg, w, h){
 
+      var imgId = 'img-' +  contrato.cod_contrato + '-detail';
+      var imagen = d3.select('#' + imgId );
 
-          var imgId = 'img-' +  contrato.cod_contrato + '-detail';
-          var imagen = d3.select('#' + imgId );
-
-          if(_.has(contrato,'adendas')){
-            var x  = w/2 - contrato.radius * 0.25;
-            var y = h/2 - contrato.radius * 0.25;
-            //x = x > w/2 ? w/2 : x;
-            //y = y > w/2 ? w/2 : y;
-            imagen = svg
-              .append('image')
-              .attr('id', imgId)
-              .attr('xlink:href', 'images/ico_dinero.png')
-              .attr('width', contrato.radius * 0.5)
-              .attr('height', contrato.radius * 0.5)
-              .attr('x', x)
-              .attr('y', y);
-          }
+      if(_.has(contrato,'adendas')){
+        var x  = w/2 - contrato.radius * 0.25;
+        var y = h/2 - contrato.radius * 0.25;
+        //x = x > w/2 ? w/2 : x;
+        //y = y > w/2 ? w/2 : y;
+        imagen = svg
+          .append('image')
+          .attr('id', imgId)
+          .attr('xlink:href', 'images/ico_dinero.png')
+          .attr('width', contrato.radius * 0.5)
+          .attr('height', contrato.radius * 0.5)
+          .attr('x', x)
+          .attr('y', y);
+      }
     };
     
 
@@ -352,16 +356,16 @@ angular.module('payvizApp')
     };
 
     function setPosAdenda(d, w, h){
-          if(d.p_data){
-            var angulos = [0,72,150,216,288,360];
+      if(d.p_data){
+        var angulos = [0,72,150,216,288,360];
 
-            d.x = w/2 + Math.cos( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius;
-            d.y = h/2 - Math.sin( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius; 
-          }
+        d.x = w/2 + Math.cos( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius;
+        d.y = h/2 - Math.sin( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius; 
+      }
     }
 
     function dibujar(c, id){
-
+      console.log(c);
       var circulo = [c];
       c.radius = 125;
       if(_.has(c,'adendas')){
@@ -378,8 +382,10 @@ angular.module('payvizApp')
       var threeColumns = $('thead tr th:not(.sorting_disabled):lt(3)');
       var width = _.reduce(threeColumns, function(memo, num){ return memo + $(num).outerWidth(); }, 0);
       var height = $('.detalle .right').height();
-      d3.select("#svg-"+ c.cod_contrato + " svg").remove();
-      var svgContainer = d3.select("#svg-"+c.cod_contrato).append("svg:svg").attr("width", width).attr("height", height);
+      d3.select("#svg-"+ c.id_filtrado + " svg").remove();
+      console.log($("#svg-"+c.id_filtrado));
+      var svgContainer = d3.select("#svg-"+c.id_filtrado).append("svg:svg").attr("width", width).attr("height", height);
+      console.log($("#svg-"+c.id_filtrado));
       var circles = svgContainer.selectAll("circle")
                           .data(circulo)
                           .enter()

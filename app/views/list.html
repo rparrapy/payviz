@@ -59,7 +59,8 @@
                                                 <strong>{mod_nombre}</strong>
                                             </td>
                                             <td>
-                                                
+                                                Obra<br />
+                                                <strong>{obra}</strong>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -100,7 +101,7 @@
                 <th style="text-align:center;">Monto</th>
                 <th style="text-align:center;">Tipo Licitación</th>
                 <th style="display:none;">Prueba</th>
-                <th style="display:none;">Id Unico</th>
+                <th style="display:none;">Id para Filtrado</th>
             </tr>
         </tfoot>
         <tbody>
@@ -115,7 +116,7 @@
                 <td class="monto" ng-bind="c.monto_total"></td>
                 <td ng-bind="c.mod_nombre"></td>
                 <td style="display:none;">prueba{{$index}}</td>
-                <td style="display:none;" ng-bind="c.id_unico"></td>
+                <td style="display:none;" ng-bind="c.id_filtrado"></td>
         </tr>
         </tbody>
 </table>
