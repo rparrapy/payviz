@@ -82,6 +82,23 @@ angular.module('payvizApp')
           return (contrato.fecha_contrato && moment(contrato.fecha_contrato) > limite) ? 0.0 : 1.0;
         }
 
+        var radius = function(contrato, hasta){
+          var cobrado, limite;
+          limite = hasta || moment();
+          if(contrato.cod_contrato){
+            return area(contrato.monto_total);
+          }else{
+            cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
+              if(moment(imputacion.fecha_obl) <= limite){
+                return sum + imputacion.monto; 
+              }else{
+                return sum;
+              }
+            }, 0);
+            return area(cobrado);
+          }
+        }
+
         var imagen = function(contrato){
           var imgId = 'img-' +  contrato.cod_contrato;
           var imagen = d3.select('#' + imgId );
@@ -207,7 +224,7 @@ angular.module('payvizApp')
               centers = moveCentersByComponente(centers);
               break;
           }
-          return centers;
+          return sortCenters(centers);
         };
 
         var sortCenters = function(centers){
@@ -216,6 +233,22 @@ angular.module('payvizApp')
             return {x: c.x, y: c.y, dx: c.dx, dy: c.dy};
           });
 
+          positions.sort(function(a, b){
+            if(a.y !== b.y){
+              return b.y - a.y;
+            }else{
+              return b.x - a.x;
+            }
+          });
+          console.log(positions)
+          _.each(centers, function(c, i){
+            c.x = positions[i].x
+            c.y = positions[i].y
+            c.dx = positions[i].dx
+            c.dy = positions[i].dy
+          });
+
+          return centers;
         }
 
         var truncateCenters = function(centers, number, varname) {
@@ -311,7 +344,7 @@ angular.module('payvizApp')
           .attr('class', 'node')
           .attr('cx', function (d) { return d.x; })
           .attr('cy', function (d) { return d.y; })
-          .attr('r', function (d) {  return d.radius;})
+          .attr('r', function (d) {  return d.radius; })
           .attr('stroke', function(d){ return stroke(d); })
           .attr('opacity', function(d){ return opacity(d); })
           .style('fill', function (d) { return fill(d); })
@@ -341,6 +374,7 @@ angular.module('payvizApp')
             until.toDate();
           }
           nodes.attr('opacity', function(d){ return opacity(d, until);})
+            .attr('r', function (d) {  return radius(d, until); })
             .style('fill', function (d) { return fill(d, until); });
         });
 

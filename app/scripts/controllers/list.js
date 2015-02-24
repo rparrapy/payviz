@@ -52,9 +52,6 @@ angular.module('payvizApp')
       if(!c.cod_contrato){
         c.cod_contrato = 'No aplica';
       }
-      if(!c.pro_nombre){
-        c.pro_nombre = 'No aplica';
-      }
       if(!c.mod_nombre){
         c.mod_nombre = 'No aplica';
       }
@@ -63,6 +60,12 @@ angular.module('payvizApp')
       }
       if(!c.fecha_contrato){
         c.fecha_contrato = 'No aplica';
+      }
+      if(!c.pro_nombre){
+        c.pro_nombre = 'Varios';
+      }
+      if(!c.pro_cod){
+        c.pro_cod = 'No aplica';
       }
       c.radius = 125;
       c.is_adenda = false;
