@@ -15,6 +15,15 @@ angular.module('payvizApp')
       'Karma'
     ];
     $('.tips, .referencias, hr:last').show();
+    //Keep active nav-pill updated
+    $(document).ready(function() {
+      $(".nav.nav-pills li").on("click",function(){
+        //Fix routing problem inside iframe
+        var url = $(this).children().first()[0].href;
+        window.location = url;
+      });
+    });
+
     var contratos = [];
     angular.copy(imputaciones, contratos);
 

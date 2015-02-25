@@ -15,14 +15,20 @@ angular.module('payvizApp')
       'Karma'
     ];
 
+    //Keep active nav-pill updated
+    $(document).ready(function() {
+      $(".nav.nav-pills li").on("click",function(){
+        var url = $(this).children().first()[0].href;
+        window.location = url;
+      });
+    });
+
+
     String.prototype.toProperCase = function () {
       return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
     };
 
     $('.tips, .referencias, hr:last').hide();
-    var liToSelect = 2;
-    $(".nav.nav-pills li").removeClass("active");
-    $(".nav.nav-pills li:eq("+(liToSelect-1)+")").addClass("active");
 
     // se clona el objeto para no afectar al grafico.
     var contratos = [];
