@@ -12,7 +12,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -165,7 +164,8 @@ body {
 
 .subTit {
   color: #666;
-  font-weight: normal; 
+  font-weight: normal;
+  text-align: left;
 }
 
 .s640 {
@@ -199,9 +199,8 @@ background: #CCC url("../images/ico_3.png") no-repeat 15px center;
 .tips .celda {
   display: table-cell;
   padding: 20px 10px 20px 80px;
-  width: 230px;
   color: #666;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 120%;
   vertical-align: middle;
 }
@@ -209,6 +208,7 @@ background: #CCC url("../images/ico_3.png") no-repeat 15px center;
 .referencias {
   display: table;
   padding: 10px 0;
+  text-align: left;
 }
 
 .referencias .celda {
@@ -259,4 +259,16 @@ ul.simple li {
 
 tbody{
   font-size: smaller;
+}
+
+.btn-group{
+  padding-bottom: 10px;
+}
+
+.referencias p, .referencias li, .fuente{
+  font-size: 12px;
+}
+
+.fuente{
+  text-align: left;
 }

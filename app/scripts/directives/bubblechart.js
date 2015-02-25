@@ -17,7 +17,19 @@ angular.module('payvizApp')
           return this.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         };
         var data = scope.data;
-        var size = { 'all' : [900,400],'rubro_nombre' : [900, 900],'pro_nombre_vista' : [900,1200], 'mod_nombre' : [900,400],'componente' : [900,450], 'obra_vista': [900, 1500] };
+        var filteredData = data;
+        var size = { 
+                    'all' : [900,400],
+                    'rubro_nombre' : [900, 900],
+                    'pro_nombre_vista' : [900,1200], 
+                    'mod_nombre' : [900,400],
+                    'componente' : [900,450], 
+                    'obra_vista': {
+                                  'pavimentadas': [900, 250],
+                                  'no-pavimentadas': [900, 300],
+                                  'fortalecimiento': [900, 400]
+                    }
+                  };
         var width = 750, height = 750;
         var maxElem = _.max(data, function(c){ return c.monto_total; });
         var minElem = _.min(data, function(c){ return c.monto_total; });
@@ -47,8 +59,11 @@ angular.module('payvizApp')
 
           var imgId = 'img-' +  contrato.cod_contrato;
           var imagen = $('#' + imgId);
-          imagen.show();
-
+          var componente = $('#componentes .active').attr('id');
+          if(!componente || contrato.componente === componente){
+            //console.log('mostrar imagen');
+            imagen.show();
+          }
 
           if(hasta){
             d3.select('#' + gradientId + " stop.color").attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
@@ -180,12 +195,13 @@ angular.module('payvizApp')
         var getCenters = function (vname, size) {
           var centers, map;
           var circulitos;
+          
           if(vname !== 'all'){
-            circulitos = _.countBy(_.pluck(data, vname), function(d) { return d; } );
+            circulitos = _.countBy(_.pluck(filteredData, vname), function(d) { return d; } );
             circulitos = _.mapObject(circulitos, function(d){ return 0; });
           }
 
-          _.each(data, function(d){ 
+          _.each(filteredData, function(d){ 
               if(d[vname])
                 circulitos[d[vname]] += parseInt(d.monto_total);
           });
@@ -194,7 +210,7 @@ angular.module('payvizApp')
           var minimoMonto = montos.min().value();
           var montoToSquareSize = d3.scale.quantize().domain([minimoMonto, maximoMonto]).range(_.range(1,5));
 
-          centers = _.uniq(_.pluck(data, vname)).map(function (d) {
+          centers = _.uniq(_.pluck(filteredData, vname)).map(function (d) {
             var c = _.has(circulitos,d) ? circulitos[d] : 0;
             var v = (c > 150000000000) ? 10 : 1;
             return {name: d, value: v, cantidad : c};
@@ -205,11 +221,8 @@ angular.module('payvizApp')
             case 'pro_nombre_vista':
               centers = truncateCenters(centers, 15, 'pro_nombre_vista');
               break;
-            case 'obra_vista':
-              centers = truncateCenters(centers, 18, 'obra_vista');
-              break;
           }
-
+          //console.log(centers);
           map = d3.layout.treemap().size(size).ratio(1).sort(function(a,b){return a.cantidad - b.cantidad});
           map.nodes({children: centers});
 
@@ -240,7 +253,7 @@ angular.module('payvizApp')
               return b.x - a.x;
             }
           });
-          console.log(positions)
+
           _.each(centers, function(c, i){
             c.x = positions[i].x
             c.y = positions[i].y
@@ -334,6 +347,12 @@ angular.module('payvizApp')
           return centers;
         }
 
+        var componenteMap = {
+                        'pavimentadas': 'REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS',
+                        'no-pavimentadas': 'MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS',
+                        'fortalecimiento': 'FORTALECIMIENTO INSTITUCIONAL'
+                      };
+
         var nodes = svg.selectAll('circle')
           .data(data);
 
@@ -341,7 +360,7 @@ angular.module('payvizApp')
 
         nodes.enter().append('circle')
           .attr('id', function(d){ return 'circulo' + d.id; })
-          .attr('class', 'node')
+          .attr('class', function(d){ return 'node ' + _.invert(componenteMap)[d.componente]})
           .attr('cx', function (d) { return d.x; })
           .attr('cy', function (d) { return d.y; })
           .attr('r', function (d) {  return d.radius; })
@@ -354,18 +373,23 @@ angular.module('payvizApp')
             window.seleccionado = d.cod_contrato; 
 
           });
-
-
-        
-        //console.log(nodes);
-              
         
         var force = d3.layout.force();
 
         draw('all');
 
         $( '.btn' ).click(function() {
-          draw(this.id);
+          var componente = $(this).attr('id');
+          var varname = $(this).attr('name');
+          if(varname === 'componente'){
+            $('#componentes').show();
+            $('[name="obra_vista"]').removeClass('active');
+          }else{
+            if(varname !== 'obra_vista'){
+              $('#componentes').hide();
+            }
+          }
+          draw(varname, componente);
         });
 
         scope.$watch('until',function(until){
@@ -394,29 +418,68 @@ angular.module('payvizApp')
             .attr('height', height);
         }
 
-        function draw (varname) {
-          width = size[varname][0];
-          height = size[varname][1];
+        function draw (varname, componente) {
+          if(componente){
+            width = size[varname][componente][0];
+            height = size[varname][componente][1];
+          }else{
+            width = size[varname][0];
+            height = size[varname][1];
+          }
           resizeSvg(width, height);
+          filterData(componente, varname);
           var centers = getCenters(varname, [width, height]);
-          force.on('tick', tick(centers, varname));
+          force.on('tick', tick(centers, varname, componente));
           labels(centers,varname);
           force.start();
         }
 
-        function tick (centers, varname) {
+        function filterData(id, vname){
+          var visibleNodes = nodes;
+          var hiddenNodes = [];
+          var excludedData;
+          filteredData = (vname === 'obra_vista') ? _.filter(data, function(d){
+            return d.componente === componenteMap[id];
+          }) : data;
+
+
+          _.each(filteredData, function(d){
+            $('#img-' + d.cod_contrato).show();
+          });
+
+          if(id){
+            excludedData = _.filter(data, function(d){
+              return d.componente !== componenteMap[id];
+            });
+
+            _.each(excludedData, function(d){
+              $('#img-' + d.cod_contrato).hide();
+            });
+
+            visibleNodes = svg.selectAll('circle.' + id);
+            hiddenNodes = svg.selectAll('circle:not(.' + id + ')');
+            hiddenNodes.style('display', 'none');
+          }
+          visibleNodes.style('display', 'block');
+        }
+
+        function tick (centers, varname, componente) {
           var foci = {};
           for (var i = 0; i < centers.length; i++) {
             foci[centers[i].name] = centers[i];
           }
           return function (e) {
-            for (var i = 0; i < data.length; i++) {
-              var o = data[i];
+            var visibleNodes = nodes;
+            if(componente){
+              visibleNodes = svg.selectAll('circle.' + componente);
+            }
+            for (var i = 0; i < filteredData.length; i++) {
+              var o = filteredData[i];
               var f = foci[o[varname]];
               o.y += ((f.y + (f.dy / 2)) - o.y) * e.alpha;
               o.x += ((f.x + (f.dx / 2)) - o.x) * e.alpha;
             }
-            nodes.each(collide(.15))
+            visibleNodes.each(collide(.15))
               .attr('cx', function (d) {  return d.x; })
               .attr('cy', function (d) { imagen(d); return d.y; });
 
@@ -435,7 +498,7 @@ angular.module('payvizApp')
             var label;
             if(d.name && !_.contains(exceptions, varname)){ label = d.name.toProperCase(); }else{ label = d.name; }
             if(label){
-              label = label.length > 60 ? label.slice(0, 57) + '...' :  label;
+              label = label.length > 50 ? label.slice(0, 47) + '...' :  label;
             }
             return d.name !== undefined || varname === 'all' ? label : 'No aplica'; 
           })
@@ -491,7 +554,7 @@ angular.module('payvizApp')
         function showPopover (d, hasta) {
           window.setLista = function setLista(id_filtrado){
             removePopovers(false);
-            console.log("Me voy a la lista")
+            console.log("Me voy a la lista");
             window.seleccionado = id_filtrado;
             window.location = window.location + 'data';
           }

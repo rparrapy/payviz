@@ -1,21 +1,41 @@
-<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-default active" id="all">
+<div class="header">
+  <ul class="nav nav-pills gray pull-right">
+    <li class="active"><a ng-href="#/">Gráficos</a></li>
+    <li><a ng-href="#/data">Listado</a></li>
+  </ul>
+  <div class="s640">
+    <h3 class="m0">Contratos del proyecto Ñamopora Ñanderape</h1>
+    <h6 class="subTit"><p>El proyecto tiene un costo total de 105.41 millones de dólares. El Banco Mundial financia 74 millones de dólares y el Estado Paraguayo 31.41 millones de dólares.</p>
+      <p>Cada círculo representa un contrato del proyecto, en donde el tamaño está dado por el monto del contrato y el contenido marcado representa el monto ya pagado. Las obras desarrolladas como parte del proyecto pueden verse en un mapa interactivo, haciendo click <a href="http://www.mopc.gov.py/mopcweb/BM/mapa.html">aquí</a>.</p>
+    </h6>
+</div>
+
+<div id="agrupaciones" class="btn-group" data-toggle="buttons">
+  <label class="btn btn-default active" name="all">
     <input type="radio" name="options"> Todos los Contratos
   </label>
-  <label class="btn btn-default" id="componente">
+  <label class="btn btn-default" name="componente">
     <input type="radio" name="options"> Componente
   </label>
-  <label class="btn btn-default" id="obra_vista">
-    <input type="radio" name="options"> Obra
-  </label>
-  <label class="btn btn-default" id="rubro_nombre">
+  <label class="btn btn-default" name="rubro_nombre">
     <input type="radio" name="options"> Rubro
   </label>
-  <label class="btn btn-default" id="mod_nombre">
+  <label class="btn btn-default" name="mod_nombre">
     <input type="radio" name="options"> Tipo de Licitación
   </label>
-  <label class="btn btn-default" id="pro_nombre_vista">
+  <label class="btn btn-default" name="pro_nombre_vista">
     <input type="radio" name="options"> Proveedor
+  </label>
+</div>
+<div id="componentes" class="btn-group" data-toggle="buttons" style="display: none;">
+  <label class="btn btn-default" name="obra_vista" id="pavimentadas">
+    <input type="radio" name="options"> Rutas Pavimentadas
+  </label>
+  <label class="btn btn-default" name="obra_vista" id="no-pavimentadas">
+    <input type="radio" name="options"> Rutas No Pavimentadas
+  </label>
+  <label class="btn btn-default" name="obra_vista" id="fortalecimiento">
+    <input type="radio" name="options"> Fortalecimiento Institucional
   </label>
 </div>
 <div id="chart">
@@ -23,4 +43,12 @@
 </div>
 <div id="slider">
 	<date-slider until="until"></date-slider>
+</div>
+<hr>
+<div class="tips clear mt20 mb20">
+  <div class="fila">
+    <div class="celda">Seleccione algún criterio (rubro, proveedor, etc.) para agrupar los contratos.</div>
+    <div class="celda">Moviendo la línea de tiempo se observa el avance en ejecución de los contratos en el tiempo.</div>
+    <div class="celda">Haciendo click en un contrato puede ver mas detalles.</div>
+  </div>
 </div>

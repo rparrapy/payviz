@@ -1,3 +1,23 @@
+ <div class="header">
+  <ul class="nav nav-pills gray pull-right">
+    <li class="active"><a ng-href="#/">Gráficos</a></li>
+    <li><a ng-href="#/data">Listado</a></li>
+  </ul>
+  <div class="s640">
+    <h3 class="m0">Contratos del proyecto Ñamopora Ñanderape</h1>
+    <h6 class="subTit"><p>El proyecto tiene un costo total de 105.41 millones de dólares. El Banco Mundial financia 74 millones de dólares y el Estado Paraguayo 31.41 millones de dólares.</p>
+      <p>Cada fila de la tabla representa un contrato del proyecto. Haciendo click en el botón <img src="images/ico_mostrar.png" class="img-mostrar" tabindex="0" style="with:15px; height:15px;"> puede verse el detalle de los pagos asociados a cada contrato. Además, puede descargarse el conjunto de datos original en formato JSON. Las obras desarrolladas como parte del proyecto pueden verse en un mapa interactivo, haciendo click <a href="http://www.mopc.gov.py/mopcweb/BM/mapa.html">aquí</a></p>
+    </h6>
+
+    <div class="tips clear mt20 mb20">
+      <div class="fila">
+        <div class="celda">Seleccione algún criterio (rubro, proveedor, etc.) para agrupar los contratos.</div>
+        <div class="celda">Moviendo la línea de tiempo se observa el avance en ejecución de los contratos en el tiempo.</div>
+        <div class="celda">Haciendo click en un contrato puede ver mas detalles.</div>
+      </div>
+    </div>
+</div>
+
  <div style="width:870px; margin:auto;">
     <div style="display:none;background:#fff;" id="template-detalle">
     <div style="text-align:center">
@@ -67,7 +87,7 @@
                                 </table>
                             </div>
     
-                            <h2 class="clear">{titulo_adendas}</h2>
+                            <h2 class="clear" style="visibility:hidden;">{titulo_adendas}</h2>
                             
                               <div id="target-{id_timeline}" class="timeline-tgt" style="max-width:800px;">
                                 <!-- <label>Zoom Factor</label><input id="zoom-factor" type="text" value="2" style="width: 30px;"><input id="zoom"  ype="button" value="Zoom" /><input id="to-today" type="button" value="Hoy" /> -->

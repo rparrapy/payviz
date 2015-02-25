@@ -184,7 +184,7 @@ angular.module('payvizApp')
 
     function generarTablaDetalles(d){
 
-      var s = '<h2>Detalle</h2>'+
+      var s = '<h2>Detalle de Pagos Realizados</h2>'+
       '<div style="overflow-y:scroll;max-height:400px;">'+
       '<table class="secundaria" style="margin-bottom:30px;width:100%;line-height: 1.2em;">'+
               '<thead>'+
@@ -277,8 +277,8 @@ angular.module('payvizApp')
         var html = generarDiv(c)
         $("#contrato-"+id).after('<tr class="detalle" id="detalle-'+id+'"><td colspan="7">'+ html +'</td></tr>');
         
-        if( _.has(c,'adendas') )
-          test(c.cod_contrato);
+        //if( _.has(c,'adendas') )
+          //test(c.cod_contrato);
         
         $scope.detalles_abiertos.push(id);
         $("#img-mostrar-"+id).attr('src','images/ico_ocultar.png');

@@ -25,26 +25,9 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills gray pull-right">
-          <li class="active"><a ng-href="#/">Gráficos</a></li>
-          <li><a ng-href="#/data">Listado</a></li>
-        </ul>
-        <div class="s640">
-          <h3 class="m0">Contratos del proyecto Ñamopora Ñanderape</h1>
-          <h5 class="subTit">Explore los detalles, contratos, adjudicaciones, montos y tiempo de todas las licitaciones.</h4>
-          <p>Cada círculo representa un contrato, en donde el tamaño está dado por el monto del contrato y el contenido marcado representa el monto ya pagado.</p>
-          <div class="tips clear mt20 mb20">
-            <div class="fila">
-              <div class="celda">Seleccione algún criterio (rubro, proveedor, etc.) para agrupar los contratos.</div>
-              <div class="celda">Moviendo la línea de tiempo se observa el avance en ejecución de los contratos en el tiempo.</div>
-              <div class="celda">Haciendo click en un contrato puede ver mas detalles.</div>
-            </div>
-          </div>
-      </div>
-
+      
       <div ng-view=""></div>
-      <hr>
+        <p class="fuente">La lista de contratos y el avance financiero del proyecto Ñamopora Ñanderape son obtenidos de los sistemas de información del MOPC. Datos adicionales de los contratos se obtienen del <a href="https://www.contrataciones.gov.py/datos">Portal de datos abiertos de la DNCP</a>. Los datos se actualizan diariamente.</p>
       <div class="referencias">
         <div class="fila">
           <div class="celda">
