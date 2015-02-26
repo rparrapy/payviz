@@ -33,11 +33,12 @@ angular.module('payvizApp')
     // se clona el objeto para no afectar al grafico.
     var contratos = [];
     angular.copy(imputaciones, contratos);
+    var bubbleRadius = 110;
 
     var maxElem = _.max(contratos, function(c){ return c.monto_total; });
     var minElem = _.min(contratos, function(c){ return c.monto_total; });
     var area = function(monto, montoTotal){
-      var scale = d3.scale.sqrt().domain([0, montoTotal]).range([0, 125]);
+      var scale = d3.scale.sqrt().domain([0, montoTotal]).range([0, bubbleRadius]);
       return scale(monto);
     }
 
@@ -47,7 +48,7 @@ angular.module('payvizApp')
       if(c.cod_contrato){
         c.id_filtrado = c.cod_contrato;
       }else{
-        c.id_filtrado = 'no-aplica-' + i.toString();
+        c.id_filtrado = (c.cod_contrato) ? c.cod_contrato : c.rubro_cod + '-' +  i.toString();
       }
       if(!c.monto_total){
         c.monto_total = _.reduce(c.imputaciones,function(sum, el) { return sum + el.monto },0);
@@ -62,7 +63,7 @@ angular.module('payvizApp')
         c.mod_nombre = 'No aplica';
       }
       if(!c.categoria_nombre){
-        c.categoria_nombre = 'No aplica';
+        c.categoria_nombre = '';
       }
       if(!c.fecha_contrato){
         c.fecha_contrato = 'No aplica';
@@ -73,7 +74,7 @@ angular.module('payvizApp')
       if(!c.pro_cod){
         c.pro_cod = 'No aplica';
       }
-      c.radius = 125;
+      c.radius = bubbleRadius;
       c.is_adenda = false;
       var cobrado = _.reduce(c.imputaciones, function(sum, imputacion){
             return sum + imputacion.monto; 
@@ -190,7 +191,7 @@ angular.module('payvizApp')
 
     function generarTablaDetalles(d){
 
-      var s = '<h2>Detalle de Pagos Realizados</h2>'+
+      var s = '<h4>Detalle de Pagos Realizados</h4>'+
       '<div style="overflow-y:scroll;max-height:400px;">'+
       '<table class="secundaria" style="margin-bottom:30px;width:100%;line-height: 1.2em;">'+
               '<thead>'+
@@ -249,7 +250,7 @@ angular.module('payvizApp')
       var html = " " + $("#template-detalle").html();
 
       
-      html = html.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : 'No aplica')
+      html = html.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : '')
                 .replace('{monto_total}', typeof d.monto_total !== "undefined" ? parseInt(d.monto_total).toLocaleString() : 'No aplica')
                 .replace('{ejecutado}', typeof d.ejecutado !== "undefined" ? (d.ejecutado * 100).toFixed(0) : '0')
                 .replace('{pro_nombre}', typeof d.pro_nombre !== "undefined" ? d.pro_nombre : 'No aplica')
@@ -376,7 +377,7 @@ angular.module('payvizApp')
     function dibujar(c, id){
       console.log(c);
       var circulo = [c];
-      c.radius = 125;
+      c.radius = bubbleRadius;
       if(_.has(c,'adendas')){
         var adendas = c.adendas;
               for(var i=0; i < adendas.length; i++){

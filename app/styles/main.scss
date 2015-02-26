@@ -254,7 +254,7 @@ ul.simple li {
 }
 
 .label{
-  font-size: 67%;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 tbody{
@@ -274,4 +274,9 @@ tbody{
 }
 
 a { cursor: pointer; }
+
+.detalle h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
 

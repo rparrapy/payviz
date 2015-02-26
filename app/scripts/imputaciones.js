@@ -2180,7 +2180,7 @@ var imputaciones = [
         "pro_nombre": "LUONGO CASELLI, GABRIEL *",
         "fecha_contrato": "2009-12-17",
         "categoria_cod": "5",
-        "obra": "GMANS",
+        "obra": "Preparación",
         "rubro_cod": "260"
     },
     {
@@ -2214,7 +2214,7 @@ var imputaciones = [
         "pro_nombre": "ESTEBAN FERNANDO TRAVAGLIANTI",
         "fecha_contrato": "2014-07-29",
         "categoria_cod": "5",
-        "obra": "GMANS",
+        "obra": "Preparación",
         "rubro_cod": "260"
     },
     {

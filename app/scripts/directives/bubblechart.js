@@ -147,11 +147,7 @@ angular.module('payvizApp')
         for (var j = 0; j < data.length; j++) {
           
             data[j].id = j;
-            if(data[j].cod_contrato){
-              data[j].id_filtrado = data[j].cod_contrato;
-            }else{
-              data[j].id_filtrado = 'no-aplica-' + j.toString();
-            }
+            data[j].id_filtrado = (data[j].cod_contrato) ? data[j].cod_contrato : data[j].rubro_cod + '-' +  j.toString();
             data[j].radius = area(data[j].monto_total);
             data[j].x = Math.random() * width;
             data[j].y = Math.random() * height;
@@ -579,7 +575,7 @@ angular.module('payvizApp')
             content: function() {
 
 
-              var crudo = '<div class="tooltipo padding10"> <table> <tbody> <tr> <td> {categoria_nombre} <br> <h5>Gs. {monto_total}</h5> </td>'+
+              var crudo = '<div class="tooltipo padding10"> <table> <tbody> <tr> <td> {categoria_nombre} <br><br> Monto total<br><h5>Gs. {monto_total}</h5> </td>'+
                     '<td rowspan="2" class="txtC" width="30%"> Monto ejecutado<br> <h1 class="per_ejex">{ejecutado}%</h1> </td> </tr> <tr> '+
                     '<td> Proveedor<br> <h6>{pro_nombre}</h6> </td> </tr> </tbody> </table> <hr> <table class="tab_sec mb10">'+
                     ' <tbody> <tr> <td width="50%"> Fecha de contrato<br> <strong>{fecha_contrato}</strong> </td> <td> Nombre del llamado<br>'+
@@ -590,7 +586,7 @@ angular.module('payvizApp')
                     ( d.is_adenda ? '' : '<a onClick="setLista(\''+d.id_filtrado+'\')">Click para ver más detalles</a></p> ')+
                     '</div>';
               if(d.is_adenda) { d.categoria_nombre = 'Adenda';}
-              return crudo.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : 'No aplica')
+              return crudo.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : '')
                 .replace('{monto_total}', typeof d.monto_total !== "undefined" ? parseInt(d.monto_total).toLocaleString() : 'No aplica')
                 .replace('{ejecutado}', typeof d.ejecutado !== "undefined" ? (d.ejecutado * 100).toFixed(0) : 'No aplica')
                 .replace('{pro_nombre}', typeof d.pro_nombre !== "undefined" ? d.pro_nombre : 'No aplica')
