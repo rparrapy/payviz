@@ -258,7 +258,7 @@ angular.module('payvizApp')
                 .replace('{cod_contrato}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : 'No aplica')
                 .replace('{monto_pagado}', typeof d.monto_pagado !== "undefined" ? d.monto_pagado.toLocaleString() : 'No aplica')
                 .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica')
-                .replace('{obra}', typeof d.obra !== "undefined" ? d.obra : 'No aplica')
+                .replace('{obra}', typeof d.obra !== "undefined" ? d.obra : d.rubro_nombre.toProperCase())
                 .replace('{id_svg}', typeof d.id_filtrado !== "undefined" ? d.id_filtrado : '1');
       if(_.has(d,'adendas')){
         html = html.replace('{id_timeline}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : '1')

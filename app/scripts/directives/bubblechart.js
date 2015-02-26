@@ -27,7 +27,7 @@ angular.module('payvizApp')
                     'obra_vista': {
                                   'pavimentadas': [900, 250],
                                   'no-pavimentadas': [900, 300],
-                                  'fortalecimiento': [900, 400]
+                                  'fortalecimiento': [900, 500]
                     }
                   };
         var width = 750, height = 750;
@@ -157,7 +157,8 @@ angular.module('payvizApp')
             data[j].y = Math.random() * height;
             data[j].is_adenda = false;
             data[j].pro_nombre_vista = data[j].pro_nombre;
-            data[j].obra_vista = data[j].obra;
+            //data[j].obra_vista = data[j].obra
+            data[j].obra_vista = (data[j].obra === undefined) ? data[j].rubro_nombre.toProperCase() : data[j].obra;
             ndata.push(data[j]);
             if(data[j].adendas){
               var adendas = data[j].adendas;
@@ -498,7 +499,7 @@ angular.module('payvizApp')
             var label;
             if(d.name && !_.contains(exceptions, varname)){ label = d.name.toProperCase(); }else{ label = d.name; }
             if(label){
-              label = label.length > 50 ? label.slice(0, 47) + '...' :  label;
+              label = label.length > 40 ? label.slice(0, 37) + '...' :  label;
             }
             return d.name !== undefined || varname === 'all' ? label : 'No aplica'; 
           })
@@ -539,16 +540,28 @@ angular.module('payvizApp')
           });
         }
 
+        var cursorOnPopover = false;
+        $('.popover').on('mouseenter', null, function() { cursorOnPopover = true; });
+        $('.popover').on('mouseleave', null, function() { cursorOnPopover = false; });
+
         function removePopovers (esperar) {
-         if(!esperar){
-            clearInterval(popClearInterval);
-            $('.popover').each(function() {
-              $(this).remove();
-              popactual = null;
-            });
+          if(!esperar || $('.popover').length > 1){
+            if((!cursorOnPopover && $('.popover').length === 1) || $('.popover').length > 1){
+              $('.popover:first').each(function() {
+                $(this).remove();
+                popactual = null;
+              });
+            }else{
+              if($('.popover').length > 0){
+                _.delay(removePopovers, 200, false);
+              }              
+            }
           }else{
-            popClearInterval = setTimeout(function(){removePopovers(false)},3000);
-          } 
+            //console.log('false');
+            if($('.popover').length > 0){
+              _.delay(removePopovers, 200, false);
+            }
+          }
         }
 
         function showPopover (d, hasta) {
@@ -586,7 +599,7 @@ angular.module('payvizApp')
                 .replace('{cod_contrato}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : 'No aplica')
                 .replace('{monto_pagado}', typeof d.monto_pagado !== "undefined" ? d.monto_pagado.toLocaleString() : 'No aplica')
                 .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica')
-                .replace('{obra}', typeof d.obra !== "undefined" ? d.obra : 'No aplica');
+                .replace('{obra}', typeof d.obra !== "undefined" ? d.obra : d.rubro_nombre.toProperCase());
 
               ( typeof metadata_title  !== "undefined" ?  "<title>" + metadata_title + "</title>\n"                             : "" )
               
@@ -603,11 +616,12 @@ angular.module('payvizApp')
 
           if(popactual !== d && isBubbleVisible){
             popactual = d;
-            removePopovers(false);
+            //removePopovers(false);
             $(this).popover('show');
           }
             
-
+          $('.popover').on('mouseenter', null, function() { cursorOnPopover = true; });
+          $('.popover').on('mouseleave', null, function() { cursorOnPopover = false; });
         }
         var PRI = true;
         function collide(alpha) {
