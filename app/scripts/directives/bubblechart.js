@@ -197,22 +197,25 @@ angular.module('payvizApp')
             circulitos = _.countBy(_.pluck(filteredData, vname), function(d) { return d; } );
             circulitos = _.mapObject(circulitos, function(d){ return 0; });
           }
-
+          //console.log(circulitos);
           _.each(filteredData, function(d){ 
               if(d[vname])
                 circulitos[d[vname]] += parseInt(d.monto_total);
           });
+          /*if(circulitos){
+            console.log(circulitos[undefined]);
+          }*/
           var montos = _.chain(circulitos).map(function(num, key) { return num;});
-          var maximoMonto = _.chain(circulitos).map(function(num, key) { return num;}).max().value();
-          var minimoMonto = montos.min().value();
-          var montoToSquareSize = d3.scale.quantize().domain([minimoMonto, maximoMonto]).range(_.range(1,5));
+          var montoTotalCirculitos = _.reduce(montos, function(memo, num){ return memo + num; }, 0);
+          var montoTotal = _.reduce(filteredData, function(memo, contrato){ return memo + contrato.monto_total; }, 0);
 
           centers = _.uniq(_.pluck(filteredData, vname)).map(function (d) {
+            var m = _.has(circulitos,d) ? circulitos[d] : montoTotal - montoTotalCirculitos;
             var c = _.has(circulitos,d) ? circulitos[d] : 0;
             var v = (c > 150000000000) ? 10 : 1;
-            return {name: d, value: v, cantidad : c};
+            return {name: d, value: v, cantidad : c, monto: m};
           });
-
+          //console.log(centers);
 
           switch(vname){
             case 'pro_nombre_vista':
