@@ -102,7 +102,7 @@ body {
     text-align:center;
     display: inline-block;
     padding-bottom: 15px;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .ng-scope {
@@ -280,3 +280,6 @@ a { cursor: pointer; }
   font-weight: bold;
 }
 
+#search-box {
+  margin-top: 10px;
+}

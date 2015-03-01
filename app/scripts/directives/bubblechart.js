@@ -158,7 +158,7 @@ angular.module('payvizApp')
             ndata.push(data[j]);
             if(data[j].adendas){
               var adendas = data[j].adendas;
-              for(var i=0; i < adendas.length; i++){
+              for(var i=0; i < adendas.length; i++){ 
                 adendas[i].padre = j;
                 adendas[i].p_data = data[j];
                 adendas[i].monto_total = adendas[i].monto;
@@ -359,7 +359,7 @@ angular.module('payvizApp')
         //console.log(nodes);
 
         nodes.enter().append('circle')
-          .attr('id', function(d){ return 'circulo' + d.id; })
+          .attr('id', function(d){ return (d.is_adenda ? 'circulo-adenda' + d.padre + d.pos : 'circulo' + d.id); })
           .attr('class', function(d){ return 'node ' + _.invert(componenteMap)[d.componente]})
           .attr('cx', function (d) { return d.x; })
           .attr('cy', function (d) { return d.y; })
@@ -402,6 +402,86 @@ angular.module('payvizApp')
             .style('fill', function (d) { return fill(d, until); });
         });
 
+
+        $("#search-box").keyup( function(){ 
+            var search = $("#search-box").val();
+            //console.log("this is sparta ... " + search);
+
+            draw('all');
+
+            filterBySearch(search);
+
+        });
+
+
+ 
+      function getTextOf(d) {
+
+
+            var crudo = '{categoria_nombre} {monto_total} '+
+                    '{ejecutado}% '+
+                    '{pro_nombre} '+
+                    '{fecha_contrato} '+
+                    '{llamado_nombre} {cod_contrato} '+
+                    '{monto_pagado} '+
+                    '{mod_nombre} '+
+                    '{obra} ';
+              if(d.is_adenda) { d = d.p_data;}
+              return crudo.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : '')
+                .replace('{monto_total}', typeof d.monto_total !== "undefined" ? parseInt(d.monto_total).toLocaleString() : 'No aplica')
+                .replace('{ejecutado}', typeof d.ejecutado !== "undefined" ? (d.ejecutado * 100).toFixed(0) : 'No aplica')
+                .replace('{pro_nombre}', typeof d.pro_nombre !== "undefined" ? d.pro_nombre : 'No aplica')
+                .replace('{fecha_contrato}', typeof d.fecha_contrato !== "undefined" ? d.fecha_contrato : 'No aplica')
+                .replace('{llamado_nombre}', typeof d.llamado_nombre !== "undefined" ? d.llamado_nombre : 'No aplica')
+                .replace('{cod_contrato}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : 'No aplica')
+                .replace('{monto_pagado}', typeof d.monto_pagado !== "undefined" ? d.monto_pagado.toLocaleString() : 'No aplica')
+                .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica')
+                .replace('{obra}', typeof d.obra !== "undefined" ? d.obra : d.rubro_nombre.toProperCase());
+        }
+
+
+
+
+        function filterBySearch(s){
+
+          var excludedData;
+          var displayedData;
+          filteredData = data;
+
+          //console.log("Lo que busco...")
+          //console.log(s);
+          
+          _.each(filteredData, function(d){
+            $('#img-' + d.cod_contrato).show();
+          });
+
+
+          excludedData = _.filter(data, function(d){
+              var text = getTextOf(d);
+              return ( text.toLowerCase().indexOf(s.trim().toLowerCase()) == -1 );
+            });
+
+          displayedData = _.filter(data, function(d){
+              var text = getTextOf(d);
+              return ( text.toLowerCase().indexOf(s.trim().toLowerCase()) != -1 );
+            });
+
+          _.each(excludedData, function(d){
+              $('#img-' + d.cod_contrato).hide();
+              d3.select('#circulo' + d.id).style('display','none');
+              if(d.is_adenda) d3.select('#circulo-adenda' + d.padre + d.pos).style('display','none');
+
+          });
+
+          _.each(displayedData, function(d){
+              $('#img-' + d.cod_contrato).show();
+              d3.select('#circulo' + d.id).style('display','block');
+          });
+
+          //console.log(displayedData);
+          //console.log(excludedData);
+          
+        }
 
         function setPosAdenda(d){
           if(d.p_data){
