@@ -283,3 +283,8 @@ a { cursor: pointer; }
 #search-box {
   margin-top: 10px;
 }
+
+.monto-label{
+    @extend .label;
+    color: #666;
+}

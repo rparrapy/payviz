@@ -26,16 +26,16 @@ angular.module('payvizApp')
                     'componente' : [900,450], 
                     'obra_vista': {
                                   'pavimentadas': [900, 250],
-                                  'no-pavimentadas': [900, 300],
+                                  'no-pavimentadas': [900, 350],
                                   'fortalecimiento': [900, 500]
                     }
                   };
         var width = 750, height = 750;
         var maxElem = _.max(data, function(c){ return c.monto_total; });
         var minElem = _.min(data, function(c){ return c.monto_total; });
-        console.log(maxElem.monto_total);
-        console.log(minElem.monto_total);
-        console.log(minElem.monto_total/maxElem.monto_total);
+        //console.log(maxElem.monto_total);
+        //console.log(minElem.monto_total);
+        //console.log(minElem.monto_total/maxElem.monto_total);
         var area = d3.scale.sqrt().domain([0, maxElem.monto_total]).range([0, 50]);
         var popactual = null;
         var popClearInterval = null;
@@ -196,22 +196,17 @@ angular.module('payvizApp')
           if(vname !== 'all'){
             circulitos = _.countBy(_.pluck(filteredData, vname), function(d) { return d; } );
             circulitos = _.mapObject(circulitos, function(d){ return 0; });
+            _.each(filteredData, function(d){ circulitos[d[vname]] += parseInt(d.monto_total); });
           }
-          //console.log(circulitos);
-          _.each(filteredData, function(d){ 
-              if(d[vname])
-                circulitos[d[vname]] += parseInt(d.monto_total);
-          });
-          /*if(circulitos){
-            console.log(circulitos[undefined]);
-          }*/
-          var montos = _.chain(circulitos).map(function(num, key) { return num;});
+
+          var montos = _.map(circulitos, function(num, key) { return num;});
           var montoTotalCirculitos = _.reduce(montos, function(memo, num){ return memo + num; }, 0);
-          var montoTotal = _.reduce(filteredData, function(memo, contrato){ return memo + contrato.monto_total; }, 0);
+          var montoTotal = _.reduce(filteredData, function(memo, contrato){ return memo + parseInt(contrato.monto_total); }, 0);
+          //console.log(filteredData);
 
           centers = _.uniq(_.pluck(filteredData, vname)).map(function (d) {
-            var m = _.has(circulitos,d) ? circulitos[d] : montoTotal - montoTotalCirculitos;
-            var c = _.has(circulitos,d) ? circulitos[d] : 0;
+            var m = _.has(circulitos, d) ? circulitos[d] : montoTotal;
+            var c = (circulitos === undefined || d === undefined) ? 0 : circulitos[d];
             var v = (c > 150000000000) ? 10 : 1;
             return {name: d, value: v, cantidad : c, monto: m};
           });
@@ -265,6 +260,7 @@ angular.module('payvizApp')
         }
 
         var truncateCenters = function(centers, number, varname) {
+          var montoOtros = 0
           centers = centers.filter(function( obj ) {
             return obj.name !== 'Otros';
           });
@@ -278,11 +274,12 @@ angular.module('payvizApp')
                 _.each(data,function(d){
                   if( d[varname] == centers[i].name ){
                     d[varname] = 'Otros';
+                    montoOtros += centers[i].monto
                   }
                 })
               }
           }
-          ncenter.push({ name: 'Otros', value : 1, cantidad : 0 });
+          ncenter.push({ name: 'Otros', value : 1, cantidad : 0, monto: montoOtros});
           return ncenter;
         };
 
@@ -568,6 +565,8 @@ angular.module('payvizApp')
 
         function labels (centers,varname) {
           svg.selectAll('.label').remove();
+          svg.selectAll('.monto-label').remove();
+
 
           svg.selectAll('.label')
           .data(centers).enter().append('text')
@@ -578,12 +577,24 @@ angular.module('payvizApp')
             var label;
             if(d.name && !_.contains(exceptions, varname)){ label = d.name.toProperCase(); }else{ label = d.name; }
             if(label){
-              label = label.length > 40 ? label.slice(0, 37) + '...' :  label;
+              label = label.length > 45 ? label.slice(0, 42) + '...' :  label;
             }
             return d.name !== undefined || varname === 'all' ? label : 'No aplica'; 
           })
           .attr('transform', function (d) {
             return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y - 5 : 15) + ')';
+          })
+
+          svg.selectAll('.monto-label')
+          .data(centers).enter().append('text')
+          .attr('class', 'monto-label')
+          .attr('text-anchor', 'start')
+          .attr('fill', '#666')
+          .text(function (d) {
+            return 'Gs. ' + d.monto.toLocaleString(); 
+          })
+          .attr('transform', function (d) {
+            return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y + 10 : 30) + ')';
           })
           //.call(wrap, 100);
         }
