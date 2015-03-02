@@ -352,7 +352,7 @@ angular.module('payvizApp')
         imagen = svg
           .append('image')
           .attr('id', imgId)
-          .attr('xlink:href', 'images/ico_dinero.png')
+          .attr('xlink:href', 'images/ico_dinero.svg')
           .attr('width', contrato.radius * 0.5)
           .attr('height', contrato.radius * 0.5)
           .attr('x', x)

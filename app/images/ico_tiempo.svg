@@ -1,0 +1,18 @@
+<svg width="180" height="180" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <g id="Layer_1"/>
+  <g id="Background">
+   <path id="svg_24" d="m7.839966,90c0,-45.379883 36.780029,-82.160034 82.159912,-82.160034c45.380127,0 82.160156,36.780151 82.160156,82.160034c0,45.370117 -36.780029,82.159912 -82.160156,82.159912c-45.379883,0 -82.159912,-36.789795 -82.159912,-82.159912z" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="14.0032" stroke="#C73E00" fill="#FF9464" clip-rule="evenodd" fill-rule="evenodd"/>
+   <g id="svg_25">
+    <polygon id="svg_26" points="43.4200439453125,118.580078125 43.4200439453125,104.2900390625 57.7098388671875,104.2900390625 57.7098388671875,97.14013671875 43.4200439453125,97.14013671875 43.4200439453125,82.85009765625 36.2698974609375,82.85009765625 36.2698974609375,97.14013671875 21.9898681640625,97.14013671875 21.9898681640625,104.2900390625 36.2698974609375,104.2900390625 36.2698974609375,118.580078125 " fill="#CA4600" clip-rule="evenodd" fill-rule="evenodd"/>
+   </g>
+   <rect id="svg_27" height="12.01" width="93.02" fill="#CA4600" clip-rule="evenodd" fill-rule="evenodd" y="32.98002" x="47.559927"/>
+   <polygon id="svg_28" points="58.5599365234375,44.989990234375 130.5799560546875,44.989990234375 130.5799560546875,64.989990234375 100.5699462890625,91 88.5699462890625,91 58.5599365234375,63.989990234375 " stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="5.0011" stroke="#CA4600" fill="none" clip-rule="evenodd" fill-rule="evenodd"/>
+   <polygon id="svg_29" points="77.5699462890625,62.989990234375 113.5799560546875,62.989990234375 95.5699462890625,83 " fill="#CA4600" clip-rule="evenodd" fill-rule="evenodd"/>
+   <rect id="svg_30" height="12" width="93.02" fill="#CA4600" clip-rule="evenodd" fill-rule="evenodd" y="138.01002" x="47.559927"/>
+   <polygon id="svg_31" points="58.5699462890625,138.010009765625 130.5799560546875,138.010009765625 130.5799560546875,118 100.5699462890625,92 88.5699462890625,92 58.5699462890625,119 " stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="5.0011" stroke="#CA4600" fill="none" clip-rule="evenodd" fill-rule="evenodd"/>
+   <polygon id="svg_32" points="68.5699462890625,132.010009765625 121.5799560546875,132.010009765625 94.5699462890625,102 " fill="#CA4600" clip-rule="evenodd" fill-rule="evenodd"/>
+  </g>
+ </g>
+</svg>

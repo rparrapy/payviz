@@ -133,7 +133,7 @@ angular.module('payvizApp')
               imagen = svg
                 .append('image')
                 .attr('id', imgId)
-                .attr('xlink:href', 'images/ico_dinero.png')
+                .attr('xlink:href', 'images/ico_dinero.svg')
                 .attr('width', contrato.radius*0.5)
                 .attr('height', contrato.radius*0.5)
                 .on('mouseover', function (d) { showPopover.call(d3.select('#circulo'+contrato.id), contrato); });
