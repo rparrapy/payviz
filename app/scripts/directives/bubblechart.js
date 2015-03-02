@@ -19,7 +19,7 @@ angular.module('payvizApp')
         var data = scope.data;
         var filteredData = data;
         var size = { 
-                    'all' : [435, 500],
+                    'all' : [435, 410],
                     'rubro_nombre' : [900, 900],
                     'pro_nombre_vista' : [900,1200], 
                     'mod_nombre' : [900,400],
@@ -609,7 +609,7 @@ angular.module('payvizApp')
           .attr('text-anchor', 'start')
           .attr('fill', '#666')
           .text(function (d) {
-            return 'Gs. ' + d.monto.toLocaleString(); 
+            return (varname === 'all') ? 'Total: Gs. ' + d.monto.toLocaleString() : 'Gs. ' + d.monto.toLocaleString(); 
           })
           .attr('transform', function (d) {
             return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y + 10 : 30) + ')';

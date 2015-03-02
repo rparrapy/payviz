@@ -213,7 +213,7 @@ background: #CCC url("../images/ico_3.png") no-repeat 15px center;
 
 .referencias .celda {
   display: table-cell;
-  width: 310px;
+  width: 280px;
   padding-right: 20px;
 }
 
@@ -231,6 +231,7 @@ ul.simple li {
   padding-bottom: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 #fecha {
@@ -289,4 +290,11 @@ a { cursor: pointer; }
 .monto-label{
     @extend .label;
     color: #666;
+}
+
+.referencias hr{
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border-top: 1px solid #CCC;
+  padding-bottom: 5px;
 }
