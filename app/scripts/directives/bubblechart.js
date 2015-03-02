@@ -19,7 +19,7 @@ angular.module('payvizApp')
         var data = scope.data;
         var filteredData = data;
         var size = { 
-                    'all' : [900,400],
+                    'all' : [435, 500],
                     'rubro_nombre' : [900, 900],
                     'pro_nombre_vista' : [900,1200], 
                     'mod_nombre' : [900,400],
@@ -260,26 +260,29 @@ angular.module('payvizApp')
         }
 
         var truncateCenters = function(centers, number, varname) {
-          var montoOtros = 0
-          centers = centers.filter(function( obj ) {
-            return obj.name !== 'Otros';
-          });
-
-          centers = _.sortBy(centers, function(o) { return -o.cantidad });
+          var montoOtros = 0;
           var ncenter = [];
-          for(var i=0; i<centers.length; i++){
+          
+          centers = _.sortBy(centers, function(o) { return -o.cantidad });
+
+          if(centers.length > number){
+            for(var i=0; i<centers.length; i++){
               if( i < number - 1 ){
                 ncenter.push(centers[i]);
               }else{
-                _.each(data,function(d){
-                  if( d[varname] == centers[i].name ){
+                _.each(filteredData, function(d){
+                  if( d[varname] === centers[i].name ){
                     d[varname] = 'Otros';
                     montoOtros += centers[i].monto
                   }
                 })
               }
+            }
+            ncenter.push({ name: 'Otros', value : 1, cantidad : 0, monto: montoOtros});
+          }else{
+            _.each(centers, function(c){ if(c.name === 'Otros') c.cantidad = 0; });
+            ncenter = centers;
           }
-          ncenter.push({ name: 'Otros', value : 1, cantidad : 0, monto: montoOtros});
           return ncenter;
         };
 
@@ -386,6 +389,13 @@ angular.module('payvizApp')
               $('#componentes').hide();
             }
           }
+
+          if(varname === 'all'){
+            $('.referencias').show();
+          }else{
+            $('.referencias').hide();
+          }
+
           draw(varname, componente);
         });
 

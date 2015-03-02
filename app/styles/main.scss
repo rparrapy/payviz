@@ -113,6 +113,7 @@ body {
   margin: auto;
   width: 80%;
   padding-bottom: 50px;
+  clear: both;
 }
 
 .pagination > li > a{
@@ -207,7 +208,6 @@ background: #CCC url("../images/ico_3.png") no-repeat 15px center;
 
 .referencias {
   display: table;
-  padding: 10px 0;
   text-align: left;
 }
 
@@ -218,17 +218,19 @@ background: #CCC url("../images/ico_3.png") no-repeat 15px center;
 }
 
 ul.simple {
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 ul.simple li {
   list-style: none;
-  padding: 5px 0;
+  padding: 2px 0;
 }
 
-.referencias .celda h5 {
+.referencias .celda h6 {
   border-bottom: 1px solid #CCC;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #fecha {
@@ -264,7 +266,7 @@ tbody{
 }
 
 .referencias p, .referencias li{
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .fuente{
