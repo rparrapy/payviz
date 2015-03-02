@@ -74,7 +74,13 @@ angular.module('payvizApp')
                 imagen.hide();
               }
             }
+            if(!contrato.is_adenda){
+              var displayContrato = d3.select('#circulo'+contrato.id).style('display');
 
+              if(displayContrato == 'none'){
+                imagen.hide();
+              }
+            }
 
           } else {
             if(d3.select('#' + gradientId).empty()){
@@ -393,6 +399,7 @@ angular.module('payvizApp')
           if(varname === 'all'){
             $('.referencias').show();
           }else{
+            $('#search-box').val('');
             $('.referencias').hide();
           }
 
@@ -414,7 +421,8 @@ angular.module('payvizApp')
             var search = $("#search-box").val();
             //console.log("this is sparta ... " + search);
 
-            draw('all');
+            //draw('all');
+            $("label[name=all]").click();
 
             filterBySearch(search);
 
