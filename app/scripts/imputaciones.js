@@ -1,4 +1,4 @@
-var imputaciones = [
+var imputaciones =[
     {
         "llamado_nombre": "ASESORAMIENTO PARA LA ELABORACION  DE UNA ESTRAT.",
         "componente": "FORTALECIMIENTO INSTITUCIONAL",
@@ -116,6 +116,7 @@ var imputaciones = [
         "mod_nombre": "Contratación directa",
         "llamado_id": "244793",
         "rubro_nombre": "BIENES DE CONS. DE OF. E INSUM",
+        "id": "244793-hadami-s-a-2",
         "pro_nombre": "HADAMI S.A.",
         "fecha_contrato": "2012-12-13",
         "categoria_cod": "11",
@@ -150,6 +151,7 @@ var imputaciones = [
         "mod_nombre": "Contratación directa",
         "llamado_id": "244793",
         "rubro_nombre": "BIENES DE CONS. DE OF. E INSUM",
+        "id": "244793-guido-antero-nunez-fleitas-3",
         "pro_nombre": "GUIDO ANTERO NUÑEZ FLEITAS",
         "fecha_contrato": "2012-12-13",
         "categoria_cod": "11",
@@ -184,6 +186,7 @@ var imputaciones = [
         "mod_nombre": "Contratación directa",
         "llamado_id": "230751",
         "rubro_nombre": "ADQ. DE EQ. DE OFIC. Y COMP.",
+        "id": "230751-meis-industrial-s-r-l-1",
         "pro_nombre": "MEIS INDUSTRIAL S.R.L",
         "fecha_contrato": "2012-11-30",
         "categoria_cod": "23",
@@ -213,6 +216,7 @@ var imputaciones = [
         "mod_nombre": "Contratación directa",
         "llamado_id": "230762",
         "rubro_nombre": "ADQ. DE EQ. DE OFIC. Y COMP.",
+        "id": "230762-shirosawa-company-saic-1",
         "pro_nombre": "SHIROSAWA COMPANY SAIC",
         "fecha_contrato": "2012-12-04",
         "categoria_cod": "24",
@@ -242,6 +246,7 @@ var imputaciones = [
         "mod_nombre": "Contratación directa",
         "llamado_id": "254280",
         "rubro_nombre": "BIENES DE CONS. DE OF. E INSUM",
+        "id": "254280-guido-antero-nunez-fleitas-1",
         "pro_nombre": "GUIDO ANTERO NUÑEZ FLEITAS",
         "fecha_contrato": "2013-12-13",
         "categoria_cod": "11",
@@ -271,6 +276,7 @@ var imputaciones = [
         "mod_nombre": "Contratación directa",
         "llamado_id": "272138",
         "rubro_nombre": "BIENES DE CONS. DE OF. E INSUM",
+        "id": "272138-office-compu-sa-2",
         "pro_nombre": "OFFICE COMPU SA",
         "fecha_contrato": "2014-08-11",
         "categoria_cod": "11",
@@ -295,6 +301,7 @@ var imputaciones = [
         "mod_nombre": "Contratación directa",
         "llamado_id": "272138",
         "rubro_nombre": "BIENES DE CONS. DE OF. E INSUM",
+        "id": "272138-fernando-rojas-1-3",
         "pro_nombre": "Fernando Rojas",
         "fecha_contrato": "2014-08-18",
         "categoria_cod": "11",
@@ -319,6 +326,7 @@ var imputaciones = [
         "mod_nombre": "Contratación por excepción",
         "llamado_id": "241037",
         "rubro_nombre": "ADQUISICION DE INMUEBLES",
+        "id": "241037-diaz-borba-francisco-gabriel-4",
         "pro_nombre": "DIAZ BORBA, FRANCISCO GABRIEL",
         "fecha_contrato": "2012-06-20",
         "categoria_cod": "3",
@@ -343,6 +351,7 @@ var imputaciones = [
         "mod_nombre": "Contratación por excepción",
         "llamado_id": "241037",
         "rubro_nombre": "ADQUISICION DE INMUEBLES",
+        "id": "241037-maciel-gimenez-marciana-5",
         "pro_nombre": "MACIEL GIMENEZ, MARCIANA *",
         "fecha_contrato": "2012-06-20",
         "categoria_cod": "3",
@@ -367,6 +376,7 @@ var imputaciones = [
         "mod_nombre": "Contratación por excepción",
         "llamado_id": "241037",
         "rubro_nombre": "ADQUISICION DE INMUEBLES",
+        "id": "241037-bazan-cabanas-cecilia-7",
         "pro_nombre": "BAZAN CABAÑAS, CECILIA *",
         "fecha_contrato": "2012-12-28",
         "categoria_cod": "3",
@@ -514,6 +524,7 @@ var imputaciones = [
         "mod_nombre": "Concurso de ofertas",
         "llamado_id": "191483",
         "rubro_nombre": "ADQ. DE EQ. DE OFIC. Y COMP.",
+        "id": "191483-parasoft-s-r-l-5",
         "pro_nombre": "PARASOFT S.R.L.",
         "fecha_contrato": "2010-11-15",
         "categoria_cod": "24",
@@ -548,6 +559,7 @@ var imputaciones = [
         "mod_nombre": "Concurso de ofertas",
         "llamado_id": "191483",
         "rubro_nombre": "ADQ. DE EQ. DE OFIC. Y COMP.",
+        "id": "191483-docunet-sa-4",
         "pro_nombre": "DOCUNET SA",
         "fecha_contrato": "2010-11-08",
         "categoria_cod": "24",
@@ -582,6 +594,7 @@ var imputaciones = [
         "mod_nombre": "Concurso de ofertas",
         "llamado_id": "191483",
         "rubro_nombre": "ADQ. DE EQ. DE OFIC. Y COMP.",
+        "id": "191483-tecnologia-planificada-tecnoplan-sa-3",
         "pro_nombre": "TECNOLOGIA PLANIFICADA (TECNOPLAN) SA",
         "fecha_contrato": "2010-11-08",
         "categoria_cod": "24",
@@ -1089,6 +1102,7 @@ var imputaciones = [
         "mod_nombre": "Concurso de ofertas",
         "llamado_id": "230696",
         "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "id": "230696-miguel-angel-espinola-ruiz-diaz-1",
         "pro_nombre": "MIGUEL ANGEL ESPINOLA RUIZ DIAZ",
         "fecha_contrato": "2012-11-28",
         "categoria_cod": "5",
@@ -1183,6 +1197,7 @@ var imputaciones = [
         "mod_nombre": "Concurso de ofertas",
         "llamado_id": "230675",
         "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "id": "230675-ginestar-ariel-marcos-1",
         "pro_nombre": "GINESTAR * ARIEL MARCOS",
         "fecha_contrato": "2012-12-27",
         "categoria_cod": "5",
@@ -1222,6 +1237,7 @@ var imputaciones = [
         "mod_nombre": "Concurso de ofertas",
         "llamado_id": "264926",
         "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "id": "264926-controller-contadores-auditores-1",
         "pro_nombre": "CONTROLLER CONTADORES & AUDITORES",
         "fecha_contrato": "2014-06-02",
         "categoria_cod": "5",
@@ -1246,6 +1262,7 @@ var imputaciones = [
         "mod_nombre": "Locación de inmuebles",
         "llamado_id": "220731",
         "rubro_nombre": "ALQUILERES Y DERECHOS",
+        "id": "220731-buena-suerte-sa-1",
         "pro_nombre": "BUENA SUERTE SA",
         "fecha_contrato": "2011-11-28",
         "categoria_cod": "3",
@@ -1448,6 +1465,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "228090",
         "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "id": "228090-consorcio-rf-consultoria-asociados-1",
         "pro_nombre": "Consorcio RF Consultoria & Asociados",
         "fecha_contrato": "2012-12-06",
         "categoria_cod": "5",
@@ -1507,6 +1525,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "227978",
         "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "id": "227978-consorcio-bicentenario-1",
         "pro_nombre": "CONSORCIO BICENTENARIO",
         "fecha_contrato": "2013-05-16",
         "categoria_cod": "5",
@@ -1601,6 +1620,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "227976",
         "rubro_nombre": "ADQ. DE MAQ. EQ. Y HERR. MAY.",
+        "id": "227976-consorcio-csi-ciemsa-1",
         "pro_nombre": "CONSORCIO CSI - CIEMSA",
         "fecha_contrato": "2013-07-26",
         "categoria_cod": "25",
@@ -1715,6 +1735,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "227974",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "227974-consorcio-m-t-s-a-pat-traffic-1",
         "pro_nombre": "CONSORCIO M&T S.A. - PAT TRAFFIC",
         "fecha_contrato": "2013-08-07",
         "categoria_cod": "21",
@@ -1859,6 +1880,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "227975",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "227975-consorcio-d-b-cct-1",
         "pro_nombre": "Consorcio D&B-CCT",
         "fecha_contrato": "2013-11-06",
         "categoria_cod": "5",
@@ -2073,148 +2095,11 @@ var imputaciones = [
         "mod_nombre": "Licitación pública nacional",
         "llamado_id": "230692",
         "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "id": "230692-angel-rafael-busto-giummarresi-1",
         "pro_nombre": "ANGEL RAFAEL BUSTO GIUMMARRESI",
         "fecha_contrato": "2012-12-19",
         "categoria_cod": "5",
         "obra": "Planificación vial",
-        "rubro_cod": "260"
-    },
-    {
-        "llamado_nombre": "MOPC 12-2009 ASESORAMIENTO EN LA GESTION Y MONIT",
-        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
-        "monto_total": 398640000,
-        "mod_codigo": "CO",
-        "pro_cod": "E-0001212",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-03-31",
-                "monto": 29013600
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-04-06",
-                "monto": 12434400
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-05-31",
-                "monto": 2385246
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-05-31",
-                "monto": 21831782
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-05-31",
-                "monto": 51370890
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-07-30",
-                "monto": 58654472
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-12",
-                "monto": 4919138
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-24",
-                "monto": 27712720
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-24",
-                "monto": 5879028
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-10-30",
-                "monto": 53110435
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-11-03",
-                "monto": 5311043
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-11-08",
-                "monto": 25040730
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-03-30",
-                "monto": 26418189
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-04-06",
-                "monto": 59838324
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-05-26",
-                "monto": 5642820
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-11-16",
-                "monto": 7363629
-            },
-            {
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-03-14",
-                "monto": 736371
-            }
-        ],
-        "cod_contrato": "CO-12013-10-53652",
-        "mod_nombre": "Concurso de ofertas",
-        "llamado_id": "139701",
-        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
-        "pro_nombre": "LUONGO CASELLI, GABRIEL *",
-        "fecha_contrato": "2009-12-17",
-        "categoria_cod": "5",
-        "obra": "Preparación",
-        "rubro_cod": "260"
-    },
-    {
-        "llamado_nombre": "SERVICIOS DE CONSULTORIA - ANALISIS DE MEJORAS Y LECCIONES APRENDIDAS GMANS",
-        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
-        "monto_total": 151238340,
-        "mod_codigo": "CO",
-        "pro_cod": "23185893899",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
-        "imputaciones": [
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-10",
-                "monto": 1005678
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-11-19",
-                "monto": 4729784
-            },
-            {
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-12-10",
-                "monto": 10032876
-            }
-        ],
-        "cod_contrato": "CO-12013-14-91197",
-        "mod_nombre": "Concurso de ofertas",
-        "llamado_id": "267053",
-        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
-        "pro_nombre": "ESTEBAN FERNANDO TRAVAGLIANTI",
-        "fecha_contrato": "2014-07-29",
-        "categoria_cod": "5",
-        "obra": "Preparación",
         "rubro_cod": "260"
     },
     {
@@ -6223,7 +6108,7 @@ var imputaciones = [
         "llamado_id": "139712",
         "adendas": [
             {
-                "fecha_contrato": "2010-06-18",
+                "fecha_contrato": "2014-07-25",
                 "duracion_contrato_cantidad": "0",
                 "tipo": "REAJUSTE",
                 "imputaciones": [
@@ -6378,6 +6263,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "191649",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "191649-consorcio-diferencial-tape-1",
         "pro_nombre": "CONSORCIO DIFERENCIAL TAPE",
         "fecha_contrato": "2010-11-26",
         "categoria_cod": "21",
@@ -6942,6 +6828,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "191699",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "191699-talavera-ortellado-construcciones-sa-t-o-c-s-a-1",
         "pro_nombre": "TALAVERA ORTELLADO CONSTRUCCIONES SA (T.O.C. S.A.)",
         "fecha_contrato": "2010-11-26",
         "categoria_cod": "21",
@@ -8079,6 +7966,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "191705",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "191705-consorcio-electropar-applus-1",
         "pro_nombre": "CONSORCIO ELECTROPAR-APPLUS",
         "fecha_contrato": "2011-03-11",
         "categoria_cod": "21",
@@ -9013,6 +8901,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "191714",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "191714-cons-oscar-g-grimaux-asoc-s-a-t-cia-1",
         "pro_nombre": "CONS. OSCAR G. GRIMAUX Y ASOC.S.A.T. - CIA",
         "fecha_contrato": "2011-03-11",
         "categoria_cod": "21",
@@ -9102,6 +8991,7 @@ var imputaciones = [
         "mod_nombre": "Concurso de ofertas",
         "llamado_id": "210142",
         "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "id": "210142-geosurvey-s-r-l-1",
         "pro_nombre": "GEOSURVEY S.R.L.",
         "fecha_contrato": "2012-01-16",
         "categoria_cod": "5",
@@ -9166,6 +9056,7 @@ var imputaciones = [
         "mod_nombre": "Concurso de ofertas",
         "llamado_id": "210232",
         "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "id": "210232-consorcio-ica-asociada-1",
         "pro_nombre": "CONSORCIO ICA Y ASOCIADA",
         "fecha_contrato": "2012-01-30",
         "categoria_cod": "5",
@@ -9571,7 +9462,7 @@ var imputaciones = [
         "pro_nombre": "CENTRO DE ASESORAMIENTO EMPRESARIAL MULTIDISCIPLINARIO - CAEM SPY",
         "fecha_contrato": "2010-09-10",
         "categoria_cod": "5",
-        "obra": "Fizcalización Jhugua Rey - Gral. Aquino Chore - Colonia Cocuera - San Pablo Chore - Jhugua Rey",
+        "obra": "Fizcalización \nJhugua Rey - Gral. Aquino\nChore - Colonia Cocuera - San Pablo\nChore - Jhugua Rey",
         "rubro_cod": "520"
     },
     {
@@ -9845,6 +9736,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "210138",
         "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "id": "210138-red-comunitaria-guarani-1",
         "pro_nombre": "Red Comunitaria Guaraní",
         "fecha_contrato": "2011-12-14",
         "categoria_cod": "5",
@@ -10024,6 +9916,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "227980",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "227980-ecomipa-s-a-4",
         "pro_nombre": "ECOMIPA S.A.",
         "fecha_contrato": "2013-06-13",
         "categoria_cod": "21",
@@ -10313,6 +10206,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "227980",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "227980-benito-roggio-e-hijos-sa-5",
         "pro_nombre": "BENITO ROGGIO E HIJOS SA",
         "fecha_contrato": "2013-05-27",
         "categoria_cod": "21",
@@ -10587,6 +10481,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "227980",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "227980-vialtec-sa-3",
         "pro_nombre": "VIALTEC SA",
         "fecha_contrato": "2013-05-02",
         "categoria_cod": "21",
@@ -10786,6 +10681,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "227981",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "227981-consorcio-numi-1",
         "pro_nombre": "Consorcio Ñumi",
         "fecha_contrato": "2013-05-16",
         "categoria_cod": "21",
@@ -10990,6 +10886,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública internacional",
         "llamado_id": "228203",
         "rubro_nombre": "CONSTRUCCIONES",
+        "id": "228203-consorcio-roggio-tecnoedil-1",
         "pro_nombre": "CONSORCIO ROGGIO - TECNOEDIL",
         "fecha_contrato": "2013-08-06",
         "categoria_cod": "21",
@@ -11069,6 +10966,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública nacional",
         "llamado_id": "203786",
         "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "id": "203786-consorcio-civial-insercon-1",
         "pro_nombre": "Consorcio CIVIAL - INSERCON",
         "fecha_contrato": "2010-12-22",
         "categoria_cod": "5",
@@ -11133,6 +11031,7 @@ var imputaciones = [
         "mod_nombre": "Licitación pública nacional",
         "llamado_id": "203784",
         "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "id": "203784-consorcio-servingci-electropar-1",
         "pro_nombre": "CONSORCIO SERVINGCI - ELECTROPAR",
         "fecha_contrato": "2010-12-20",
         "categoria_cod": "5",
@@ -11222,11 +11121,151 @@ var imputaciones = [
         "mod_nombre": "Licitación pública nacional",
         "llamado_id": "203785",
         "rubro_nombre": "ESTUDIOS Y PROY. DE INVERSION",
+        "id": "203785-consorcio-csi-geipex-1",
         "pro_nombre": "Consorcio CSI - GEIPEX",
         "fecha_contrato": "2010-12-21",
         "categoria_cod": "5",
         "obra": "Estudios de factibilidad",
         "rubro_cod": "580"
+    },
+    {
+        "llamado_nombre": "MOPC 12-2009 ASESORAMIENTO EN LA GESTION Y MONIT",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
+        "monto_total": 398640000,
+        "mod_codigo": "CO",
+        "pro_cod": "E-0001212",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-03-31",
+                "monto": 29013600
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-04-06",
+                "monto": 12434400
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-05-31",
+                "monto": 2385246
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-05-31",
+                "monto": 21831782
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-05-31",
+                "monto": 51370890
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-07-30",
+                "monto": 58654472
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-12",
+                "monto": 4919138
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-24",
+                "monto": 27712720
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-24",
+                "monto": 5879028
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-10-30",
+                "monto": 53110435
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-11-03",
+                "monto": 5311043
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-11-08",
+                "monto": 25040730
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-03-30",
+                "monto": 26418189
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-04-06",
+                "monto": 59838324
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-05-26",
+                "monto": 5642820
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-11-16",
+                "monto": 7363629
+            },
+            {
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-03-14",
+                "monto": 736371
+            }
+        ],
+        "cod_contrato": "CO-12013-10-53652",
+        "mod_nombre": "Concurso de ofertas",
+        "llamado_id": "139701",
+        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "pro_nombre": "LUONGO CASELLI, GABRIEL *",
+        "fecha_contrato": "2009-12-17",
+        "categoria_cod": "5",
+        "obra": "Preparación",
+        "rubro_cod": "260"
+    },
+    {
+        "llamado_nombre": "SERVICIOS DE CONSULTORIA - ANALISIS DE MEJORAS Y LECCIONES APRENDIDAS GMANS",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
+        "monto_total": 151238340,
+        "mod_codigo": "CO",
+        "pro_cod": "23185893899",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-10",
+                "monto": 1005678
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-11-19",
+                "monto": 4729784
+            },
+            {
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-12-10",
+                "monto": 10032876
+            }
+        ],
+        "cod_contrato": "CO-12013-14-91197",
+        "mod_nombre": "Concurso de ofertas",
+        "llamado_id": "267053",
+        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "id": "267053-esteban-fernando-travaglianti-1",
+        "pro_nombre": "ESTEBAN FERNANDO TRAVAGLIANTI",
+        "fecha_contrato": "2014-07-29",
+        "categoria_cod": "5",
+        "obra": "Preparación",
+        "rubro_cod": "260"
     },
     {
         "rubro_nombre": "GRATIF. POR SERV. ESPECIALES",
