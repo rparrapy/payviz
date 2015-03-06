@@ -190,12 +190,13 @@ angular.module('payvizApp')
 
 
     function generarTablaDetalles(d){
-
       var s = '<h4>Detalle de Pagos Realizados</h4>'+
-      '<div style="overflow-y:scroll;max-height:400px;">'+
-      '<table class="secundaria" style="margin-bottom:30px;width:100%;line-height: 1.2em;">'+
-              '<thead>'+
-                '<tr style="background:#ddd;">'+
+              '<div style="overflow-y:scroll;max-height:400px;">'+
+              '<table class="secundaria" style="margin-bottom:30px;width:100%;line-height: 1.2em;">';
+              
+      if(d.pro_nombre != 'Varios'){
+        s +=      '<thead>' +
+                  '<tr style="background:#ddd;">'+
                   '<td>Cod. contrato</td>'+
                   '<td>Fecha contrato</td>'+
                   '<td>Fecha de obligación</td>'+
@@ -238,9 +239,29 @@ angular.module('payvizApp')
                     }
                   }
                 }
+          s += '</tbody>';
+            
+        }else{
+          s +=      '<thead>' +
+                  '<tr style="background:#ddd;">'+
+                  '<td>Fecha</td>'+
+                  '<td>Razon Social</td>'+
+                  '<td>Monto</td>'+
+                '</tr>'+
+              '</thead>'+
+              '<tbody>';
+                for(var i=0; i< d.imputaciones.length; i++){
+                  var imp = d.imputaciones[i];
+                  s+= '<tr>'+
+                      '<td>'+imp.fecha_obl+'</td>'+
+                      '<td>'+imp.pro_nombre+'</td>'+
+                      '<td style="text-align:right;">Gs. '+parseInt(imp.monto).toLocaleString()+'</td>'+
+                    '</tr>';
+                }
+          s += '</tbody>';
 
-            s += '</tbody>'+
-            '</table>'+
+        }
+      s += '</table>'+
             '</div>';
       return s
     }
