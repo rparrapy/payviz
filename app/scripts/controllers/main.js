@@ -35,7 +35,6 @@ angular.module('payvizApp')
     }
 
 
-    console.log(contratos.length);
     $scope.data = contratos;
     //$scope.$apply();
   });

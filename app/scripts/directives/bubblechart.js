@@ -675,7 +675,6 @@ angular.module('payvizApp')
         function showPopover (d, hasta) {
           window.setLista = function setLista(id_filtrado){
             removePopovers(false);
-            console.log("Me voy a la lista");
             window.seleccionado = id_filtrado;
             window.location = window.location + 'data';
           }
