@@ -609,7 +609,7 @@ angular.module('payvizApp')
           .attr('text-anchor', 'start')
           .attr('fill', '#666')
           .text(function (d) {
-            return (varname === 'all') ? 'Total: Gs. ' + d.monto.toLocaleString() : 'Gs. ' + d.monto.toLocaleString(); 
+            return (varname === 'all') ? 'Monto Total de Contratos: Gs. ' + d.monto.toLocaleString() : 'Gs. ' + d.monto.toLocaleString(); 
           })
           .attr('transform', function (d) {
             return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y + 10 : 30) + ')';
