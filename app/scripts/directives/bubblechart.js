@@ -7,7 +7,7 @@
  * # bubbleChart
  */
 angular.module('payvizApp')
-  .directive('bubbleChart', function () {
+  .directive('bubbleChart', function ($timeout) {
     return {
       restrict: 'E',
       replace: false,
@@ -39,6 +39,7 @@ angular.module('payvizApp')
         var area = d3.scale.sqrt().domain([0, maxElem.monto_total]).range([0, 50]);
         var popactual = null;
         var popClearInterval = null;
+        var lastSelectedDate = moment(); 
         var fill = function(contrato, hasta){
           var limite = hasta || moment();
           var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
@@ -409,7 +410,7 @@ angular.module('payvizApp')
         scope.$watch('until',function(until){
           //No se porque es necesaria esta primera linea
           if(until){
-            until.toDate();
+            lastSelectedDate = until.toDate();
           }
           nodes.attr('opacity', function(d){ return opacity(d, until);})
             .attr('r', function (d) {  return radius(d, until); })
@@ -556,6 +557,11 @@ angular.module('payvizApp')
             hiddenNodes.style('display', 'none');
           }
           visibleNodes.style('display', 'block');
+          $timeout(function(){
+            scope.$apply(function(){
+              scope.until = moment(lastSelectedDate);
+            });
+          });
         }
 
         function tick (centers, varname, componente) {
