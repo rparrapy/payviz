@@ -595,6 +595,10 @@ angular.module('payvizApp')
 
         function labels (centers, varname, until) {
           var limite = until || moment();
+          var totalALaFecha = _.reduce(filteredData, function(memo, c){
+                var fecha = (c['fecha_contrato']) ? moment(c['fecha_contrato']) : moment(c['fecha_primer_pago']);
+                return (fecha <= limite.toDate()) ? c['monto_total'] + memo : memo; 
+              }, 0);
           svg.selectAll('.label').remove();
           svg.selectAll('.monto-label').remove();
           //Del total del proyecto, cuanto se destino a contratos
@@ -605,12 +609,11 @@ angular.module('payvizApp')
           .attr('text-anchor', 'start')
           .text(function (d) {
             var exceptions = ['pro_nombre_vista', 'obra_vista'];
-            var label;
-            var porcentajeContratacion;
+            var label, porcentajeContratacion;
             if(varname === 'all'){
               porcentajeContratacion = d.monto / totalProyecto * 100;
               //label = 'Monto Total de Contratos: Gs. ' + d.monto.toLocaleString() + '(' + porcentajeContratacion.toLocaleString() +'% del monto total del proyecto)';
-              label = 'Monto Total de Contratos: Gs. ' + d.monto.toLocaleString();
+              label = 'Monto Total de Contratos: Gs. ' + totalALaFecha.toLocaleString();
             }else{
               if(d.name && !_.contains(exceptions, varname)){ label = d.name.toProperCase(); }else{ label = d.name; }
               if(label){
@@ -632,7 +635,8 @@ angular.module('payvizApp')
           .attr('text-anchor', 'start')
           .attr('fill', '#666')
           .text(function (d) {
-            var porcentajeEjecutado = (totalEjecutado/d.monto * 100).toFixed(0);
+            var porcentajeEjecutado = (totalEjecutado/totalALaFecha * 100).toFixed(0);
+            porcentajeEjecutado = (porcentajeEjecutado === NaN) ? 0 : porcentajeEjecutado;
             var labelAll = 'Total Ejecutado: Gs. ' + totalEjecutado.toLocaleString() + ' (' + porcentajeEjecutado.toLocaleString() + '% del monto total de contratos)'
             return (varname === 'all') ? labelAll : 'Gs. ' + d.monto.toLocaleString(); 
           })
