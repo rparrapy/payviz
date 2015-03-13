@@ -39,16 +39,19 @@ angular.module('payvizApp')
         var area = d3.scale.sqrt().domain([0, maxElem.monto_total]).range([0, 50]);
         var popactual = null;
         var popClearInterval = null;
-        var lastSelectedDate = moment(); 
+        var lastSelectedDate = moment();
+        var totalProyectoDolares = 105410000;
+        var cotizacion = 4812;
+        var totalProyecto = totalProyectoDolares * cotizacion;
+        var currentCenters, currentVarname;
+        var montoCobrado = function(contrato, hasta){
+          return _.reduce(contrato.imputaciones, function(sum, imputacion){
+            return (moment(imputacion.fecha_obl) <= hasta) ? sum + imputacion.monto : sum;
+          }, 0);
+        };
         var fill = function(contrato, hasta){
           var limite = hasta || moment();
-          var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
-            if(moment(imputacion.fecha_obl) <= limite){
-              return sum + imputacion.monto; 
-            }else{
-              return sum;
-            }
-          }, 0);
+          var cobrado = montoCobrado(contrato, limite);
           var ejecutado = cobrado/contrato.monto_total;
           var fillColor = contrato.is_adenda ? '#00698C' : '#f56727' ;
           var bgColor = contrato.is_adenda ? '#bfdfff' : '#ffead4';
@@ -415,6 +418,7 @@ angular.module('payvizApp')
           nodes.attr('opacity', function(d){ return opacity(d, until);})
             .attr('r', function (d) {  return radius(d, until); })
             .style('fill', function (d) { return fill(d, until); });
+          labels(currentCenters, currentVarname, until);
         });
 
 
@@ -515,6 +519,7 @@ angular.module('payvizApp')
         }
 
         function draw (varname, componente) {
+          currentVarname = varname;
           if(componente){
             width = size[varname][componente][0];
             height = size[varname][componente][1];
@@ -527,6 +532,7 @@ angular.module('payvizApp')
           var centers = getCenters(varname, [width, height]);
           force.on('tick', tick(centers, varname, componente));
           labels(centers,varname);
+          currentCenters = centers;
           force.start();
         }
 
@@ -587,10 +593,11 @@ angular.module('payvizApp')
           };
         }
 
-        function labels (centers,varname) {
+        function labels (centers, varname, until) {
+          var limite = until || moment();
           svg.selectAll('.label').remove();
           svg.selectAll('.monto-label').remove();
-
+          //Del total del proyecto, cuanto se destino a contratos
 
           svg.selectAll('.label')
           .data(centers).enter().append('text')
@@ -599,9 +606,16 @@ angular.module('payvizApp')
           .text(function (d) {
             var exceptions = ['pro_nombre_vista', 'obra_vista'];
             var label;
-            if(d.name && !_.contains(exceptions, varname)){ label = d.name.toProperCase(); }else{ label = d.name; }
-            if(label){
-              label = label.length > 45 ? label.slice(0, 42) + '...' :  label;
+            var porcentajeContratacion;
+            if(varname === 'all'){
+              porcentajeContratacion = d.monto / totalProyecto * 100;
+              //label = 'Monto Total de Contratos: Gs. ' + d.monto.toLocaleString() + '(' + porcentajeContratacion.toLocaleString() +'% del monto total del proyecto)';
+              label = 'Monto Total de Contratos: Gs. ' + d.monto.toLocaleString();
+            }else{
+              if(d.name && !_.contains(exceptions, varname)){ label = d.name.toProperCase(); }else{ label = d.name; }
+              if(label){
+                label = label.length > 45 ? label.slice(0, 42) + '...' :  label;
+              }
             }
             return d.name !== undefined || varname === 'all' ? label : 'No aplica'; 
           })
@@ -615,7 +629,10 @@ angular.module('payvizApp')
           .attr('text-anchor', 'start')
           .attr('fill', '#666')
           .text(function (d) {
-            return (varname === 'all') ? 'Monto Total de Contratos: Gs. ' + d.monto.toLocaleString() : 'Gs. ' + d.monto.toLocaleString(); 
+            var totalEjecutado = _.reduce(filteredData, function(memo, c){ return montoCobrado(c, limite) + memo; }, 0);
+            var porcentajeEjecutado = (totalEjecutado/d.monto * 100).toFixed(0); 
+            var labelAll = 'Total Ejecutado: Gs. ' + totalEjecutado.toLocaleString() + ' (' + porcentajeEjecutado.toLocaleString() + '% del monto total de contratos)'
+            return (varname === 'all') ? labelAll : 'Gs. ' + d.monto.toLocaleString(); 
           })
           .attr('transform', function (d) {
             return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y + 10 : 30) + ')';
