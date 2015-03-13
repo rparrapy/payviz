@@ -254,7 +254,7 @@ angular.module('payvizApp')
                   var imp = d.imputaciones[i];
                   s+= '<tr>'+
                       '<td>'+imp.fecha_obl+'</td>'+
-                      '<td>'+imp.pro_nombre+'</td>'+
+                      '<td style="text-align:left;">'+imp.pro_nombre+'</td>'+
                       '<td style="text-align:right;">Gs. '+parseInt(imp.monto).toLocaleString()+'</td>'+
                     '</tr>';
                 }

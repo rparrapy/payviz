@@ -197,11 +197,15 @@ body {
 background: #CCC url("../images/ico_3.png") no-repeat 15px center;
 }
 
+.tips .celda:nth-child(4) {
+background: #BBB url("../images/paraguay.svg") no-repeat 15px center;
+}
+
 .tips .celda {
   display: table-cell;
   padding: 20px 10px 20px 80px;
   color: #666;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 120%;
   vertical-align: middle;
   width: 230px;
@@ -214,7 +218,7 @@ background: #CCC url("../images/ico_3.png") no-repeat 15px center;
 
 .referencias .celda {
   display: table-cell;
-  width: 280px;
+  width: 210px;
   padding-right: 20px;
 }
 
