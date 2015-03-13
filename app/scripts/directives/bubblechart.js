@@ -127,7 +127,7 @@ angular.module('payvizApp')
         var imagen = function(contrato){
           var imgId = 'img-' +  contrato.cod_contrato;
           var imagen = d3.select('#' + imgId );
-          if(_.has(contrato,'adendas')){
+          if(_.has(contrato,'adendas') && contrato['adendas'].length > 0){
             if(!imagen.empty()){
               imagen
               .attr('x', contrato.x - contrato.radius/4)

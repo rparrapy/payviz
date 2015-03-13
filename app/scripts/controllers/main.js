@@ -32,6 +32,10 @@ angular.module('payvizApp')
       if(!c.monto_total){
         c.monto_total = _.reduce(c.imputaciones,function(sum, el) { return sum + el.monto },0);
       }
+      //temporalmente
+      c.adendas = _.filter(c.adendas, function(adenda){
+        return (adenda.tipo === 'Amp de monto' || adenda.tipo === 'Reajuste.' || adenda.tipo === 'Renovación') && adenda['fecha_contrato']; 
+      });
     }
 
 
