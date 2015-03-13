@@ -18,7 +18,7 @@ angular.module('payvizApp')
           return +moment(str, 'YYYYMMDD');   
         }
 
-        var limits = ['20071130', '20141231'];
+        var limits = ['20071130', '20150331'];
 
         $("#fecha").noUiSlider({
         // Create two timestamps to define a range.
