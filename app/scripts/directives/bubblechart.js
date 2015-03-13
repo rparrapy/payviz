@@ -623,14 +623,16 @@ angular.module('payvizApp')
             return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y - 5 : 15) + ')';
           })
 
+
+          var totalEjecutado = _.reduce(filteredData, function(memo, c){ return montoCobrado(c, limite) + memo; }, 0);
+
           svg.selectAll('.monto-label')
           .data(centers).enter().append('text')
           .attr('class', 'monto-label')
           .attr('text-anchor', 'start')
           .attr('fill', '#666')
           .text(function (d) {
-            var totalEjecutado = _.reduce(filteredData, function(memo, c){ return montoCobrado(c, limite) + memo; }, 0);
-            var porcentajeEjecutado = (totalEjecutado/d.monto * 100).toFixed(0); 
+            var porcentajeEjecutado = (totalEjecutado/d.monto * 100).toFixed(0);
             var labelAll = 'Total Ejecutado: Gs. ' + totalEjecutado.toLocaleString() + ' (' + porcentajeEjecutado.toLocaleString() + '% del monto total de contratos)'
             return (varname === 'all') ? labelAll : 'Gs. ' + d.monto.toLocaleString(); 
           })
