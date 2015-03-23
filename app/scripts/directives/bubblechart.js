@@ -18,12 +18,12 @@ angular.module('payvizApp')
         };
         var data = scope.data;
         var filteredData = data;
-        var size = { 
+        var size = {
                     'all' : [435, 410],
                     'rubro_nombre' : [900, 900],
-                    'pro_nombre_vista' : [900,1200], 
+                    'pro_nombre_vista' : [900,1200],
                     'mod_nombre' : [900,400],
-                    'componente' : [900,450], 
+                    'componente' : [900,450],
                     'obra_vista': {
                                   'pavimentadas': [900, 250],
                                   'no-pavimentadas': [900, 350],
@@ -116,7 +116,7 @@ angular.module('payvizApp')
           }else{
             cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
               if(moment(imputacion.fecha_obl) <= limite){
-                return sum + imputacion.monto; 
+                return sum + imputacion.monto;
               }else{
                 return sum;
               }
@@ -156,7 +156,7 @@ angular.module('payvizApp')
 
 
         for (var j = 0; j < data.length; j++) {
-          
+
             data[j].id = j;
             data[j].id_filtrado = (data[j].cod_contrato) ? data[j].cod_contrato : data[j].rubro_cod + '-' +  j.toString();
             data[j].radius = area(data[j].monto_total);
@@ -169,7 +169,8 @@ angular.module('payvizApp')
             ndata.push(data[j]);
             if(data[j].adendas){
               var adendas = data[j].adendas;
-              for(var i=0; i < adendas.length; i++){ 
+              for(var i=0; i < adendas.length; i++){
+                adendas[i].id_filtrado = data[j].id_filtrado;
                 adendas[i].padre = j;
                 adendas[i].p_data = data[j];
                 adendas[i].monto_total = adendas[i].monto;
@@ -187,7 +188,7 @@ angular.module('payvizApp')
                 adendas[i].is_adenda = true;
                 ndata.push(adendas[i]);
             }
-            
+
           }
 
         }
@@ -196,14 +197,14 @@ angular.module('payvizApp')
         //console.log(data);
         //var sinContrato = _.chain(data).filter(function(e){return e.cod_contrato == undefined; }).value();
         //console.log(sinContrato);
-        
+
         var padding = 5;
         var maxRadius = d3.max(_.pluck(data, 'radius'));
 
         var getCenters = function (vname, size) {
           var centers, map;
           var circulitos;
-          
+
           if(vname !== 'all'){
             circulitos = _.countBy(_.pluck(filteredData, vname), function(d) { return d; } );
             circulitos = _.mapObject(circulitos, function(d){ return 0; });
@@ -273,7 +274,7 @@ angular.module('payvizApp')
         var truncateCenters = function(centers, number, varname) {
           var montoOtros = 0;
           var ncenter = [];
-          
+
           centers = _.sortBy(centers, function(o) { return -o.cantidad });
 
           if(centers.length > number){
@@ -380,11 +381,11 @@ angular.module('payvizApp')
           .style('fill', function (d) { return fill(d); })
           .on('mouseover', function (d) { showPopover.call(this, d, scope.until); })
           .on('mouseout', function (d) { removePopovers(true); })
-          .on('click', function(d){ 
-            window.seleccionado = d.cod_contrato; 
-
+          .on('click', function(d){
+            window.seleccionado = d.cod_contrato;
+            setLista(d.id_filtrado);
           });
-        
+
         var force = d3.layout.force();
 
         draw('all');
@@ -423,7 +424,7 @@ angular.module('payvizApp')
         });
 
 
-        $("#search-box").keyup( function(){ 
+        $("#search-box").keyup( function(){
             var search = $("#search-box").val();
             //console.log("this is sparta ... " + search);
 
@@ -435,7 +436,7 @@ angular.module('payvizApp')
         });
 
 
- 
+
       function getTextOf(d) {
 
 
@@ -471,7 +472,7 @@ angular.module('payvizApp')
 
           //console.log("Lo que busco...")
           //console.log(s);
-          
+
           _.each(filteredData, function(d){
             $('#img-' + d.cod_contrato).show();
           });
@@ -501,7 +502,7 @@ angular.module('payvizApp')
 
           //console.log(displayedData);
           //console.log(excludedData);
-          
+
         }
 
         function setPosAdenda(d){
@@ -629,7 +630,7 @@ angular.module('payvizApp')
                 label = label.length > 45 ? label.slice(0, 42) + '...' :  label;
               }
             }
-            return d.name !== undefined || varname === 'all' ? label : 'No aplica'; 
+            return d.name !== undefined || varname === 'all' ? label : 'No aplica';
           })
           .attr('transform', function (d) {
             return 'translate(' + (d.x + ((d.dx - this.getComputedTextLength())/2)) + ', ' + (d.y > 0 ? d.y - 5 : 15) + ')';
@@ -652,7 +653,7 @@ angular.module('payvizApp')
         }
 
         function wrap(text, width) {
-  
+
           text.each(function() {
             var text = d3.select(this),
                 words = text.text().split(/\s+/).reverse(),
@@ -668,7 +669,7 @@ angular.module('payvizApp')
                 //dx = parseFloat(text.attr("dx")),
             y = y + diff;
             var tspan = text.text(null).append("tspan").attr("x", -50).attr("y", y).attr("dy", dy + "em");
-           
+
             while (word = words.pop()) {
               line.push(word);
               tspan.text(line.join(" "));
@@ -683,8 +684,8 @@ angular.module('payvizApp')
         }
 
         var cursorOnPopover = false;
-        $('.popover').on('mouseenter', null, function() { cursorOnPopover = true; });
-        $('.popover').on('mouseleave', null, function() { cursorOnPopover = false; });
+        //$('.popover').on('mouseenter', null, function() { cursorOnPopover = true; });
+        //$('.popover').on('mouseleave', null, function() { cursorOnPopover = false; });
 
         function removePopovers (esperar) {
           if(!esperar || $('.popover').length > 1){
@@ -695,13 +696,13 @@ angular.module('payvizApp')
               });
             }else{
               if($('.popover').length > 0){
-                _.delay(removePopovers, 200, false);
-              }              
+                _.delay(removePopovers, 50, false);
+              }
             }
           }else{
             //console.log('false');
             if($('.popover').length > 0){
-              _.delay(removePopovers, 200, false);
+              _.delay(removePopovers, 50, false);
             }
           }
         }
@@ -720,49 +721,67 @@ angular.module('payvizApp')
             content: function() {
 
 
-              var crudo = '<div class="tooltipo padding10"> <table> <tbody> <tr> <td> {categoria_nombre} <br><br> Monto total<br><h5>Gs. {monto_total}</h5> </td>'+
-                    '<td rowspan="2" class="txtC" width="30%"> Monto ejecutado<br> <h1 class="per_ejex">{ejecutado}%</h1> </td> </tr> <tr> '+
-                    '<td> Proveedor<br> <h6>{pro_nombre}</h6> </td> </tr> </tbody> </table> <hr> <table class="tab_sec mb10">'+
-                    ' <tbody> <tr> <td width="50%"> Fecha de contrato<br> <strong>{fecha_contrato}</strong> </td> <td> Nombre del llamado<br>'+
-                    ' <strong>{llamado_nombre}</strong> </td> </tr> <tr> <td> Código de contratación<br> <strong>{cod_contrato}</strong> </td>'+
-                    ' <td> Monto ya pagado<br> <strong>Gs. {monto_pagado}</strong> </td> </tr> <tr> <td> Tipo de licitación<br> '+
-                    '<strong>{mod_nombre}</strong> </td> <td> Obra<br> '+
-                    '<strong>{obra}</strong> </td> </tr> </tbody> </table> <p class="txtC">'+
-                    ( d.is_adenda ? '' : '<a onClick="setLista(\''+d.id_filtrado+'\')">Click para ver más detalles</a></p> ')+
-                    '</div>';
+          var crudo = '<div class="tooltipo padding10">' +
+         '    <table>' +
+         '        <tbody>' +
+         '' +
+         '            <tr>' +
+         '            <td style="min-width:300px;" colspan="2">' +
+         '                     <strong>{llamado_nombre}</strong>' +
+         '            </td>' +
+         '            </tr>' +
+         '            <tr>' +
+         '                <td colspan="2">' +
+         '                    <h6>{pro_nombre}</h6>' +
+         '                </td>' +
+         '            </tr>' +
+         '            <tr style="min-width:320px;">' +
+         '                <td width="*">' +
+         '' +
+         '                    Monto total: ' +
+         '                    ' +
+         '                    Gs. {monto_total}' +
+         '                </td>' +
+         '                <td  style="padding:0px;text-align:right;white-space:nowrap;">' +
+                          'Monto ejecutado: ' +
+         '                    <span class="per_ejex">{ejecutado}%</span>' +
+         '                </td>' +
+         '            </tr>' +
+         '' +
+         '        </tbody>' +
+         '    </table>' +
+         '    <hr>' +
+         '' +
+         '    <center><p style="font-size:12px;">Click en el círculo para ver más detalles</p></center>' +
+         '</div>';
               if(d.is_adenda) { d.categoria_nombre = 'Adenda';}
-              return crudo.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : '')
+              return crudo
                 .replace('{monto_total}', typeof d.monto_total !== "undefined" ? parseInt(d.monto_total).toLocaleString() : 'No aplica')
                 .replace('{ejecutado}', typeof d.ejecutado !== "undefined" ? (d.ejecutado * 100).toFixed(0) : 'No aplica')
                 .replace('{pro_nombre}', typeof d.pro_nombre !== "undefined" ? d.pro_nombre : 'No aplica')
-                .replace('{fecha_contrato}', typeof d.fecha_contrato !== "undefined" ? d.fecha_contrato : 'No aplica')
-                .replace('{llamado_nombre}', typeof d.llamado_nombre !== "undefined" ? d.llamado_nombre : 'No aplica')
-                .replace('{cod_contrato}', typeof d.cod_contrato !== "undefined" ? d.cod_contrato : 'No aplica')
-                .replace('{monto_pagado}', typeof d.monto_pagado !== "undefined" ? d.monto_pagado.toLocaleString() : 'No aplica')
-                .replace('{mod_nombre}', typeof d.mod_nombre !== "undefined" ? d.mod_nombre : 'No aplica')
-                .replace('{obra}', typeof d.obra !== "undefined" ? d.obra : d.rubro_nombre.toProperCase());
+                .replace('{llamado_nombre}', typeof d.llamado_nombre !== "undefined" ? (d.llamado_nombre.length > 80 ? d.llamado_nombre.slice(0,77) + '...' : d.llamado_nombre) : 'No aplica');
 
               ( typeof metadata_title  !== "undefined" ?  "<title>" + metadata_title + "</title>\n"                             : "" )
-              
-              /*return ( typeof d.pro_nombre !== "undefined" ? 'Proveedor: ' + d.pro_nombre : '' ) + 
-                     ( typeof d.mod_nombre !== "undefined" ? '<br/>Modalidad: ' + d.mod_nombre : '' ) + 
-                     ( typeof d.categoria_nombre !== "undefined" ? '<br/>Categoria: ' + d.categoria_nombre : '') + 
-                     ( typeof d.monto_total !== "undefined" ? '<br/>Monto: ' + d.monto_total : '') + 
+
+              /*return ( typeof d.pro_nombre !== "undefined" ? 'Proveedor: ' + d.pro_nombre : '' ) +
+                     ( typeof d.mod_nombre !== "undefined" ? '<br/>Modalidad: ' + d.mod_nombre : '' ) +
+                     ( typeof d.categoria_nombre !== "undefined" ? '<br/>Categoria: ' + d.categoria_nombre : '') +
+                     ( typeof d.monto_total !== "undefined" ? '<br/>Monto: ' + d.monto_total : '') +
                      ( typeof d.padre !== "undefined" ? '<br/>ES ADENDA!' : '' ); */
             }
           });
 
           var limite = hasta || moment();
-          var isBubbleVisible = !(d.fecha_contrato && moment(d.fecha_contrato) > limite); 
+          var isBubbleVisible = !(d.fecha_contrato && moment(d.fecha_contrato) > limite);
 
           if(popactual !== d && isBubbleVisible){
             popactual = d;
             //removePopovers(false);
             $(this).popover('show');
           }
-            
-          $('.popover').on('mouseenter', null, function() { cursorOnPopover = true; });
-          $('.popover').on('mouseleave', null, function() { cursorOnPopover = false; });
+
+          //$('.popover').on('mouseenter', null, function() { cursorOnPopover = true; });
+          //$('.popover').on('mouseleave', null, function() { cursorOnPopover = false; });
         }
         var PRI = true;
         function collide(alpha) {

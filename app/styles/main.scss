@@ -122,11 +122,12 @@ body {
 
 .popover {
   max-width : 350px;
+  background-color:rgba(255,255,255,0.9);
 }
 
 /* Added by me */
 .tooltipo {
-  width: 300px; }
+  width: 320px; }
   .tooltipo td, .tooltip th {
     padding: 2px; }
   .tooltipo .tab_sec td {
@@ -134,7 +135,7 @@ body {
 
 .per_ejex {
   color: #35B140;
-  font-size: 32px; 
+
 }
 
 .gray > li.active > a,
@@ -253,11 +254,11 @@ ul.simple li {
 .left, .right, .center {
   float: left;
   display: block;
-  width : 50%; 
+  width : 50%;
 }
 
 .clear {
-  clear: both; 
+  clear: both;
 }
 
 .label{
