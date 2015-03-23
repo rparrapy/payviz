@@ -26,6 +26,13 @@ angular.module('payvizApp')
 
     var contratos = [];
     angular.copy(imputaciones, contratos);
+    /*var conAmbasAdendas = _.filter(contratos, function(c){
+      var adendasMonto = _.filter(c.adendas, function(a){ return (a.tipo === 'Amp de monto' || a.tipo === 'Reajuste.' || a.tipo === 'Renovación'); });
+      var adendasPlazo = _.filter(c.adendas, function(a){ return (a.tipo === 'Amp de plazos'); });
+      if(adendasPlazo.length > 0 && adendasMonto.length > 0){ console.log(c.adendas); }
+      return adendasPlazo.length > 0 && adendasMonto.length > 0;
+    });
+    console.log(conAmbasAdendas);*/
 
     for (var i = 0; i < contratos.length; i++){
       var c = contratos[i];

@@ -228,6 +228,10 @@ angular.module('payvizApp')
                         '<td></td>'+
                         '<td></td>'+
                       '</tr>';
+                   //temporalmente
+                   d.adendas = _.filter(d.adendas, function(adenda){
+                    return (adenda.tipo === 'Amp de monto' || adenda.tipo === 'Reajuste.' || adenda.tipo === 'Renovación') && adenda['fecha_contrato']; 
+                   });
                    for(var k=0; k< ad.imputaciones.length; k++){
                       var impa = ad.imputaciones[k];
                       s+= '<tr>'+
@@ -396,7 +400,7 @@ angular.module('payvizApp')
     }
 
     function dibujar(c, id){
-      console.log(c);
+      //console.log(c);
       var circulo = [c];
       c.radius = bubbleRadius;
       if(_.has(c,'adendas')){
@@ -414,9 +418,9 @@ angular.module('payvizApp')
       var width = _.reduce(threeColumns, function(memo, num){ return memo + $(num).outerWidth(); }, 0);
       var height = $('.detalle .right').height();
       d3.select("#svg-"+ c.id_filtrado + " svg").remove();
-      console.log($("#svg-"+c.id_filtrado));
+      //console.log($("#svg-"+c.id_filtrado));
       var svgContainer = d3.select("#svg-"+c.id_filtrado).append("svg:svg").attr("width", width).attr("height", height);
-      console.log($("#svg-"+c.id_filtrado));
+      //console.log($("#svg-"+c.id_filtrado));
       var circles = svgContainer.selectAll("circle")
                           .data(circulo)
                           .enter()
@@ -452,7 +456,7 @@ angular.module('payvizApp')
       {dates: [new Date(2011, 11, 30), new Date(2012, 12, 30)], title: "Adenta de tiempo +30 días", section: 3, attrs: {fill: "#FFE9D4"}}
       ];
        //console.log("Timeline:");
-       console.log(id);
+       //console.log(id);
        var timeline1 = new Chronoline(document.getElementById("target-"+id), events,
         {
           visibleSpan: DAY_IN_MILLISECONDS * 366,
@@ -475,7 +479,7 @@ angular.module('payvizApp')
 
     $scope.descargarJSON = function(){
 
-      console.log("descargarJson");
+      //console.log("descargarJson");
 
       var link = window.document.getElementById('descargar-json');
       var toDownload = new Blob([JSON.stringify(imputaciones,null,4)],{type:'application/json'});

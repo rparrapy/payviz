@@ -104,7 +104,8 @@ angular.module('payvizApp')
 
         var opacity = function(contrato, hasta){
           var limite = hasta || moment();
-          return (contrato.fecha_contrato && moment(contrato.fecha_contrato) > limite) ? 0.0 : 1.0;
+          var fecha = (contrato['fecha_contrato']) ? moment(contrato['fecha_contrato']) : moment(contrato['fecha_primer_pago']);
+          return (fecha && fecha > limite) ? 0.0 : 1.0;
         }
 
         var radius = function(contrato, hasta){
@@ -603,7 +604,7 @@ angular.module('payvizApp')
               }, 0);
             totalEjecutado = _.reduce(filteredData, function(memo, c){ return montoCobrado(c, limite) + memo; }, 0);
             porcentajeEjecutado = (totalEjecutado/totalALaFecha * 100).toFixed(0);
-            porcentajeEjecutado = (porcentajeEjecutado === NaN) ? 0 : porcentajeEjecutado;
+            porcentajeEjecutado = isNaN(porcentajeEjecutado) ? 0 : porcentajeEjecutado;
             labelAll = 'Total Ejecutado: Gs. ' + totalEjecutado.toLocaleString() + ' (' + porcentajeEjecutado.toLocaleString() + '% del monto total de contratos)';
           }
           
