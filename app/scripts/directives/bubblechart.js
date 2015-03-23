@@ -595,10 +595,18 @@ angular.module('payvizApp')
 
         function labels (centers, varname, until) {
           var limite = until || moment();
-          var totalALaFecha = _.reduce(filteredData, function(memo, c){
+          var totalALaFecha = 0, totalEjecutado = 0, labelAll = '', porcentajeEjecutado = 0;
+          if(varname === 'all'){
+            totalALaFecha = _.reduce(filteredData, function(memo, c){
                 var fecha = (c['fecha_contrato']) ? moment(c['fecha_contrato']) : moment(c['fecha_primer_pago']);
                 return (fecha <= limite.toDate()) ? c['monto_total'] + memo : memo; 
               }, 0);
+            totalEjecutado = _.reduce(filteredData, function(memo, c){ return montoCobrado(c, limite) + memo; }, 0);
+            porcentajeEjecutado = (totalEjecutado/totalALaFecha * 100).toFixed(0);
+            porcentajeEjecutado = (porcentajeEjecutado === NaN) ? 0 : porcentajeEjecutado;
+            labelAll = 'Total Ejecutado: Gs. ' + totalEjecutado.toLocaleString() + ' (' + porcentajeEjecutado.toLocaleString() + '% del monto total de contratos)';
+          }
+          
           svg.selectAll('.label').remove();
           svg.selectAll('.monto-label').remove();
           //Del total del proyecto, cuanto se destino a contratos
@@ -627,7 +635,6 @@ angular.module('payvizApp')
           })
 
 
-          var totalEjecutado = _.reduce(filteredData, function(memo, c){ return montoCobrado(c, limite) + memo; }, 0);
 
           svg.selectAll('.monto-label')
           .data(centers).enter().append('text')
@@ -635,9 +642,6 @@ angular.module('payvizApp')
           .attr('text-anchor', 'start')
           .attr('fill', '#666')
           .text(function (d) {
-            var porcentajeEjecutado = (totalEjecutado/totalALaFecha * 100).toFixed(0);
-            porcentajeEjecutado = (porcentajeEjecutado === NaN) ? 0 : porcentajeEjecutado;
-            var labelAll = 'Total Ejecutado: Gs. ' + totalEjecutado.toLocaleString() + ' (' + porcentajeEjecutado.toLocaleString() + '% del monto total de contratos)'
             return (varname === 'all') ? labelAll : 'Gs. ' + d.monto.toLocaleString(); 
           })
           .attr('transform', function (d) {
