@@ -200,6 +200,7 @@ angular.module('payvizApp')
                   '<td>Cod. contrato</td>'+
                   '<td>Fecha contrato</td>'+
                   '<td>Fecha de obligación</td>'+
+                  '<td>Concepto</td>'+
                   '<td>Monto</td>'+
                 '</tr>'+
               '</thead>'+
@@ -216,6 +217,7 @@ angular.module('payvizApp')
                       '<td></td>'+
                       '<td></td>'+
                       '<td>'+imp.fecha_obl+'</td>'+
+                      '<td style="text-align:left;">'+imp.concepto+'</td>'+
                       '<td style="text-align:right;">Gs. '+parseInt(imp.monto).toLocaleString()+'</td>'+
                     '</tr>';
                 }
@@ -238,6 +240,7 @@ angular.module('payvizApp')
                           '<td></td>'+
                           '<td></td>'+
                           '<td>'+impa.fecha_obl+'</td>'+
+                          '<td style="text-align:left;">'+impa.concepto+'</td>'+
                           '<td style="text-align:right;">Gs. '+parseInt(impa.monto).toLocaleString()+'</td>'+
                         '</tr>';
                     }
@@ -250,6 +253,7 @@ angular.module('payvizApp')
                   '<tr style="background:#ddd;">'+
                   '<td>Fecha</td>'+
                   '<td>Razon Social</td>'+
+                  '<td>Concepto</td>'+
                   '<td>Monto</td>'+
                 '</tr>'+
               '</thead>'+
@@ -259,6 +263,7 @@ angular.module('payvizApp')
                   s+= '<tr>'+
                       '<td>'+imp.fecha_obl+'</td>'+
                       '<td style="text-align:left;">'+imp.pro_nombre+'</td>'+
+                      '<td style="text-align:left;">'+imp.concepto+'</td>'+
                       '<td style="text-align:right;">Gs. '+parseInt(imp.monto).toLocaleString()+'</td>'+
                     '</tr>';
                 }
