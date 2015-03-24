@@ -222,7 +222,11 @@ angular.module('payvizApp')
                     '</tr>';
                 }
                 if(_.has(d,'adendas')){
-                    for(var j=0; j< d.adendas.length; j++){
+                  //temporalmente
+                  d.adendas = _.filter(d.adendas, function(adenda){
+                    return (adenda.tipo === 'Amp de monto' || adenda.tipo === 'Reajuste.' || adenda.tipo === 'Renovación') && adenda['fecha_contrato']; 
+                  });
+                  for(var j=0; j< d.adendas.length; j++){
                     var ad = d.adendas[j];
                     s+= '<tr class="item">'+
                         '<td><strong>'+ad.cod_contrato+'</strong></td>'+
@@ -230,10 +234,6 @@ angular.module('payvizApp')
                         '<td></td>'+
                         '<td></td>'+
                       '</tr>';
-                   //temporalmente
-                   d.adendas = _.filter(d.adendas, function(adenda){
-                    return (adenda.tipo === 'Amp de monto' || adenda.tipo === 'Reajuste.' || adenda.tipo === 'Renovación') && adenda['fecha_contrato']; 
-                   });
                    for(var k=0; k< ad.imputaciones.length; k++){
                       var impa = ad.imputaciones[k];
                       s+= '<tr>'+
