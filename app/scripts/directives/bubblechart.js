@@ -750,9 +750,9 @@ angular.module('payvizApp')
          '' +
          '        </tbody>' +
          '    </table>' +
-         '    <hr>' +
+         '    <hr style="margin:0px;">' +
          '' +
-         '    <center><p style="font-size:12px;">Click en el círculo para ver más detalles</p></center>' +
+         '    <center><p style="font-size:12px;margin-bottom:0px;margin-top:5px;color:#666;">Click en el círculo para ver más detalles</p></center>' +
          '</div>';
               if(d.is_adenda) { d.categoria_nombre = 'Adenda';}
               return crudo
