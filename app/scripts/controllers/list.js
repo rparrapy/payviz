@@ -8,12 +8,15 @@
  * Controller of the payvizApp
  */
 angular.module('payvizApp')
-  .controller('ListCtrl', function ($scope, DTOptionsBuilder, DTColumnBuilder, DTColumnDefBuilder) {
+  .controller('ListCtrl', function ($scope, DTOptionsBuilder, DTColumnBuilder, DTColumnDefBuilder, serviceImputaciones) {
+
+
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
 
     //Keep active nav-pill updated
     $(document).ready(function() {
@@ -30,78 +33,79 @@ angular.module('payvizApp')
 
     $('.tips, .referencias, hr:last').hide();
 
-    // se clona el objeto para no afectar al grafico.
-    var contratos = [];
-    angular.copy(imputaciones, contratos);
-    var bubbleRadius = 110;
-
-    var maxElem = _.max(contratos, function(c){ return c.monto_total; });
-    var minElem = _.min(contratos, function(c){ return c.monto_total; });
-    var area = function(monto, montoTotal){
-      var scale = d3.scale.sqrt().domain([0, montoTotal]).range([0, bubbleRadius]);
-      return scale(monto);
-    }
-
-    var ncontratos = []
-    for (var i = 0; i < contratos.length; i++){
-      var c = contratos[i];
-      if(c.cod_contrato){
-        c.id_filtrado = c.cod_contrato;
-      }else{
-        c.id_filtrado = (c.cod_contrato) ? c.cod_contrato : c.rubro_cod + '-' +  i.toString();
-      }
-      if(!c.monto_total){
-        c.monto_total = _.reduce(c.imputaciones,function(sum, el) { return sum + el.monto },0);
-      }
-      if(!c.llamado_nombre){
-        c.llamado_nombre = 'No aplica';
-      }
-      if(!c.cod_contrato){
-        c.cod_contrato = 'No aplica';
-      }
-      if(!c.mod_nombre){
-        c.mod_nombre = 'No aplica';
-      }
-      if(!c.categoria_nombre){
-        c.categoria_nombre = '';
-      }
-      if(!c.fecha_contrato){
-        c.fecha_contrato = 'No aplica';
-      }
-      if(!c.pro_nombre){
-        c.pro_nombre = 'Varios';
-      }
-      if(!c.pro_cod){
-        c.pro_cod = 'No aplica';
-      }
-      c.radius = bubbleRadius;
-      c.is_adenda = false;
-      var cobrado = _.reduce(c.imputaciones, function(sum, imputacion){
-            return sum + imputacion.monto; 
-        }, 0);
-      var ejecutado = cobrado/c.monto_total;
-      c.ejecutado = ejecutado.toFixed(2);
-      c.monto_pagado = cobrado;
-
-      //Convertimos a ProperCase
-      c.llamado_nombre = c.llamado_nombre.toProperCase();
-      //c.pro_nombre = c.pro_nombre.toProperCase();
-      c.mod_nombre = c.mod_nombre.toProperCase();
-      c.llamado_nombre = c.llamado_nombre.toProperCase();
-      c.categoria_nombre = c.categoria_nombre.toProperCase();
 
 
-      //truncamos el nombre del llamado...
-      c.llamado_nombre_completo = c.llamado_nombre;
-      c.llamado_nombre = c.llamado_nombre.length > 40 ? c.llamado_nombre.slice(0,37) + '...' :  c.llamado_nombre;      
+      var contratos = [];
+      angular.copy(window.imputaciones, contratos);
+      var bubbleRadius = 110;
 
-      ncontratos.push(c);
+      var maxElem = _.max(contratos, function(c){ return c.monto_total; });
+      var minElem = _.min(contratos, function(c){ return c.monto_total; });
+      var area = function(monto, montoTotal){
+        var scale = d3.scale.sqrt().domain([0, montoTotal]).range([0, bubbleRadius]);
+        return scale(monto);
+      }
 
-    }
+      var ncontratos = []
+      for (var i = 0; i < contratos.length; i++){
+        var c = contratos[i];
+        if(c.cod_contrato){
+          c.id_filtrado = c.cod_contrato;
+        }else{
+          c.id_filtrado = (c.cod_contrato) ? c.cod_contrato : c.rubro_cod + '-' +  i.toString();
+        }
+        if(!c.monto_total){
+          c.monto_total = _.reduce(c.imputaciones,function(sum, el) { return sum + el.monto },0);
+        }
+        if(!c.llamado_nombre){
+          c.llamado_nombre = 'No aplica';
+        }
+        if(!c.cod_contrato){
+          c.cod_contrato = 'No aplica';
+        }
+        if(!c.mod_nombre){
+          c.mod_nombre = 'No aplica';
+        }
+        if(!c.categoria_nombre){
+          c.categoria_nombre = '';
+        }
+        if(!c.fecha_contrato){
+          c.fecha_contrato = 'No aplica';
+        }
+        if(!c.pro_nombre){
+          c.pro_nombre = 'Varios';
+        }
+        if(!c.pro_cod){
+          c.pro_cod = 'No aplica';
+        }
+        c.radius = bubbleRadius;
+        c.is_adenda = false;
+        var cobrado = _.reduce(c.imputaciones, function(sum, imputacion){
+              return sum + imputacion.monto;
+          }, 0);
+        var ejecutado = cobrado/c.monto_total;
+        c.ejecutado = ejecutado.toFixed(2);
+        c.monto_pagado = cobrado;
 
-    contratos = _.sortBy(ncontratos, function(o) { return o.llamado_nombre; });
-    $scope.contratos = contratos;
-    $scope.detalles_abiertos = [];
+        //Convertimos a ProperCase
+        c.llamado_nombre = c.llamado_nombre.toProperCase();
+        //c.pro_nombre = c.pro_nombre.toProperCase();
+        c.mod_nombre = c.mod_nombre.toProperCase();
+        c.llamado_nombre = c.llamado_nombre.toProperCase();
+        c.categoria_nombre = c.categoria_nombre.toProperCase();
+
+
+        //truncamos el nombre del llamado...
+        c.llamado_nombre_completo = c.llamado_nombre;
+        c.llamado_nombre = c.llamado_nombre.length > 40 ? c.llamado_nombre.slice(0,37) + '...' :  c.llamado_nombre;
+
+        ncontratos.push(c);
+
+      }
+
+      contratos = _.sortBy(ncontratos, function(o) { return o.llamado_nombre; });
+      $scope.contratos = contratos;
+      $scope.detalles_abiertos = [];
 
     $scope.dtOptions = DTOptionsBuilder.newOptions().withPaginationType('full_numbers')
       .withOption('order', [[2, 'asc']])
@@ -132,7 +136,7 @@ angular.module('payvizApp')
     })
       .withBootstrap()
       .withOption('responsive', true)
-      .withOption('fnDrawCallback', function(oSettings){  
+      .withOption('fnDrawCallback', function(oSettings){
         $(".img-mostrar").attr("src","images/ico_mostrar.png");
         $scope.detalles_abiertos = [];
       });
@@ -175,9 +179,9 @@ angular.module('payvizApp')
         });
       });
 
-    // si viene de una seleccion 
+    // si viene de una seleccion
     if(window.seleccionado){
-      var cod_contrato = window.seleccionado; 
+      var cod_contrato = window.seleccionado;
       $("input[type=search]").val(cod_contrato);
       $("input[type=search]").keyup();
       $("img").click();
@@ -193,7 +197,7 @@ angular.module('payvizApp')
       var s = '<h4>Detalle de Pagos Realizados</h4>'+
               '<div style="overflow-y:scroll;max-height:400px;">'+
               '<table class="secundaria" style="margin-bottom:30px;width:100%;line-height: 1.2em;">';
-              
+
       if(d.pro_nombre != 'Varios'){
         s +=      '<thead>' +
                   '<tr style="background:#ddd;">'+
@@ -224,10 +228,13 @@ angular.module('payvizApp')
                 if(_.has(d,'adendas')){
                   //temporalmente
                   d.adendas = _.filter(d.adendas, function(adenda){
-                    return (adenda.tipo === 'Amp de monto' || adenda.tipo === 'Reajuste.' || adenda.tipo === 'Renovación') && adenda['fecha_contrato']; 
+                    return (adenda.tipo === 'Amp de monto' || adenda.tipo === 'Reajuste.' || adenda.tipo === 'Renovación' || adenda.tipo === 'Amp de plazos') && adenda['fecha_contrato'];
                   });
-                  for(var j=0; j< d.adendas.length; j++){
-                    var ad = d.adendas[j];
+                  d.adendasN = _.filter(d.adendas, function(adenda){
+                    return (adenda.tipo === 'Amp de monto' || adenda.tipo === 'Reajuste.' || adenda.tipo === 'Renovación') && adenda['fecha_contrato'];
+                  });
+                  for(var j=0; j< d.adendasN.length; j++){
+                    var ad = d.adendasN[j];
                     s+= '<tr class="item">'+
                         '<td><strong>'+ad.cod_contrato+'</strong></td>'+
                         '<td>'+ad.fecha_contrato+'</td>'+
@@ -247,7 +254,7 @@ angular.module('payvizApp')
                   }
                 }
           s += '</tbody>';
-            
+
         }else{
           s +=      '<thead>' +
                   '<tr style="background:#ddd;">'+
@@ -279,7 +286,7 @@ angular.module('payvizApp')
 
       var html = " " + $("#template-detalle").html();
 
-      
+
       html = html.replace('{categoria_nombre}', typeof d.categoria_nombre !== "undefined" ? d.categoria_nombre : '')
                 .replace('{monto_total}', typeof d.monto_total !== "undefined" ? parseInt(d.monto_total).toLocaleString() : 'No aplica')
                 .replace('{ejecutado}', typeof d.ejecutado !== "undefined" ? (d.ejecutado * 100).toFixed(0) : '0')
@@ -313,10 +320,10 @@ angular.module('payvizApp')
         //console.log(c,id);
         var html = generarDiv(c)
         $("#contrato-"+id).after('<tr class="detalle" id="detalle-'+id+'"><td colspan="7">'+ html +'</td></tr>');
-        
+
         //if( _.has(c,'adendas') )
           //test(c.cod_contrato);
-        
+
         $scope.detalles_abiertos.push(id);
         $("#img-mostrar-"+id).attr('src','images/ico_ocultar.png');
         //console.log(c);
@@ -339,14 +346,15 @@ angular.module('payvizApp')
 
     var fill = function(contrato, svg){
       var limite = moment();
+      var is_adenda_tiempo = contrato.is_adenda && contrato.tipo === 'Amp de plazos';
       var cobrado = _.reduce(contrato.imputaciones, function(sum, imputacion){
         if(moment(imputacion.fecha_obl) <= limite){
-          return sum + imputacion.monto; 
+          return sum + imputacion.monto;
         }else{
           return sum;
         }
       }, 0);
-      var ejecutado = cobrado/contrato.monto_total;
+      var ejecutado = is_adenda_tiempo ? 1 : cobrado/contrato.monto_total;
       var fillColor = contrato.is_adenda ? '#00698C' : '#f56727' ;
       var bgColor = contrato.is_adenda ? '#bfdfff' : '#ffead4';
       var gradientId = 'grad-' + contrato.id_filtrado + '-detail';
@@ -365,7 +373,7 @@ angular.module('payvizApp')
         .attr('x1', '0%').attr('x2', '0%').attr('y1', '100%').attr('y2', '0%');
         grad.append('stop').attr('class', 'color').attr('offset', ejecutado.toFixed(2)).style('stop-color', fillColor);
         grad.append('stop').attr('class', 'blank').attr('offset', ejecutado.toFixed(2)).style('stop-color', bgColor);
-      }  
+      }
       return 'url(#' + gradientId + ')';
     };
 
@@ -377,19 +385,34 @@ angular.module('payvizApp')
       if(_.has(contrato,'adendas')){
         var x  = w/2 - contrato.radius * 0.25;
         var y = h/2 - contrato.radius * 0.25;
-        //x = x > w/2 ? w/2 : x;
-        //y = y > w/2 ? w/2 : y;
-        imagen = svg
-          .append('image')
-          .attr('id', imgId)
-          .attr('xlink:href', 'images/ico_dinero.svg')
-          .attr('width', contrato.radius * 0.5)
-          .attr('height', contrato.radius * 0.5)
-          .attr('x', x)
-          .attr('y', y);
+
+        var src_img = null;
+
+        if( _.filter(contrato.adendas, function(adenda){ return (adenda.tipo === 'Amp de plazos'); }).length > 0 ){
+          src_img = 'ico_tiempo.svg';
+        }
+
+        if(_.filter(contrato.adendas, function(adenda){ return (adenda.tipo === 'Amp de monto' || adenda.tipo === 'Reajuste.' || adenda.tipo === 'Renovación'); }).length > 0){
+          if(src_img === null){
+            src_img = 'ico_dinero.svg';
+          }else{
+            src_img = 'ico_ambos.png';
+          }
+        }
+
+        if(src_img){
+          imagen = svg
+            .append('image')
+            .attr('id', imgId)
+            .attr('xlink:href', 'images/' + src_img)
+            .attr('width', contrato.radius * 0.5)
+            .attr('height', contrato.radius * 0.5)
+            .attr('x', x)
+            .attr('y', y);
+        }
       }
     };
-    
+
 
     var stroke = function(contrato){
           return contrato.is_adenda ? '#006289' : '#ca4600';
@@ -400,7 +423,7 @@ angular.module('payvizApp')
         var angulos = [0,72,150,216,288,360];
 
         d.x = w/2 + Math.cos( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius;
-        d.y = h/2 - Math.sin( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius; 
+        d.y = h/2 - Math.sin( (angulos[d.pos] * 180 ) / Math.PI ) * d.p_data.radius;
       }
     }
 
@@ -410,10 +433,12 @@ angular.module('payvizApp')
       c.radius = bubbleRadius;
       if(_.has(c,'adendas')){
         var adendas = c.adendas;
+              console.log(adendas);
               for(var i=0; i < adendas.length; i++){
+                adendas[i].id_filtrado = c.id_filtrado + '-adenda-' + i;
                 adendas[i].p_data = c;
                 adendas[i].monto_total = adendas[i].monto;
-                adendas[i].radius = area(adendas[i].monto_total, c.monto_total);
+                adendas[i].radius = adendas[i].tipo === 'Amp de plazos' ? area(c.monto_total * 0.1,c.monto_total) : area(adendas[i].monto_total, c.monto_total);
                 adendas[i].pos = i;
                 adendas[i].is_adenda = true;
                 circulo.push(adendas[i]);
@@ -489,7 +514,7 @@ angular.module('payvizApp')
       var link = window.document.getElementById('descargar-json');
       var toDownload = new Blob([JSON.stringify(imputaciones,null,4)],{type:'application/json'});
       var url = window.URL.createObjectURL(toDownload);
-      
+
       link.download = 'datos.json';
       link.href = url;
 
@@ -498,4 +523,5 @@ angular.module('payvizApp')
 
 
     //$scope.$apply();
+
   });

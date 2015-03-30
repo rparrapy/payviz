@@ -2881,101 +2881,30 @@ var imputaciones = [
         "rubro_cod": "250"
     },
     {
-        "llamado_nombre": "CONSULTORIA PARA LA IMPLEMENTACION DEL PLAN DE PUEBLOS INDIGENAS",
-        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
-        "monto_total": 697543000,
-        "mod_codigo": "LPI",
-        "pro_cod": "80069038-9",
-        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "pro_nombre": "MARIA REMIGIA BOLLA ARREGUI",
+        "llamado_nombre": "Contratación excluída de la ley de contrataciones públicas",
+        "componente": "FORTALECIMIENTO INSTITUCIONAL",
+        "mod_codigo": "EX",
+        "pro_cod": "1465957-3  ",
+        "obra": "Consultoría",
+        "categoria_nombre": "Contratación excluída de la ley de contrataciones públicas",
         "imputaciones": [
             {
-                "concepto": "SERVICIO DE CONSULTORIA",
+                "concepto": "PAGO A ESCRIBANIA",
                 "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-04-30",
-                "monto": 88778200
+                "fecha_obl": "2014-12-27",
+                "monto": 1889996
             },
             {
-                "concepto": "SERVICIOS DE CONSULTORIAS",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-05-28",
-                "monto": 41852580
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-08-13",
-                "monto": 8877820
-            },
-            {
-                "concepto": "SERVICIO DE CONSULTORIA.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-11-21",
-                "monto": 29307611
-            },
-            {
-                "concepto": "SERV. DE CONSULTORIA.-",
+                "concepto": "SOLICITUD DE PAGO",
                 "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-11-27",
-                "monto": 106533382
-            },
-            {
-                "concepto": "PAGO POR SERVICIOS DE CONSULTORIA.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-04-09",
-                "monto": 106533382
-            },
-            {
-                "concepto": "TERCER INFORME DE AVANCE",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2013-10-04",
-                "monto": 71022560
-            },
-            {
-                "concepto": "PAGO POR SERVICIO DE CONSULTORIA.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2013-11-29",
-                "monto": 50222880
-            },
-            {
-                "concepto": "PAGO DEL INFORME FINAL.",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-29",
-                "monto": 26882064
-            },
-            {
-                "concepto": "SERVICIOS DE CONSULTORIA PLAN DE PUEBLOS INDIGENA",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-05-30",
-                "monto": 20915269
-            },
-            {
-                "concepto": "SOLICITUD DE PAGO DEL TERCER INFORME",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-06-27",
-                "monto": 33482064
-            },
-            {
-                "concepto": "PAGO POR SERVICIO DE CONSULTORIA",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-07-23",
-                "monto": 53640742
-            },
-            {
-                "concepto": "PAGO DE IVA.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-08-26",
-                "monto": 5364074
+                "fecha_obl": "2014-12-28",
+                "monto": 4409997
             }
         ],
-        "cod_contrato": "LI-12013-12-47788",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "210138",
-        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
-        "id": "210138-red-comunitaria-guarani-1",
-        "pro_nombre": "Red Comunitaria Guaraní",
-        "fecha_contrato": "2011-12-14",
-        "categoria_cod": "5",
-        "obra": "Estudios de factibilidad",
+        "mod_nombre": "Contrataciones excluidas",
+        "cod_contrato": "EX-12013-13-71644",
         "rubro_cod": "260"
     },
     {
@@ -5760,6 +5689,104 @@ var imputaciones = [
         "rubro_cod": "520"
     },
     {
+        "llamado_nombre": "CONSULTORIA PARA LA IMPLEMENTACION DEL PLAN DE PUEBLOS INDIGENAS",
+        "componente": "MEJ. Y MANT. DE LA RED DE RUTAS NO PAVIMENTADAS",
+        "monto_total": 697543000,
+        "mod_codigo": "LPI",
+        "pro_cod": "80069038-9",
+        "categoria_nombre": "Consultorías, Asesorías e Investigaciones. Estudios y Proyectos de inversión",
+        "imputaciones": [
+            {
+                "concepto": "SERVICIO DE CONSULTORIA",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-04-30",
+                "monto": 88778200
+            },
+            {
+                "concepto": "SERVICIOS DE CONSULTORIAS",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-05-28",
+                "monto": 41852580
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-08-13",
+                "monto": 8877820
+            },
+            {
+                "concepto": "SERVICIO DE CONSULTORIA.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-11-21",
+                "monto": 29307611
+            },
+            {
+                "concepto": "SERV. DE CONSULTORIA.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-11-27",
+                "monto": 106533382
+            },
+            {
+                "concepto": "PAGO POR SERVICIOS DE CONSULTORIA.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-04-09",
+                "monto": 106533382
+            },
+            {
+                "concepto": "TERCER INFORME DE AVANCE",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2013-10-04",
+                "monto": 71022560
+            },
+            {
+                "concepto": "PAGO POR SERVICIO DE CONSULTORIA.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2013-11-29",
+                "monto": 50222880
+            },
+            {
+                "concepto": "PAGO DEL INFORME FINAL.",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-29",
+                "monto": 26882064
+            },
+            {
+                "concepto": "SERVICIOS DE CONSULTORIA PLAN DE PUEBLOS INDIGENA",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-05-30",
+                "monto": 20915269
+            },
+            {
+                "concepto": "SOLICITUD DE PAGO DEL TERCER INFORME",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-06-27",
+                "monto": 33482064
+            },
+            {
+                "concepto": "PAGO POR SERVICIO DE CONSULTORIA",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-07-23",
+                "monto": 53640742
+            },
+            {
+                "concepto": "PAGO DE IVA.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2014-08-26",
+                "monto": 5364074
+            }
+        ],
+        "cod_contrato": "LI-12013-12-47788",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "210138",
+        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
+        "id": "210138-red-comunitaria-guarani-1",
+        "pro_nombre": "Red Comunitaria Guaraní",
+        "fecha_contrato": "2011-12-14",
+        "categoria_cod": "5",
+        "obra": "Estudios de factibilidad",
+        "rubro_cod": "260"
+    },
+    {
         "llamado_nombre": "106/08 fiscali. por niveles GEMANS 5",
         "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
         "monto_total": 4208766315,
@@ -7847,1535 +7874,6 @@ var imputaciones = [
         "pro_nombre": "CONSORCIO CONSULPAR - ESTEIO SA",
         "fecha_contrato": "2009-09-07",
         "categoria_cod": "5",
-        "obra": "GMANS 5",
-        "rubro_cod": "520"
-    },
-    {
-        "llamado_nombre": "GESTION Y MANT.DE CARRETERAS POR NIVELES DE SERV.",
-        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
-        "monto_total": 100029583901,
-        "mod_codigo": "LPI",
-        "pro_cod": "80056720-0",
-        "categoria_nombre": "Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles",
-        "imputaciones": [
-            {
-                "concepto": "ANTICIPO",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-08-31",
-                "monto": 1940745094
-            },
-            {
-                "concepto": "ANTICIPO",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2009-08-31",
-                "monto": 6051267365
-            },
-            {
-                "concepto": "SALDO DE ANTICIPO CONSORCIO VIAL SUREÑO",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-09-30",
-                "monto": 911995235
-            },
-            {
-                "concepto": "PAGO DE IVA DEL ANTICIPO FINANCIERO",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2009-09-30",
-                "monto": 605126736
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO N° N2",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-03-30",
-                "monto": 134807484
-            },
-            {
-                "concepto": "CERT.Nº3, OBRAS DE MANTEN SERV GMANS RUTA 4",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-03-30",
-                "monto": 410991653
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-03-31",
-                "monto": 82051810
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-04-06",
-                "monto": 26913437
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO N° 12",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-04-15",
-                "monto": 269134372
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO N ° 3",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-04-15",
-                "monto": 820518096
-            },
-            {
-                "concepto": "PAGO DE CEERTIFICADO N ° 4",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-04-30",
-                "monto": 2549470237
-            },
-            {
-                "concepto": "CERTIFICADO Nº4, OBRAS DE MANTENIMIENTO",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-04-30",
-                "monto": 1277011431
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-05-17",
-                "monto": 254947023
-            },
-            {
-                "concepto": "CERT.N°1, MANTENIMIENTO RUTA 4 PILAR",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-07-30",
-                "monto": 170676772
-            },
-            {
-                "concepto": "CERT.N°2, MANTENIMIENTO RUTA 4- S.IGNACIO-PILAR",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-07-30",
-                "monto": 338590313
-            },
-            {
-                "concepto": "CERT.N°3, MANTENIMIENTO RUTA 4- S.IGNACIO-PILAR",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-07-30",
-                "monto": 341353544
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nª 3",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-07-30",
-                "monto": 724083275
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº2",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-07-30",
-                "monto": 718221876
-            },
-            {
-                "concepto": "CERT.N°1, MANTENIMIENTO RUTA 4, PILAR",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-07-30",
-                "monto": 362041637
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-06",
-                "monto": 36204164
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-06",
-                "monto": 71822187
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-09",
-                "monto": 72408327
-            },
-            {
-                "concepto": "CERT.N°6, OBRAS DE MANT. GMANS RUTA4-SAN IGANCIO-P",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-08-17",
-                "monto": 1136664392
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº4",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-17",
-                "monto": 568932627
-            },
-            {
-                "concepto": "PAGO DEL IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-23",
-                "monto": 113666439
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nª7",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-27",
-                "monto": 853226303
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 7",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-08-27",
-                "monto": 1703410801
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-31",
-                "monto": 170341080
-            },
-            {
-                "concepto": "PAGO DE CERTTIFICADO 4",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-08-31",
-                "monto": 341353544
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº4",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-08-31",
-                "monto": 724083275
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-09-17",
-                "monto": 72408327
-            },
-            {
-                "concepto": "CERT.N° 5, MANTENIMIENTO GMANS RUTA 4 - PILAR",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-09-30",
-                "monto": 724083275
-            },
-            {
-                "concepto": "CERTIFICADO Nº 5",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-09-30",
-                "monto": 341353544
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-10-08",
-                "monto": 72408327
-            },
-            {
-                "concepto": "CERT.N° 8, RUTA 4 - SAN IGNACIO - PILAR",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-10-13",
-                "monto": 2703200635
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-10-19",
-                "monto": 1354269639
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-10-20",
-                "monto": 270320064
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 9",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-10-28",
-                "monto": 1047815158
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 9",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-10-28",
-                "monto": 2090969518
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-10-30",
-                "monto": 72408327
-            },
-            {
-                "concepto": "CERTIFICADO Nº6",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-11-19",
-                "monto": 326206532
-            },
-            {
-                "concepto": "CERTIFICADO Nº6",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-11-22",
-                "monto": 691953250
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-11-22",
-                "monto": 209096952
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 11",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-11-30",
-                "monto": 2485679783
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 7 - NOVIEMBRE/2010.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-11-30",
-                "monto": 367233673
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-11-30",
-                "monto": 1244409193
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 10 - OCTUBRE/2010",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-11-30",
-                "monto": 914110486
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 10",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-11-30",
-                "monto": 1829141248
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 7 - NOVIEMBRE/2010.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-11-30",
-                "monto": 874228473
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-03",
-                "monto": 87422847
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-16",
-                "monto": 182914125
-            },
-            {
-                "concepto": "PAGO DE IVA - CERTIFICADO 11.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-22",
-                "monto": 248567978
-            },
-            {
-                "concepto": "PAG DE CERTIFICADO Nª 8",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-12-29",
-                "monto": 775064930
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 12",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-30",
-                "monto": 650921171
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº 12",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2010-12-30",
-                "monto": 1301079343
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2010-12-30",
-                "monto": 130107934
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-01-31",
-                "monto": 77506493
-            },
-            {
-                "concepto": "PAGO DE IVA CERTIFICADO 9.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-02-28",
-                "monto": 76631804
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-02-28",
-                "monto": 169358443
-            },
-            {
-                "concepto": "CERTIFICADO Nº 13",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-02-28",
-                "monto": 847664691
-            },
-            {
-                "concepto": "CERTIFICADO Nº 9",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-02-28",
-                "monto": 361264217
-            },
-            {
-                "concepto": "CERTIFICADO Nº 11",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-03-31",
-                "monto": 786404141
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 15 - MARZO/2011.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-03-31",
-                "monto": 3015636199
-            },
-            {
-                "concepto": "CERTIFICADO 15",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-03-31",
-                "monto": 1509558981
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-06",
-                "monto": 78640414
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 11 - MARZO/2011.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-06",
-                "monto": 370733381
-            },
-            {
-                "concepto": "CERTIFICADO Nº 10",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-25",
-                "monto": 373986596
-            },
-            {
-                "concepto": "PAGO DE SALDO DEL CERTIFICADO 7 - NOV/2010.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-25",
-                "monto": 44902608
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 14 - FEBRERO/2011.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-25",
-                "monto": 726477568
-            },
-            {
-                "concepto": "CONSORCIO VIAL SUREÑO",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-04-26",
-                "monto": 793304899
-            },
-            {
-                "concepto": "CERTIFICADO Nº 8",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-26",
-                "monto": 365387752
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-26",
-                "monto": 79330490
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-26",
-                "monto": 145060576
-            },
-            {
-                "concepto": "CERTIFICADO Nº 14",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-04-28",
-                "monto": 1450605763
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 9 - ENERO/2011.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-04-29",
-                "monto": 1693584435
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-04-29",
-                "monto": 2275929270
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-04-29",
-                "monto": 782731749
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 9 - ENERO/2010.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-04-29",
-                "monto": 766318036
-            },
-            {
-                "concepto": "CERTIFICADO Nº 12",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-29",
-                "monto": 369002110
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-29",
-                "monto": 78273175
-            },
-            {
-                "concepto": "PAGO DE I.V.A",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-29",
-                "monto": 227592927
-            },
-            {
-                "concepto": "CERTIFICADO Nº 16",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-04-29",
-                "monto": 1139810906
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-05-03",
-                "monto": 301563620
-            },
-            {
-                "concepto": "PAGO DE IVA OBRAS DE MANTENIMIENTO POR SERV.",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-06-02",
-                "monto": 75753655
-            },
-            {
-                "concepto": "CERT 13 OBRAS DE MANT. POR SERV RUTA 4  - PILAR",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-07-06",
-                "monto": 357124377
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-07-06",
-                "monto": 247534100
-            },
-            {
-                "concepto": "CERT 17 OBRAS DE MANT. POR NIV. DE SERV. T. RUTA 4",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-07-06",
-                "monto": 1239453209
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº 18-TRAMO RUTA 4",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-08-19",
-                "monto": 940436607
-            },
-            {
-                "concepto": "CERT 14 OBRAS DE MANT. POR SERV. DE LA RUTA 4",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-08-22",
-                "monto": 757536555
-            },
-            {
-                "concepto": "CERT. 13, MANT. SAN IGNACIO - PILAR",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-08-22",
-                "monto": 757536555
-            },
-            {
-                "concepto": "CERT 17 OBRA DE MANT POR NIV DE SERV T. RUTA 4",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-08-22",
-                "monto": 2475340997
-            },
-            {
-                "concepto": "CERT 18 OBRAS DE MANT. POR NIV. DE SERV. RUTA 4",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-08-22",
-                "monto": 2131705560
-            },
-            {
-                "concepto": "CERT 15 OBRAS DE MANT. NIV. SERV. GMANS RUTA 4",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-08-30",
-                "monto": 791342811
-            },
-            {
-                "concepto": "PAGO DE CERTTIFICADO 19 - JULIO/2011.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-08-31",
-                "monto": 1258333363
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 16",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-09-28",
-                "monto": 803712214
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº 29",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-09-30",
-                "monto": 1914671581
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 14 - JUNIO/2011.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-09-30",
-                "monto": 357124377
-            },
-            {
-                "concepto": "OBRAS DE MANT. SERV. GEMANS.TR.4 S.IGNACIO-PILAR",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-09-30",
-                "monto": 373061611
-            },
-            {
-                "concepto": "PAGO DE SALDO CERTIFICADO 18.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-09-30",
-                "monto": 64510301
-            },
-            {
-                "concepto": "CERTIFICADO N° 19 MES DE JULIO 2011",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-10-21",
-                "monto": 629187609
-            },
-            {
-                "concepto": "PAGO CERTIFICADO 21",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-10-27",
-                "monto": 993476608
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO N°17 MES DE SETIEMBRE 2011",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-10-31",
-                "monto": 798944725
-            },
-            {
-                "concepto": "DEVOLUCION DE RETENCION.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-11-14",
-                "monto": 709136730
-            },
-            {
-                "concepto": "CERTIFICADO 18",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-12-05",
-                "monto": 802768604
-            },
-            {
-                "concepto": "CERTIFICADO 19",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2011-12-27",
-                "monto": 821590598
-            },
-            {
-                "concepto": "PAGO DE I.V.A.",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-12-27",
-                "monto": 80276860
-            },
-            {
-                "concepto": "PAGO DE I.V.A.",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-12-27",
-                "monto": 213170556
-            },
-            {
-                "concepto": "CEDRTIFICADO N°20 MES DE AGOSTO 2011",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-12-27",
-                "monto": 958631907
-            },
-            {
-                "concepto": "PAGO DE I.V.A.",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-12-27",
-                "monto": 80371221
-            },
-            {
-                "concepto": "PAGO DEL CERTIFICADO 21",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-12-27",
-                "monto": 497653803
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº 18",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-12-29",
-                "monto": 378448056
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nª 19",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-12-29",
-                "monto": 387321283
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº 17",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-12-29",
-                "monto": 376645372
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº 16",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2011-12-29",
-                "monto": 378892901
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº 20",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-02-13",
-                "monto": 389350942
-            },
-            {
-                "concepto": "PAGO DE IVA-CERTIFICADO N°17",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-02-21",
-                "monto": 79894472
-            },
-            {
-                "concepto": "CERTIFICADO N°21 PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-02-21",
-                "monto": 99347661
-            },
-            {
-                "concepto": "CERTIFICADO N°19 PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-02-21",
-                "monto": 125833336
-            },
-            {
-                "concepto": "PAGO DE IVA CERTIFICADO 15.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-02-21",
-                "monto": 79134281
-            },
-            {
-                "concepto": "PAGO DE IVA, CERTIFICADO 14.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-02-21",
-                "monto": 75753655
-            },
-            {
-                "concepto": "PAGO DE IVA.",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-03-28",
-                "monto": 191467158
-            },
-            {
-                "concepto": "CERTIFICADO Nº21 MES DE ENERO 2012",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-03-29",
-                "monto": 846913470
-            },
-            {
-                "concepto": "CERTIFICADO Nº20 MES DE DICIEMBRE 2011",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-03-30",
-                "monto": 825895937
-            },
-            {
-                "concepto": "CERTIFICADO 22",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-03-30",
-                "monto": 864490384
-            },
-            {
-                "concepto": "PAGO DE IVA CERTIFICADO 09.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-16",
-                "monto": 82159060
-            },
-            {
-                "concepto": "CERTIFICADO Nº21 MES DE ENERO 2012",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-16",
-                "monto": 399259207
-            },
-            {
-                "concepto": "PAGO DE IVA, CERTIFICADO 20.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-16",
-                "monto": 82589594
-            },
-            {
-                "concepto": "PAGO DE IVA CERTIFICADO 21.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-18",
-                "monto": 84691347
-            },
-            {
-                "concepto": "PAGO DE IVA, CERTIFICADO 22.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-19",
-                "monto": 86449038
-            },
-            {
-                "concepto": "PAGO DE IVA DE LA DEVOLUCION DE LA RETENCION.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-23",
-                "monto": 70913673
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 22 -FEBRERO/2012.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-25",
-                "monto": 407545466
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO 23 - MARZO/2012.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-04-25",
-                "monto": 415287192
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nª 23",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-04-27",
-                "monto": 880912219
-            },
-            {
-                "concepto": "PAGO DE IVA.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-05-09",
-                "monto": 88091222
-            },
-            {
-                "concepto": "CERTIFICADO Nº 24 MES DE ABRIL 2012",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-05-23",
-                "monto": 845633504
-            },
-            {
-                "concepto": "CERT. 24 PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-05-24",
-                "monto": 84563350
-            },
-            {
-                "concepto": "CERTIFICADO Nº24 MES DE ABRIL 2012",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-05-24",
-                "monto": 398655795
-            },
-            {
-                "concepto": "CERTIFICADO Nº25 MES DE MAYO 2012.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-06-22",
-                "monto": 876312128
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº 25",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-06-28",
-                "monto": 413118575
-            },
-            {
-                "concepto": "CERTIFICADO 1",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-06-29",
-                "monto": 92892461
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-06-30",
-                "monto": 9289246
-            },
-            {
-                "concepto": "CERTIFICADO 1",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-07-06",
-                "monto": 43792160
-            },
-            {
-                "concepto": "CERTIFICADO Nº26 MES DE JUNIO 2012.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-07-18",
-                "monto": 861801076
-            },
-            {
-                "concepto": "PAGO DE IVA.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-07-24",
-                "monto": 87631213
-            },
-            {
-                "concepto": "PAGO DE DEVOLUCION DE RETENCION",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-08-28",
-                "monto": 348542030
-            },
-            {
-                "concepto": "PAGO DE CERTIFICADO Nº 27",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-08-28",
-                "monto": 872692559
-            },
-            {
-                "concepto": "PAGO DE IVA",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-08-30",
-                "monto": 87269256
-            },
-            {
-                "concepto": "PAGO DE IVA.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2012-08-31",
-                "monto": 34854203
-            },
-            {
-                "concepto": "CERTIFICADO Nº 28 MES DE AGOSTO 2012.",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-09-24",
-                "monto": 882598639
-            },
-            {
-                "concepto": "CERTIFICADO Nº29 SEPTIEMBRE/12.-",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-10-31",
-                "monto": 826930019
-            },
-            {
-                "concepto": "CERTIFICADO 3",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2012-12-27",
-                "monto": 451648964
-            },
-            {
-                "concepto": "PAGO DE IVA.-",
-                "fuente": "Recursos del tesoro público",
-                "fecha_obl": "2013-04-30",
-                "monto": 105767876
-            }
-        ],
-        "cod_contrato": "LI-12013-09-42288",
-        "mod_nombre": "Licitación pública internacional",
-        "llamado_id": "139714",
-        "adendas": [
-            {
-                "fecha_contrato": "2013-04-10",
-                "duracion_contrato_cantidad": "42",
-                "tipo": "Amp de monto",
-                "imputaciones": [
-                    {
-                        "concepto": "CERTIFICADO Nº36 MES DE MARZO 2013.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-05-31",
-                        "monto": 856128968
-                    },
-                    {
-                        "concepto": "CERTIFICADO N°35 - FEBRERO/13",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-05-31",
-                        "monto": 856128968
-                    },
-                    {
-                        "concepto": "CERTTIFICADO Nº34 MES DE ENERO 2013.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-05-31",
-                        "monto": 856128968
-                    },
-                    {
-                        "concepto": "CERTIFICADO N°37 - ABRIL/13",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-06-26",
-                        "monto": 838524079
-                    },
-                    {
-                        "concepto": "CERTIFICADO N°8 - MAYO/13",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-06-28",
-                        "monto": 828511869
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 34",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-09-30",
-                        "monto": 403603657
-                    },
-                    {
-                        "concepto": "PAGO DE CERTIFICADO 33 - DICIEMBRE/2012.-",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-09-30",
-                        "monto": 407669515
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº 35 MES DE FEBRERO 2013.",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-09-30",
-                        "monto": 403603657
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 36",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-09-30",
-                        "monto": 403603657
-                    },
-                    {
-                        "concepto": "PAGO DE IVA.CERTIFICADO Nº3 MES DE SET/2012.",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-10-04",
-                        "monto": 45164896
-                    },
-                    {
-                        "concepto": "PAGO DE I.V.A.",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-10-04",
-                        "monto": 88259864
-                    },
-                    {
-                        "concepto": "PAGO DE I.V.A",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-10-04",
-                        "monto": 82693002
-                    },
-                    {
-                        "concepto": "PAGO DE IVA. CERTIFICADO DE EMERGENCIA Nº2OCT/2013",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-10-04",
-                        "monto": 101153171
-                    },
-                    {
-                        "concepto": "PAGO DE I.V.A.",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-10-04",
-                        "monto": 85612897
-                    },
-                    {
-                        "concepto": "PAGO DE I.V.A",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-10-04",
-                        "monto": 86475352
-                    },
-                    {
-                        "concepto": "PAGO DE IVA.-",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-10-18",
-                        "monto": 85612897
-                    },
-                    {
-                        "concepto": "CERTIFICADO 41 AGOSTO 2013",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-10-25",
-                        "monto": 866712639
-                    },
-                    {
-                        "concepto": "CERTIFICADO N 39 JUNIO 2013",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-10-28",
-                        "monto": 841399644
-                    },
-                    {
-                        "concepto": "CERTIFICDO Nº 40-MAYO-2013",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-10-28",
-                        "monto": 854609647
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº42 MES DE SET/2013.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-10-31",
-                        "monto": 868996994
-                    },
-                    {
-                        "concepto": "PAGO DE CERTIFICADO 43 - OCTUBRE/2013.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-11-23",
-                        "monto": 866858939
-                    },
-                    {
-                        "concepto": "CERTIFICADO 44",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-12-17",
-                        "monto": 432454807
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº 46 MES DE DICIEMBRE 2013.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-30",
-                        "monto": 865943933
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 45.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 433489126
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº47-2014",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 865943933
-                    }
-                ],
-                "cod_contrato": "AC-12013-13-9701",
-                "duracion_contrato_medida": "M",
-                "monto": 13654141746
-            },
-            {
-                "fecha_contrato": "2014-04-30",
-                "duracion_contrato_cantidad": "48",
-                "tipo": "Amp de monto",
-                "imputaciones": [
-                    {
-                        "concepto": "CERTIFICADO N° 32.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 201241621
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº90 MES DE ABRIL 2014.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 878164601
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 43245481
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 86685894
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº40-JULIO-2013",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 402887407
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 39",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 396659832
-                    },
-                    {
-                        "concepto": "CERTIFICADO N°48-FEBRERO 2014",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 338340190
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 84139964
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 85460965
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 86671264
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-05-31",
-                        "monto": 86899699
-                    },
-                    {
-                        "concepto": "CERTIFICADO N°49/MARZO 2014",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-06-25",
-                        "monto": 870104322
-                    },
-                    {
-                        "concepto": "PARA DE IVA",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-07-22",
-                        "monto": 33834019
-                    },
-                    {
-                        "concepto": "PAGO DE IVA.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-07-25",
-                        "monto": 87010432
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº 42 MES DE SETIEMBRE 2013.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-07-31",
-                        "monto": 165636042
-                    },
-                    {
-                        "concepto": "PAGO DE CERTIFICADO 48 - FEBRERO/2014.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-08-29",
-                        "monto": 536037535
-                    },
-                    {
-                        "concepto": "CERTIFICADO DE MANTENIMIENTO.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-08-30",
-                        "monto": 446325261
-                    },
-                    {
-                        "concepto": "PAGO DE IVA.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-09-12",
-                        "monto": 44632526
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 46.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-09-26",
-                        "monto": 408230711
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-09-26",
-                        "monto": 43348912
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 45.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-09-26",
-                        "monto": 204359160
-                    },
-                    {
-                        "concepto": "CARTIFICADO DE MANT. 43",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-09-30",
-                        "monto": 408662073
-                    },
-                    {
-                        "concepto": "CERTIFICICADO DE MANT. 41",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-09-30",
-                        "monto": 408593100
-                    },
-                    {
-                        "concepto": "CERTIFICADO DE MANTENIMIENTO 44",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-09-30",
-                        "monto": 203871552
-                    },
-                    {
-                        "concepto": "PAGO PARCIAL DEL CERT. MANT. 56 - SET/14.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-11-29",
-                        "monto": 32911803
-                    }
-                ],
-                "cod_contrato": "AC-12013-14-12911",
-                "duracion_contrato_medida": "M",
-                "monto": 6827070489
-            },
-            {
-                "fecha_contrato": "2014-12-09",
-                "duracion_contrato_cantidad": "0",
-                "tipo": "Reajuste.",
-                "imputaciones": [
-                    {
-                        "concepto": "CERTIF. DE MANTENIMIENTO Nº57 MES DE OCTUBRE 2014.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-12-09",
-                        "monto": 1309409406
-                    },
-                    {
-                        "concepto": "SALDO CERTIFICADO DE MANTENIMIENTO Nº56 SET/2014.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-12-27",
-                        "monto": 65316056
-                    },
-                    {
-                        "concepto": "CERTIFICADO DE MANTENIMIENTO Nº58 MES DE NOV/2014.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-12-28",
-                        "monto": 1309409406
-                    }
-                ],
-                "cod_contrato": "RC-12013-14-15956",
-                "duracion_contrato_medida": "0",
-                "monto": 3126106047
-            },
-            {
-                "fecha_contrato": "2012-12-21",
-                "duracion_contrato_cantidad": "0",
-                "tipo": "Reajuste.",
-                "imputaciones": [
-                    {
-                        "concepto": "PAGO DE CERTIFICADO Nº 29",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-02-26",
-                        "monto": 389838438
-                    },
-                    {
-                        "concepto": "PAGO DE CERTIFICADO Nº 31",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-02-26",
-                        "monto": 201371682
-                    },
-                    {
-                        "concepto": "CERTIFICADO DE EMERGENCIA Nº3 NOVIEMBRE/2012.-",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-02-27",
-                        "monto": 224126553
-                    },
-                    {
-                        "concepto": "CERTIFICADO N°30 - OCTUBRE/12",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-02-27",
-                        "monto": 402076470
-                    },
-                    {
-                        "concepto": "PAGO DE CERTIFICADO DE EMERGENCIA",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-02-27",
-                        "monto": 476864947
-                    },
-                    {
-                        "concepto": "DEVOLUCION DE RETENCIONES.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-02-28",
-                        "monto": 1057678760
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº26 JUNIO/2012.-",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-02-28",
-                        "monto": 406277652
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-02-28",
-                        "monto": 86180108
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº27 MES DE JULIO 2012.",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-02-28",
-                        "monto": 411412206
-                    },
-                    {
-                        "concepto": "CERTIFICADO N°28 MANTENIMIENTO - AGOSTO/12",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-02-28",
-                        "monto": 416082215
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 31 NOV/2012.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-02-28",
-                        "monto": 427152051
-                    },
-                    {
-                        "concepto": "PAGO CERTIFICADO N° 30",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-02-28",
-                        "monto": 852889483
-                    },
-                    {
-                        "concepto": "PAGO DE CERTIFICADO DE EMERGENCIA",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-02-28",
-                        "monto": 1011531706
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-03-25",
-                        "monto": 85288948
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-03-25",
-                        "monto": 42715206
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº 32 MES DE NOVIEMBRE 2012.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-05-31",
-                        "monto": 426876168
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº 33 MES DE DICIEMBRE 2012.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2013-05-31",
-                        "monto": 864753516
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-06-19",
-                        "monto": 85612897
-                    },
-                    {
-                        "concepto": "PAGO D EIVA",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-06-26",
-                        "monto": 42687617
-                    },
-                    {
-                        "concepto": "CERTIFICADO Nº37-MARZO-2013",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-10-31",
-                        "monto": 395304209
-                    },
-                    {
-                        "concepto": "CERTIFICADO N°38 MAYO 2013",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-11-11",
-                        "monto": 390584167
-                    },
-                    {
-                        "concepto": "PAGO DE IVA. CERTIF. DE MANTEN. Nº 38 MAYO 2013.",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-11-12",
-                        "monto": 82851187
-                    },
-                    {
-                        "concepto": "PAGO DE IVA",
-                        "fuente": "Recursos del tesoro público",
-                        "fecha_obl": "2013-12-16",
-                        "monto": 83852408
-                    }
-                ],
-                "cod_contrato": "RC-12013-13-8352",
-                "duracion_contrato_medida": "0",
-                "monto": 8984280794
-            },
-            {
-                "fecha_contrato": "2014-10-01",
-                "duracion_contrato_cantidad": "55",
-                "tipo": "Amp de monto",
-                "imputaciones": [
-                    {
-                        "concepto": "PAGO DE SALDO CERTIFICADO 42 - SETIEMBRE/2013.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-16",
-                        "monto": 244033970
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 51.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-16",
-                        "monto": 210410480
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 47.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-16",
-                        "monto": 408230711
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 48.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-16",
-                        "monto": 412206644
-                    },
-                    {
-                        "concepto": "CERTIFICADO N°49/",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-16",
-                        "monto": 410192038
-                    },
-                    {
-                        "concepto": "CERTIF. Nº50-MANTENIMIENTO.",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-16",
-                        "monto": 413991884
-                    },
-                    {
-                        "concepto": "PAGO DE IVA.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-20",
-                        "monto": 86594393
-                    },
-                    {
-                        "concepto": "PAGO DE IVA CERTIFICADO 50 - ABRIL/2014.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-20",
-                        "monto": 87816460
-                    },
-                    {
-                        "concepto": "PAGO DE IVA CERTIFICADO 48 - FEBRERO/2014.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-20",
-                        "monto": 53603754
-                    },
-                    {
-                        "concepto": "PAGO DE IVA.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-23",
-                        "monto": 86594393
-                    },
-                    {
-                        "concepto": "CERTIFICADO N° 55.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-27",
-                        "monto": 1402271349
-                    },
-                    {
-                        "concepto": "CERTIFICADO 54",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-27",
-                        "monto": 1402671349
-                    },
-                    {
-                        "concepto": "CERTIFICADO 53 MANTENIMIENTO",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-27",
-                        "monto": 1402671349
-                    },
-                    {
-                        "concepto": "PAGO DE CERTIFICADO DE MANTENIMIENTO N° 52.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-10-27",
-                        "monto": 701368267
-                    },
-                    {
-                        "concepto": "PAGO PARCIAL DEL CERT. MANT. 56 - SET/14.-",
-                        "fuente": "Recursos de Crédito Público",
-                        "fecha_obl": "2014-11-29",
-                        "monto": 1211181547
-                    }
-                ],
-                "cod_contrato": "AC-12013-14-14948",
-                "duracion_contrato_medida": "M",
-                "monto": 8533838588
-            }
-        ],
-        "rubro_nombre": "CONSTRUCCIONES",
-        "pro_nombre": "CONSORCIO VIAL SUREÃO",
-        "fecha_contrato": "2009-08-20",
-        "categoria_cod": "21",
         "obra": "GMANS 5",
         "rubro_cod": "520"
     },
@@ -14111,29 +12609,1533 @@ var imputaciones = [
         "rubro_cod": "260"
     },
     {
-        "rubro_nombre": "SERV. TECNICOS Y PROFESIONALES",
-        "pro_nombre": "MARIA REMIGIA BOLLA ARREGUI",
-        "llamado_nombre": "Contratación excluída de la ley de contrataciones públicas",
-        "mod_codigo": "EX",
-        "pro_cod": "1465957-3  ",
-        "categoria_nombre": "Contratación excluída de la ley de contrataciones públicas",
+        "llamado_nombre": "GESTION Y MANT.DE CARRETERAS POR NIVELES DE SERV.",
+        "componente": "REHAB. Y MANT. DE LA RED DE RUTAS PAVIMENTADAS",
+        "monto_total": 100029583901,
+        "mod_codigo": "LPI",
+        "pro_cod": "80056720-0",
+        "categoria_nombre": "Construcción, Restauración, Reconstrucción o Remodelación y Reparación de Inmuebles",
         "imputaciones": [
             {
-                "concepto": "PAGO A ESCRIBANIA",
-                "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-12-27",
-                "monto": 1889996
+                "concepto": "ANTICIPO",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-08-31",
+                "monto": 1940745094
             },
             {
-                "concepto": "SOLICITUD DE PAGO",
+                "concepto": "ANTICIPO",
                 "fuente": "Recursos de Crédito Público",
-                "fecha_obl": "2014-12-28",
-                "monto": 4409997
+                "fecha_obl": "2009-08-31",
+                "monto": 6051267365
+            },
+            {
+                "concepto": "SALDO DE ANTICIPO CONSORCIO VIAL SUREÑO",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-09-30",
+                "monto": 911995235
+            },
+            {
+                "concepto": "PAGO DE IVA DEL ANTICIPO FINANCIERO",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2009-09-30",
+                "monto": 605126736
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO N° N2",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-03-30",
+                "monto": 134807484
+            },
+            {
+                "concepto": "CERT.Nº3, OBRAS DE MANTEN SERV GMANS RUTA 4",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-03-30",
+                "monto": 410991653
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-03-31",
+                "monto": 82051810
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-04-06",
+                "monto": 26913437
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO N° 12",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-04-15",
+                "monto": 269134372
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO N ° 3",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-04-15",
+                "monto": 820518096
+            },
+            {
+                "concepto": "PAGO DE CEERTIFICADO N ° 4",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-04-30",
+                "monto": 2549470237
+            },
+            {
+                "concepto": "CERTIFICADO Nº4, OBRAS DE MANTENIMIENTO",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-04-30",
+                "monto": 1277011431
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-05-17",
+                "monto": 254947023
+            },
+            {
+                "concepto": "CERT.N°1, MANTENIMIENTO RUTA 4 PILAR",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-07-30",
+                "monto": 170676772
+            },
+            {
+                "concepto": "CERT.N°2, MANTENIMIENTO RUTA 4- S.IGNACIO-PILAR",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-07-30",
+                "monto": 338590313
+            },
+            {
+                "concepto": "CERT.N°3, MANTENIMIENTO RUTA 4- S.IGNACIO-PILAR",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-07-30",
+                "monto": 341353544
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nª 3",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-07-30",
+                "monto": 724083275
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº2",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-07-30",
+                "monto": 718221876
+            },
+            {
+                "concepto": "CERT.N°1, MANTENIMIENTO RUTA 4, PILAR",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-07-30",
+                "monto": 362041637
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-06",
+                "monto": 36204164
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-06",
+                "monto": 71822187
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-09",
+                "monto": 72408327
+            },
+            {
+                "concepto": "CERT.N°6, OBRAS DE MANT. GMANS RUTA4-SAN IGANCIO-P",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-08-17",
+                "monto": 1136664392
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº4",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-17",
+                "monto": 568932627
+            },
+            {
+                "concepto": "PAGO DEL IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-23",
+                "monto": 113666439
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nª7",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-27",
+                "monto": 853226303
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 7",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-08-27",
+                "monto": 1703410801
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-31",
+                "monto": 170341080
+            },
+            {
+                "concepto": "PAGO DE CERTTIFICADO 4",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-08-31",
+                "monto": 341353544
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº4",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-08-31",
+                "monto": 724083275
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-09-17",
+                "monto": 72408327
+            },
+            {
+                "concepto": "CERT.N° 5, MANTENIMIENTO GMANS RUTA 4 - PILAR",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-09-30",
+                "monto": 724083275
+            },
+            {
+                "concepto": "CERTIFICADO Nº 5",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-09-30",
+                "monto": 341353544
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-10-08",
+                "monto": 72408327
+            },
+            {
+                "concepto": "CERT.N° 8, RUTA 4 - SAN IGNACIO - PILAR",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-10-13",
+                "monto": 2703200635
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-10-19",
+                "monto": 1354269639
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-10-20",
+                "monto": 270320064
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 9",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-10-28",
+                "monto": 1047815158
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 9",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-10-28",
+                "monto": 2090969518
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-10-30",
+                "monto": 72408327
+            },
+            {
+                "concepto": "CERTIFICADO Nº6",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-11-19",
+                "monto": 326206532
+            },
+            {
+                "concepto": "CERTIFICADO Nº6",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-11-22",
+                "monto": 691953250
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-11-22",
+                "monto": 209096952
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 11",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-11-30",
+                "monto": 2485679783
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 7 - NOVIEMBRE/2010.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-11-30",
+                "monto": 367233673
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-11-30",
+                "monto": 1244409193
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 10 - OCTUBRE/2010",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-11-30",
+                "monto": 914110486
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 10",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-11-30",
+                "monto": 1829141248
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 7 - NOVIEMBRE/2010.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-11-30",
+                "monto": 874228473
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-03",
+                "monto": 87422847
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-16",
+                "monto": 182914125
+            },
+            {
+                "concepto": "PAGO DE IVA - CERTIFICADO 11.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-22",
+                "monto": 248567978
+            },
+            {
+                "concepto": "PAG DE CERTIFICADO Nª 8",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-12-29",
+                "monto": 775064930
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 12",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-30",
+                "monto": 650921171
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº 12",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2010-12-30",
+                "monto": 1301079343
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2010-12-30",
+                "monto": 130107934
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-01-31",
+                "monto": 77506493
+            },
+            {
+                "concepto": "PAGO DE IVA CERTIFICADO 9.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-02-28",
+                "monto": 76631804
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-02-28",
+                "monto": 169358443
+            },
+            {
+                "concepto": "CERTIFICADO Nº 13",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-02-28",
+                "monto": 847664691
+            },
+            {
+                "concepto": "CERTIFICADO Nº 9",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-02-28",
+                "monto": 361264217
+            },
+            {
+                "concepto": "CERTIFICADO Nº 11",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-03-31",
+                "monto": 786404141
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 15 - MARZO/2011.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-03-31",
+                "monto": 3015636199
+            },
+            {
+                "concepto": "CERTIFICADO 15",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-03-31",
+                "monto": 1509558981
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-06",
+                "monto": 78640414
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 11 - MARZO/2011.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-06",
+                "monto": 370733381
+            },
+            {
+                "concepto": "CERTIFICADO Nº 10",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-25",
+                "monto": 373986596
+            },
+            {
+                "concepto": "PAGO DE SALDO DEL CERTIFICADO 7 - NOV/2010.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-25",
+                "monto": 44902608
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 14 - FEBRERO/2011.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-25",
+                "monto": 726477568
+            },
+            {
+                "concepto": "CONSORCIO VIAL SUREÑO",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-04-26",
+                "monto": 793304899
+            },
+            {
+                "concepto": "CERTIFICADO Nº 8",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-26",
+                "monto": 365387752
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-26",
+                "monto": 79330490
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-26",
+                "monto": 145060576
+            },
+            {
+                "concepto": "CERTIFICADO Nº 14",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-04-28",
+                "monto": 1450605763
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 9 - ENERO/2011.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-04-29",
+                "monto": 1693584435
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-04-29",
+                "monto": 2275929270
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-04-29",
+                "monto": 782731749
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 9 - ENERO/2010.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-04-29",
+                "monto": 766318036
+            },
+            {
+                "concepto": "CERTIFICADO Nº 12",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-29",
+                "monto": 369002110
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-29",
+                "monto": 78273175
+            },
+            {
+                "concepto": "PAGO DE I.V.A",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-29",
+                "monto": 227592927
+            },
+            {
+                "concepto": "CERTIFICADO Nº 16",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-04-29",
+                "monto": 1139810906
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-05-03",
+                "monto": 301563620
+            },
+            {
+                "concepto": "PAGO DE IVA OBRAS DE MANTENIMIENTO POR SERV.",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-06-02",
+                "monto": 75753655
+            },
+            {
+                "concepto": "CERT 13 OBRAS DE MANT. POR SERV RUTA 4  - PILAR",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-07-06",
+                "monto": 357124377
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-07-06",
+                "monto": 247534100
+            },
+            {
+                "concepto": "CERT 17 OBRAS DE MANT. POR NIV. DE SERV. T. RUTA 4",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-07-06",
+                "monto": 1239453209
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº 18-TRAMO RUTA 4",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-08-19",
+                "monto": 940436607
+            },
+            {
+                "concepto": "CERT 14 OBRAS DE MANT. POR SERV. DE LA RUTA 4",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-08-22",
+                "monto": 757536555
+            },
+            {
+                "concepto": "CERT. 13, MANT. SAN IGNACIO - PILAR",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-08-22",
+                "monto": 757536555
+            },
+            {
+                "concepto": "CERT 17 OBRA DE MANT POR NIV DE SERV T. RUTA 4",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-08-22",
+                "monto": 2475340997
+            },
+            {
+                "concepto": "CERT 18 OBRAS DE MANT. POR NIV. DE SERV. RUTA 4",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-08-22",
+                "monto": 2131705560
+            },
+            {
+                "concepto": "CERT 15 OBRAS DE MANT. NIV. SERV. GMANS RUTA 4",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-08-30",
+                "monto": 791342811
+            },
+            {
+                "concepto": "PAGO DE CERTTIFICADO 19 - JULIO/2011.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-08-31",
+                "monto": 1258333363
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 16",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-09-28",
+                "monto": 803712214
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº 29",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-09-30",
+                "monto": 1914671581
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 14 - JUNIO/2011.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-09-30",
+                "monto": 357124377
+            },
+            {
+                "concepto": "OBRAS DE MANT. SERV. GEMANS.TR.4 S.IGNACIO-PILAR",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-09-30",
+                "monto": 373061611
+            },
+            {
+                "concepto": "PAGO DE SALDO CERTIFICADO 18.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-09-30",
+                "monto": 64510301
+            },
+            {
+                "concepto": "CERTIFICADO N° 19 MES DE JULIO 2011",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-10-21",
+                "monto": 629187609
+            },
+            {
+                "concepto": "PAGO CERTIFICADO 21",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-10-27",
+                "monto": 993476608
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO N°17 MES DE SETIEMBRE 2011",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-10-31",
+                "monto": 798944725
+            },
+            {
+                "concepto": "DEVOLUCION DE RETENCION.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-11-14",
+                "monto": 709136730
+            },
+            {
+                "concepto": "CERTIFICADO 18",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-12-05",
+                "monto": 802768604
+            },
+            {
+                "concepto": "CERTIFICADO 19",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2011-12-27",
+                "monto": 821590598
+            },
+            {
+                "concepto": "PAGO DE I.V.A.",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-12-27",
+                "monto": 80276860
+            },
+            {
+                "concepto": "PAGO DE I.V.A.",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-12-27",
+                "monto": 213170556
+            },
+            {
+                "concepto": "CEDRTIFICADO N°20 MES DE AGOSTO 2011",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-12-27",
+                "monto": 958631907
+            },
+            {
+                "concepto": "PAGO DE I.V.A.",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-12-27",
+                "monto": 80371221
+            },
+            {
+                "concepto": "PAGO DEL CERTIFICADO 21",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-12-27",
+                "monto": 497653803
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº 18",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-12-29",
+                "monto": 378448056
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nª 19",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-12-29",
+                "monto": 387321283
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº 17",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-12-29",
+                "monto": 376645372
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº 16",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2011-12-29",
+                "monto": 378892901
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº 20",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-02-13",
+                "monto": 389350942
+            },
+            {
+                "concepto": "PAGO DE IVA-CERTIFICADO N°17",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-02-21",
+                "monto": 79894472
+            },
+            {
+                "concepto": "CERTIFICADO N°21 PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-02-21",
+                "monto": 99347661
+            },
+            {
+                "concepto": "CERTIFICADO N°19 PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-02-21",
+                "monto": 125833336
+            },
+            {
+                "concepto": "PAGO DE IVA CERTIFICADO 15.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-02-21",
+                "monto": 79134281
+            },
+            {
+                "concepto": "PAGO DE IVA, CERTIFICADO 14.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-02-21",
+                "monto": 75753655
+            },
+            {
+                "concepto": "PAGO DE IVA.",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-03-28",
+                "monto": 191467158
+            },
+            {
+                "concepto": "CERTIFICADO Nº21 MES DE ENERO 2012",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-03-29",
+                "monto": 846913470
+            },
+            {
+                "concepto": "CERTIFICADO Nº20 MES DE DICIEMBRE 2011",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-03-30",
+                "monto": 825895937
+            },
+            {
+                "concepto": "CERTIFICADO 22",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-03-30",
+                "monto": 864490384
+            },
+            {
+                "concepto": "PAGO DE IVA CERTIFICADO 09.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-16",
+                "monto": 82159060
+            },
+            {
+                "concepto": "CERTIFICADO Nº21 MES DE ENERO 2012",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-16",
+                "monto": 399259207
+            },
+            {
+                "concepto": "PAGO DE IVA, CERTIFICADO 20.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-16",
+                "monto": 82589594
+            },
+            {
+                "concepto": "PAGO DE IVA CERTIFICADO 21.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-18",
+                "monto": 84691347
+            },
+            {
+                "concepto": "PAGO DE IVA, CERTIFICADO 22.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-19",
+                "monto": 86449038
+            },
+            {
+                "concepto": "PAGO DE IVA DE LA DEVOLUCION DE LA RETENCION.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-23",
+                "monto": 70913673
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 22 -FEBRERO/2012.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-25",
+                "monto": 407545466
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO 23 - MARZO/2012.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-04-25",
+                "monto": 415287192
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nª 23",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-04-27",
+                "monto": 880912219
+            },
+            {
+                "concepto": "PAGO DE IVA.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-05-09",
+                "monto": 88091222
+            },
+            {
+                "concepto": "CERTIFICADO Nº 24 MES DE ABRIL 2012",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-05-23",
+                "monto": 845633504
+            },
+            {
+                "concepto": "CERT. 24 PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-05-24",
+                "monto": 84563350
+            },
+            {
+                "concepto": "CERTIFICADO Nº24 MES DE ABRIL 2012",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-05-24",
+                "monto": 398655795
+            },
+            {
+                "concepto": "CERTIFICADO Nº25 MES DE MAYO 2012.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-06-22",
+                "monto": 876312128
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº 25",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-06-28",
+                "monto": 413118575
+            },
+            {
+                "concepto": "CERTIFICADO 1",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-06-29",
+                "monto": 92892461
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-06-30",
+                "monto": 9289246
+            },
+            {
+                "concepto": "CERTIFICADO 1",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-07-06",
+                "monto": 43792160
+            },
+            {
+                "concepto": "CERTIFICADO Nº26 MES DE JUNIO 2012.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-07-18",
+                "monto": 861801076
+            },
+            {
+                "concepto": "PAGO DE IVA.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-07-24",
+                "monto": 87631213
+            },
+            {
+                "concepto": "PAGO DE DEVOLUCION DE RETENCION",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-08-28",
+                "monto": 348542030
+            },
+            {
+                "concepto": "PAGO DE CERTIFICADO Nº 27",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-08-28",
+                "monto": 872692559
+            },
+            {
+                "concepto": "PAGO DE IVA",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-08-30",
+                "monto": 87269256
+            },
+            {
+                "concepto": "PAGO DE IVA.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2012-08-31",
+                "monto": 34854203
+            },
+            {
+                "concepto": "CERTIFICADO Nº 28 MES DE AGOSTO 2012.",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-09-24",
+                "monto": 882598639
+            },
+            {
+                "concepto": "CERTIFICADO Nº29 SEPTIEMBRE/12.-",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-10-31",
+                "monto": 826930019
+            },
+            {
+                "concepto": "CERTIFICADO 3",
+                "fuente": "Recursos de Crédito Público",
+                "fecha_obl": "2012-12-27",
+                "monto": 451648964
+            },
+            {
+                "concepto": "PAGO DE IVA.-",
+                "fuente": "Recursos del tesoro público",
+                "fecha_obl": "2013-04-30",
+                "monto": 105767876
             }
         ],
-        "mod_nombre": "Contrataciones excluidas",
-        "cod_contrato": "EX-12013-13-71644",
-        "rubro_cod": "260"
+        "cod_contrato": "LI-12013-09-42288",
+        "mod_nombre": "Licitación pública internacional",
+        "llamado_id": "139714",
+        "adendas": [
+            {
+                "fecha_contrato": "2013-04-10",
+                "duracion_contrato_cantidad": "42",
+                "tipo": "Amp de monto",
+                "imputaciones": [
+                    {
+                        "concepto": "CERTIFICADO Nº36 MES DE MARZO 2013.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-05-31",
+                        "monto": 856128968
+                    },
+                    {
+                        "concepto": "CERTIFICADO N°35 - FEBRERO/13",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-05-31",
+                        "monto": 856128968
+                    },
+                    {
+                        "concepto": "CERTTIFICADO Nº34 MES DE ENERO 2013.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-05-31",
+                        "monto": 856128968
+                    },
+                    {
+                        "concepto": "CERTIFICADO N°37 - ABRIL/13",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-06-26",
+                        "monto": 838524079
+                    },
+                    {
+                        "concepto": "CERTIFICADO N°8 - MAYO/13",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-06-28",
+                        "monto": 828511869
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 34",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-09-30",
+                        "monto": 403603657
+                    },
+                    {
+                        "concepto": "PAGO DE CERTIFICADO 33 - DICIEMBRE/2012.-",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-09-30",
+                        "monto": 407669515
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº 35 MES DE FEBRERO 2013.",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-09-30",
+                        "monto": 403603657
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 36",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-09-30",
+                        "monto": 403603657
+                    },
+                    {
+                        "concepto": "PAGO DE IVA.CERTIFICADO Nº3 MES DE SET/2012.",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-10-04",
+                        "monto": 45164896
+                    },
+                    {
+                        "concepto": "PAGO DE I.V.A.",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-10-04",
+                        "monto": 88259864
+                    },
+                    {
+                        "concepto": "PAGO DE I.V.A",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-10-04",
+                        "monto": 82693002
+                    },
+                    {
+                        "concepto": "PAGO DE IVA. CERTIFICADO DE EMERGENCIA Nº2OCT/2013",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-10-04",
+                        "monto": 101153171
+                    },
+                    {
+                        "concepto": "PAGO DE I.V.A.",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-10-04",
+                        "monto": 85612897
+                    },
+                    {
+                        "concepto": "PAGO DE I.V.A",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-10-04",
+                        "monto": 86475352
+                    },
+                    {
+                        "concepto": "PAGO DE IVA.-",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-10-18",
+                        "monto": 85612897
+                    },
+                    {
+                        "concepto": "CERTIFICADO 41 AGOSTO 2013",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-10-25",
+                        "monto": 866712639
+                    },
+                    {
+                        "concepto": "CERTIFICADO N 39 JUNIO 2013",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-10-28",
+                        "monto": 841399644
+                    },
+                    {
+                        "concepto": "CERTIFICDO Nº 40-MAYO-2013",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-10-28",
+                        "monto": 854609647
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº42 MES DE SET/2013.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-10-31",
+                        "monto": 868996994
+                    },
+                    {
+                        "concepto": "PAGO DE CERTIFICADO 43 - OCTUBRE/2013.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-11-23",
+                        "monto": 866858939
+                    },
+                    {
+                        "concepto": "CERTIFICADO 44",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-12-17",
+                        "monto": 432454807
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº 46 MES DE DICIEMBRE 2013.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-30",
+                        "monto": 865943933
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 45.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 433489126
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº47-2014",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 865943933
+                    }
+                ],
+                "cod_contrato": "AC-12013-13-9701",
+                "duracion_contrato_medida": "M",
+                "monto": 13654141746
+            },
+            {
+                "fecha_contrato": "2014-04-30",
+                "duracion_contrato_cantidad": "48",
+                "tipo": "Amp de monto",
+                "imputaciones": [
+                    {
+                        "concepto": "CERTIFICADO N° 32.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 201241621
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº90 MES DE ABRIL 2014.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 878164601
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 43245481
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 86685894
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº40-JULIO-2013",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 402887407
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 39",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 396659832
+                    },
+                    {
+                        "concepto": "CERTIFICADO N°48-FEBRERO 2014",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 338340190
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 84139964
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 85460965
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 86671264
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-05-31",
+                        "monto": 86899699
+                    },
+                    {
+                        "concepto": "CERTIFICADO N°49/MARZO 2014",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-06-25",
+                        "monto": 870104322
+                    },
+                    {
+                        "concepto": "PARA DE IVA",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-07-22",
+                        "monto": 33834019
+                    },
+                    {
+                        "concepto": "PAGO DE IVA.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-07-25",
+                        "monto": 87010432
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº 42 MES DE SETIEMBRE 2013.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-07-31",
+                        "monto": 165636042
+                    },
+                    {
+                        "concepto": "PAGO DE CERTIFICADO 48 - FEBRERO/2014.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-08-29",
+                        "monto": 536037535
+                    },
+                    {
+                        "concepto": "CERTIFICADO DE MANTENIMIENTO.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-08-30",
+                        "monto": 446325261
+                    },
+                    {
+                        "concepto": "PAGO DE IVA.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-09-12",
+                        "monto": 44632526
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 46.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-09-26",
+                        "monto": 408230711
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-09-26",
+                        "monto": 43348912
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 45.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-09-26",
+                        "monto": 204359160
+                    },
+                    {
+                        "concepto": "CARTIFICADO DE MANT. 43",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-09-30",
+                        "monto": 408662073
+                    },
+                    {
+                        "concepto": "CERTIFICICADO DE MANT. 41",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-09-30",
+                        "monto": 408593100
+                    },
+                    {
+                        "concepto": "CERTIFICADO DE MANTENIMIENTO 44",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-09-30",
+                        "monto": 203871552
+                    },
+                    {
+                        "concepto": "PAGO PARCIAL DEL CERT. MANT. 56 - SET/14.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-11-29",
+                        "monto": 32911803
+                    }
+                ],
+                "cod_contrato": "AC-12013-14-12911",
+                "duracion_contrato_medida": "M",
+                "monto": 6827070489
+            },
+            {
+                "fecha_contrato": "2014-12-09",
+                "duracion_contrato_cantidad": "0",
+                "tipo": "Reajuste.",
+                "imputaciones": [
+                    {
+                        "concepto": "CERTIF. DE MANTENIMIENTO Nº57 MES DE OCTUBRE 2014.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-12-09",
+                        "monto": 1309409406
+                    },
+                    {
+                        "concepto": "SALDO CERTIFICADO DE MANTENIMIENTO Nº56 SET/2014.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-12-27",
+                        "monto": 65316056
+                    },
+                    {
+                        "concepto": "CERTIFICADO DE MANTENIMIENTO Nº58 MES DE NOV/2014.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-12-28",
+                        "monto": 1309409406
+                    }
+                ],
+                "cod_contrato": "RC-12013-14-15956",
+                "duracion_contrato_medida": "0",
+                "monto": 3126106047
+            },
+            {
+                "fecha_contrato": "2012-12-21",
+                "duracion_contrato_cantidad": "0",
+                "tipo": "Reajuste.",
+                "imputaciones": [
+                    {
+                        "concepto": "PAGO DE CERTIFICADO Nº 29",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-02-26",
+                        "monto": 389838438
+                    },
+                    {
+                        "concepto": "PAGO DE CERTIFICADO Nº 31",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-02-26",
+                        "monto": 201371682
+                    },
+                    {
+                        "concepto": "CERTIFICADO DE EMERGENCIA Nº3 NOVIEMBRE/2012.-",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-02-27",
+                        "monto": 224126553
+                    },
+                    {
+                        "concepto": "CERTIFICADO N°30 - OCTUBRE/12",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-02-27",
+                        "monto": 402076470
+                    },
+                    {
+                        "concepto": "PAGO DE CERTIFICADO DE EMERGENCIA",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-02-27",
+                        "monto": 476864947
+                    },
+                    {
+                        "concepto": "DEVOLUCION DE RETENCIONES.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-02-28",
+                        "monto": 1057678760
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº26 JUNIO/2012.-",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-02-28",
+                        "monto": 406277652
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-02-28",
+                        "monto": 86180108
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº27 MES DE JULIO 2012.",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-02-28",
+                        "monto": 411412206
+                    },
+                    {
+                        "concepto": "CERTIFICADO N°28 MANTENIMIENTO - AGOSTO/12",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-02-28",
+                        "monto": 416082215
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 31 NOV/2012.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-02-28",
+                        "monto": 427152051
+                    },
+                    {
+                        "concepto": "PAGO CERTIFICADO N° 30",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-02-28",
+                        "monto": 852889483
+                    },
+                    {
+                        "concepto": "PAGO DE CERTIFICADO DE EMERGENCIA",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-02-28",
+                        "monto": 1011531706
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-03-25",
+                        "monto": 85288948
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-03-25",
+                        "monto": 42715206
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº 32 MES DE NOVIEMBRE 2012.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-05-31",
+                        "monto": 426876168
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº 33 MES DE DICIEMBRE 2012.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2013-05-31",
+                        "monto": 864753516
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-06-19",
+                        "monto": 85612897
+                    },
+                    {
+                        "concepto": "PAGO D EIVA",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-06-26",
+                        "monto": 42687617
+                    },
+                    {
+                        "concepto": "CERTIFICADO Nº37-MARZO-2013",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-10-31",
+                        "monto": 395304209
+                    },
+                    {
+                        "concepto": "CERTIFICADO N°38 MAYO 2013",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-11-11",
+                        "monto": 390584167
+                    },
+                    {
+                        "concepto": "PAGO DE IVA. CERTIF. DE MANTEN. Nº 38 MAYO 2013.",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-11-12",
+                        "monto": 82851187
+                    },
+                    {
+                        "concepto": "PAGO DE IVA",
+                        "fuente": "Recursos del tesoro público",
+                        "fecha_obl": "2013-12-16",
+                        "monto": 83852408
+                    }
+                ],
+                "cod_contrato": "RC-12013-13-8352",
+                "duracion_contrato_medida": "0",
+                "monto": 8984280794
+            },
+            {
+                "fecha_contrato": "2014-10-01",
+                "duracion_contrato_cantidad": "55",
+                "tipo": "Amp de monto",
+                "imputaciones": [
+                    {
+                        "concepto": "PAGO DE SALDO CERTIFICADO 42 - SETIEMBRE/2013.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-16",
+                        "monto": 244033970
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 51.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-16",
+                        "monto": 210410480
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 47.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-16",
+                        "monto": 408230711
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 48.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-16",
+                        "monto": 412206644
+                    },
+                    {
+                        "concepto": "CERTIFICADO N°49/",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-16",
+                        "monto": 410192038
+                    },
+                    {
+                        "concepto": "CERTIF. Nº50-MANTENIMIENTO.",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-16",
+                        "monto": 413991884
+                    },
+                    {
+                        "concepto": "PAGO DE IVA.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-20",
+                        "monto": 86594393
+                    },
+                    {
+                        "concepto": "PAGO DE IVA CERTIFICADO 50 - ABRIL/2014.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-20",
+                        "monto": 87816460
+                    },
+                    {
+                        "concepto": "PAGO DE IVA CERTIFICADO 48 - FEBRERO/2014.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-20",
+                        "monto": 53603754
+                    },
+                    {
+                        "concepto": "PAGO DE IVA.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-23",
+                        "monto": 86594393
+                    },
+                    {
+                        "concepto": "CERTIFICADO N° 55.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-27",
+                        "monto": 1402271349
+                    },
+                    {
+                        "concepto": "CERTIFICADO 54",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-27",
+                        "monto": 1402671349
+                    },
+                    {
+                        "concepto": "CERTIFICADO 53 MANTENIMIENTO",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-27",
+                        "monto": 1402671349
+                    },
+                    {
+                        "concepto": "PAGO DE CERTIFICADO DE MANTENIMIENTO N° 52.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-10-27",
+                        "monto": 701368267
+                    },
+                    {
+                        "concepto": "PAGO PARCIAL DEL CERT. MANT. 56 - SET/14.-",
+                        "fuente": "Recursos de Crédito Público",
+                        "fecha_obl": "2014-11-29",
+                        "monto": 1211181547
+                    }
+                ],
+                "cod_contrato": "AC-12013-14-14948",
+                "duracion_contrato_medida": "M",
+                "monto": 8533838588
+            }
+        ],
+        "rubro_nombre": "CONSTRUCCIONES",
+        "pro_nombre": "CONSORCIO VIAL SUREÃO",
+        "fecha_contrato": "2009-08-20",
+        "categoria_cod": "21",
+        "obra": "GMANS 5",
+        "rubro_cod": "520"
     },
     {
         "rubro_nombre": "GRATIF. POR SERV. ESPECIALES",

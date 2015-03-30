@@ -81,7 +81,7 @@
       </div>
     </div>
   </div>
-	<bubble-chart data="data" until="until"></bubble-chart>
+	<bubble-chart data="$parent.data" until="$parent.until" ng-if="loaded"></bubble-chart>
 </div>
 <div id="slider">
 	<date-slider until="until"></date-slider>
