@@ -121,6 +121,9 @@ angular.module('payvizApp')
           }
 
           var radius = function(contrato, hasta){
+            //No se dibuja el circulo correspondiente a una adenda de tiempo.
+            var isAdendaTiempo = (contrato.tipo === 'Amp de plazos');
+            if(isAdendaTiempo) return 0;
             var cobrado, limite;
             limite = hasta || moment();
             if(contrato.cod_contrato){
@@ -155,19 +158,20 @@ angular.module('payvizApp')
                 }
               }
 
+              var imgScale = (src_img === 'ico_ambos.png') ? 2 : 4; 
 
               if(!imagen.empty()){
                 imagen
-                .attr('x', contrato.x - contrato.radius/4)
-                .attr('y', contrato.y - contrato.radius/4);
+                .attr('x', contrato.x - contrato.radius / imgScale)
+                .attr('y', contrato.y - contrato.radius / imgScale);
 
               }else{
                 imagen = svg
                   .append('image')
                   .attr('id', imgId)
                   .attr('xlink:href', 'images/' + src_img )
-                  .attr('width', contrato.radius*0.5)
-                  .attr('height', contrato.radius*0.5)
+                  .attr('width', contrato.radius / imgScale * 2)
+                  .attr('height', contrato.radius / imgScale * 2)
                   .on('mouseover', function (d) { showPopover.call(d3.select('#circulo'+contrato.id), contrato); });
 
               }
@@ -757,10 +761,12 @@ angular.module('payvizApp')
           }
 
           var cursorOnPopover = false;
+          var cursorOnImage = false;
           //$('.popover').on('mouseenter', null, function() { cursorOnPopover = true; });
           //$('.popover').on('mouseleave', null, function() { cursorOnPopover = false; });
 
           function removePopovers (esperar) {
+            if(cursorOnImage) return;
             if(!esperar || $('.popover').length > 1){
               if((!cursorOnPopover && $('.popover').length === 1) || $('.popover').length > 1){
                 $('.popover:first').each(function() {
@@ -853,8 +859,10 @@ angular.module('payvizApp')
               $(this).popover('show');
             }
 
-            //$('.popover').on('mouseenter', null, function() { cursorOnPopover = true; });
-            //$('.popover').on('mouseleave', null, function() { cursorOnPopover = false; });
+          //$('.popover').on('mouseenter', null, function() { cursorOnPopover = true; });
+          //$('.popover').on('mouseleave', null, function() { cursorOnPopover = false; });
+            $('image').on('mouseenter', null, function() { cursorOnImage = true; });
+            $('image').on('mouseleave', null, function() { cursorOnImage = false; });
           }
           var PRI = true;
           function collide(alpha) {
