@@ -12,10 +12,10 @@ angular.module('payvizApp')
     var getData = function() {
 
         return $http({method:"GET", url:"http://demo3867734.mockable.io/imputaciones"}).then(function(result){
-            //return result.data;
-            var c = []
-            angular.copy(imputaciones, c)
-            return c;
+            return result.data;
+            //var c = []
+            //angular.copy(imputaciones, c)
+            //return c;
         }).catch(function(result){
           //console.log('Error', result.status,result.data);
           var c = []
