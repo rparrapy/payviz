@@ -350,7 +350,6 @@ angular.module('payvizApp')
           };
 
           var moveCentersByRubro = function(centers){
-            console.log(centers);
             var colsToMove = 2; // number of columns to "lift"
             var rowsToMove = 2;
             var bigDy = _.last(centers).dy;

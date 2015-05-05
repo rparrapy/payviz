@@ -11,26 +11,21 @@ angular.module('payvizApp')
   .factory('serviceImputaciones',function($http){
     var getData = function() {
 
-        return $http({method:"GET", url:"http://demo3867734.mockable.io/imputaciones"}).then(function(result){
+        return $http({method:"GET", url:"http://www.mopc.gov.py/BM/IGAP/datos/imputaciones"}).then(function(result){
             return result.data;
-            //var c = []
-            //angular.copy(imputaciones, c)
-            //return c;
+            /*var c = []
+            angular.copy(imputaciones, c)
+            return c;*/
         }).catch(function(result){
           //console.log('Error', result.status,result.data);
           var c = []
-          angular.copy(imputaciones, c)
+          angular.copy(dataset, c)
           return c;
         });
     };
     return { getData: getData };
   })
   .controller('MainCtrl', function ($scope,serviceImputaciones) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
     $('.tips, .referencias, hr:last').show();
     //Keep active nav-pill updated
     $(document).ready(function() {
@@ -51,8 +46,8 @@ angular.module('payvizApp')
 
     //var contratos = [];
     //angular.copy(imputaciones, contratos);
-    window.imputaciones = result;
-    var contratos = result;
+    window.imputaciones = result.contratos;
+    var contratos = result.contratos;
     /*var conAmbasAdendas = _.filter(contratos, function(c){
       var adendasMonto = _.filter(c.adendas, function(a){ return (a.tipo === 'Amp de monto' || a.tipo === 'Reajuste.' || a.tipo === 'Renovación'); });
       var adendasPlazo = _.filter(c.adendas, function(a){ return (a.tipo === 'Amp de plazos'); });
@@ -78,6 +73,7 @@ angular.module('payvizApp')
 
     $scope.data = contratos;
     $scope.loaded = true;
+    $scope.lastUpdated = result.meta['fecha_actualizacion'] ? moment(result.meta['fecha_actualizacion']) : null; 
     //$scope.$apply();
     });
 

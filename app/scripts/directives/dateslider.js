@@ -11,14 +11,15 @@ angular.module('payvizApp')
     return {
       restrict: 'E',
       replace: false,
-      scope: { until: '=' },
+      scope: { until: '=', lastUpdated: '=' },
       template: '<div id="fecha"></div>',
       link: function postLink(scope, element, attrs) {
         var timestamp = function(str){
           return +moment(str, 'YYYYMMDD');   
         }
 
-        var limits = ['20071130', '20150331'];
+        var upperLimit = scope.lastUpdated ? scope.lastUpdated.format('YYYYMMDD') : '20150430';
+        var limits = ['20071130', upperLimit];
 
         $("#fecha").noUiSlider({
         // Create two timestamps to define a range.
@@ -48,10 +49,16 @@ angular.module('payvizApp')
           }
         });
 
+        var lastYear = moment(upperLimit, 'YYYYMMDD').year();
+        var secondHalfYear = moment(upperLimit, 'YYYYMMDD').subtract(6, 'months').year() === lastYear;
+        var yearRange = secondHalfYear ? _.range(2009, lastYear + 1) : _.range(2009, lastYear);
+        var pipValues = [timestamp(limits[0])];
+        pipValues = pipValues.concat(_.map(yearRange, function(y){ return timestamp(y + '0101'); }));
+        pipValues.push(timestamp(limits[1]));
+
         $('#fecha').noUiSlider_pips({
           mode: 'values',
-          values: [timestamp(limits[0]), timestamp('20090101'), timestamp('20100101'),
-                    timestamp('20110101'), timestamp('20120101'), timestamp('20130101'), timestamp('20140101'), timestamp(limits[1])],
+          values: pipValues,
           density: 4
         });
 
