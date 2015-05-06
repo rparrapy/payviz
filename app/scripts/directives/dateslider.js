@@ -50,8 +50,9 @@ angular.module('payvizApp')
         });
 
         var lastYear = moment(upperLimit, 'YYYYMMDD').year();
-        var secondHalfYear = moment(upperLimit, 'YYYYMMDD').subtract(6, 'months').year() === lastYear;
-        var yearRange = secondHalfYear ? _.range(2009, lastYear + 1) : _.range(2009, lastYear);
+        //var secondHalfYear = moment(upperLimit, 'YYYYMMDD').subtract(6, 'months').year() === lastYear;
+        var afterApril = moment(upperLimit, 'YYYYMMDD').subtract(4, 'months').year() === lastYear;
+        var yearRange = afterApril ? _.range(2009, lastYear + 1) : _.range(2009, lastYear);
         var pipValues = [timestamp(limits[0])];
         pipValues = pipValues.concat(_.map(yearRange, function(y){ return timestamp(y + '0101'); }));
         pipValues.push(timestamp(limits[1]));
@@ -68,6 +69,7 @@ angular.module('payvizApp')
           var limitTimestamps = _.map(limits, function(l){ return timestamp(l); });
           if(_.contains(limitTimestamps, ts)){
             label = moment(ts).format('L');
+            if(ts === limitTimestamps[1] && afterApril) label = label.substring(0, label.length - 5);
           }else{
             label = moment(ts).year();
           }
